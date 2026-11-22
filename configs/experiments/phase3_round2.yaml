@@ -1,0 +1,31 @@
+# Pre-gold round 2 (Adrija, 2026-11-14): one time-boxed improvement round on the TUNING images only.
+# Written and committed BEFORE any extended-grid or halo-variant result was looked at. What was seen
+# before writing it: the round 1 table and the stage diagnosis of the 3 worst tuning images
+# (report/figures/pregold_round2/, experiments/LOG.md "pre-gold round 2").
+name: phase3_round2
+
+model: segformer
+checkpoint: experiments/20261114_100055_segformer/best_model.pt
+tune_on: B
+
+# Change rule (Adrija): the frozen method changes only if a candidate's leave-one-out MAE is more than
+# this many points below the leave-one-out MAE of phase3-method-v1 (recomputed here as candidate "v1").
+resolution_limit: 3.64
+
+# Candidates. Every choice inside a candidate (threshold, and halo on/off where listed) is made again
+# inside each leave-one-out fold. Ties go to the option listed first (original values first).
+# If more than one candidate passes the change rule, the lowest leave-one-out MAE wins; E before F on a tie.
+candidates:
+  v1: # the frozen method's grid, as a reference
+    rust: {thresholds: [0, 5, 10, 15, 20], halo: [true]}
+    necrotic: {thresholds: [-5, 0, 5, 10, 15], halo: [true]}
+    mildew: {thresholds: [8, 12, 16, 20, 25], halo: [true]}
+  E: # grids extended three steps past the edge that round 1 chose (necrotic upwards, mildew downwards)
+    rust: {thresholds: [0, 5, 10, 15, 20], halo: [true]}
+    necrotic: {thresholds: [-5, 0, 5, 10, 15, 20, 25, 30], halo: [true]}
+    mildew: {thresholds: [8, 12, 16, 20, 25, 6, 4, 2], halo: [true]}
+  F: # E plus the stage-specific rule from the diagnosis: the necrotic group may drop the chlorotic halo
+     # (the halo added 29 and 44 points on the two worst necrotic images)
+    rust: {thresholds: [0, 5, 10, 15, 20], halo: [true]}
+    necrotic: {thresholds: [-5, 0, 5, 10, 15, 20, 25, 30], halo: [true, false]}
+    mildew: {thresholds: [8, 12, 16, 20, 25, 6, 4, 2], halo: [true]}

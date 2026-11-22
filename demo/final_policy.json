@@ -1,0 +1,52 @@
+{
+ "tag": "final-v1",
+ "source_run": "experiments/20261118_182200_phase6_v2",
+ "model": {
+  "architecture": "segformer",
+  "checkpoint": "experiments/20261114_100055_segformer/best_model.pt"
+ },
+ "max_long_side": 2048,
+ "colour_steps": {
+  "rust": [],
+  "necrotic": [],
+  "mildew": []
+ },
+ "colour_thresholds": {
+  "rust": 10,
+  "necrotic": 15,
+  "mildew": 8
+ },
+ "gate_ranges": {
+  "sharpness": [
+   36.08456802368164,
+   null
+  ],
+  "noise": [
+   null,
+   5.268788012603212
+  ],
+  "luma": [
+   0.24747399722828584,
+   0.6375352448108149
+  ],
+  "clip_high": [
+   null,
+   0.21356225296442688
+  ],
+  "clip_low": [
+   null,
+   0.056314878892733566
+  ],
+  "blockiness": [
+   null,
+   3.0477989793293205
+  ],
+  "min_side": [
+   169.0,
+   null
+  ]
+ },
+ "policy_score": "photometric",
+ "coverage_target": 0.8,
+ "uncertainty_threshold": 3.043230517090573
+}

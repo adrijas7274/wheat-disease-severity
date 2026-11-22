@@ -1,0 +1,58 @@
+name,verdict,rater,saved_at
+wheat_stripe_rust_Baidu_0273.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Baidu_0044.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Baidu_0007.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Baidu_0243.jpg,wrong,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Baidu_0206.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_Google_0049.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Bing_0020.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_blotch (35).jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Google_0358.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Google_0339.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0283.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Bing_0214.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_blotch (29).jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Google_0317.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Google_0263.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0004.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Bing_0080.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Bing_0023.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Baidu_0286.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Google_0101.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_Google_0016.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Baidu_0259.jpg,wrong,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0235.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Google_0040.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_blotch (22).jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0009.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_Google_0309.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (25).jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Google_0115.jpg,wrong,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Baidu_0025.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Baidu_0012.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Google_0374.jpg,wrong,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0039.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_Google_0115.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (5).jpg,not_a_leaf,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Google_0058.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_Baidu_0098.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (2).jpg,not_a_leaf,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Baidu_0355.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Baidu_0001.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_blotch (64).jpg,wrong,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Baidu_0448.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_Google_0206.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0142.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Bing_0002.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Bing_0111.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Google_0103.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Google_0328.jpg,wrong,claude (AI),2026-11-14T03:56:33+00:00
+wheat_leaf_rust_Bing_0042.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Baidu_0143.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_stripe_rust_Baidu_0011.jpg,not_a_leaf,claude (AI),2026-11-14T03:56:33+00:00
+wheat_septoria_blotch_Google_0058.jpg,correct,claude (AI),2026-11-14T03:56:33+00:00
+wheat_powdery_mildew_Bing_0023.jpg,wrong,claude (AI),2026-11-14T04:03:35+00:00
+wheat_septoria_blotch_blotch (22).jpg,wrong,claude (AI),2026-11-14T04:03:35+00:00
+wheat_leaf_rust_Google_0058.jpg,wrong,claude (AI),2026-11-14T04:03:35+00:00
+wheat_leaf_rust_Bing_0042.jpg,wrong,claude (AI),2026-11-14T04:03:35+00:00

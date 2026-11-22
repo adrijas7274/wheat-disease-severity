@@ -1,0 +1,45 @@
+# Phase 7: external wheat field sets (Adrija, 2026-11-17). PlantDoc has no wheat (see experiments/LOG.md),
+# so the held-out field sets are the Mendeley Wheat Leaf Dataset and NWRD. Neither is ever trained or tuned on.
+# Written before any Phase 7 result. Gold is not used.
+name: phase7_mendeley_final
+# FINAL PIPELINE re-run on Mendeley (Adrija, 2026-11-18): Phase 5 v2 colour stage (no preprocessing) and the Phase 6
+# v2 policy re-fitted on it. NOT INDEPENDENT: the necrotic problem that led to Phase 5 v2 was found on this set.
+table_name: phase7_mendeley_final.md
+fig_dir: report/figures/phase7_final
+title_suffix: " (final pipeline, NOT INDEPENDENT)"
+note: "NOT AN INDEPENDENT TEST: the problem that led to Phase 5 v2 was found on this dataset. The independent external test is JIC (report/tables/phase7_jic.md)."
+
+
+# Final pipeline = Phase 2 SegFormer-B0 region, automatic click (Phase 4 rule: deepest point of the largest
+# predicted infected component on the photo, image centre if none), SAM 2 leaf, Phase 5 colour stage,
+# Phase 6 v2 gate and policy (post hoc; gate ranges, policy thresholds and the classifier's C are read from
+# the v2 run, the classifier is refitted deterministically on the same validation records).
+model: {architecture: segformer, checkpoint: experiments/20261114_100055_segformer/best_model.pt}
+phase6_v2_run: experiments/20261118_182200_phase6_v2
+phase6_v2_experiment: configs/experiments/phase6_v2_on_phase5_v2.yaml
+
+mendeley:
+  dir: data/raw/mendeley_wheat_leaf/extracted
+  # class of a photo = first matching keyword (lower case) in its folder path, checked in this order
+  classes:
+    - {keyword: healthy, label: healthy}
+    - {keyword: septoria, label: wheat septoria blotch}
+    - {keyword: rust, label: wheat stripe rust}
+    - {keyword: strip, label: wheat stripe rust}
+  # Healthy leaves have no disease to choose the colour rule, so every group's rule is run on them and
+  # reported separately (the app would run the rule of whatever disease the farmer or a classifier names).
+  healthy_groups: [rust, necrotic, mildew]
+  # Added 2026-11-18 (Adrija), before any full-run result was looked at: every photo is downscaled (area
+  # interpolation) so its long side is at most this many px before the pipeline. Reason: repeated out-of-memory
+  # stops and runtime at 6000 x 4000; the app will downscale photos anyway. Decided for memory and speed, not results.
+  max_long_side: 2048
+  n_overlays_per_class: 4
+
+# NWRD: attempted 2026-11-17, NOT USED (Adrija, 2026-11-18): the download site was unreachable and no data
+# licence is stated. The code path is kept but not run.
+nwrd:
+  dir: data/raw/nwrd    # expects <dir>/**/images/*.jpg and matching <dir>/**/masks/*.png (NWRD layout)
+  # Region check only: infected-region IoU of SegFormer-B0 against the NWRD rust masks (mask > 0 = rust),
+  # computed in the model's 512 px padded space as in Phase 2.
+
+n_bootstrap: 1000

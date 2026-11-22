@@ -1,0 +1,37 @@
+# Phase 6 v2: POST HOC round (Adrija, 2026-11-17), written after the v1 test results were seen.
+# v1 (configs/experiments/phase6_abstention.yaml, tag phase6-v1) stays the pre-registered result and is
+# reported unchanged. This file and the code it runs are committed and tagged phase6-v2-prereg BEFORE the
+# single v2 test evaluation. Everything is fitted on the VALIDATION split; test is evaluated once.
+# Gold is not used.
+name: phase6_v2
+
+# The v1 run whose per-image records (severity, gate features, uncertainty scores) are reused unchanged.
+# v2 only adds the blockiness feature (recomputed from the deterministic corrupted images).
+v1_run: experiments/20261116_120119_phase6_abstention
+v1_experiment: configs/experiments/phase6_abstention.yaml   # model, colour stage, unreliable_shift, coverages
+
+# Change 1. Gate: ONE overall false-retake target on the clean validation photos. The same tail percentile is
+# used on every check side (budget split evenly); the largest tail (0.05-point steps) whose share of clean
+# validation photos failing ANY check is <= the target is used.
+gate_false_retake_target: 0.05
+# Change 1b. The fixed 224 px minimum side is replaced by a fitted lower bound inside the same budget
+# (clean sizes: 4 of 78 val and 6 of 121 test photos are below 224 px, so v1 rejected about 5% of clean photos
+# on size alone).
+# Change 2. JPEG blockiness check (high side), see quality_gate.blockiness.
+checks: {sharpness: low, noise: high, luma: both, clip_high: high, clip_low: high, blockiness: high, min_side: low}
+
+# Change 3. Coverage targets are measured AMONG GATE-PASSED photos: the uncertainty threshold is the
+# coverage quantile of the policy score on gate-passed corrupted validation photos (out-of-fold scores for
+# the classifiers), so "consult an expert" can fire.
+coverages: [0.8, 0.9]
+
+# Change 4. The tiny classifiers' regularisation C is chosen by grouped (by image) K-fold cross-validation
+# inside validation (lowest out-of-fold log loss); the policy score is chosen by the lowest out-of-fold shift
+# AURC on gate-passed corrupted validation photos. Final classifiers are refitted on all of validation.
+cv_folds: 5
+c_grid: [0.01, 0.1, 1.0, 10.0]
+
+# Change 5 (reporting only). Flip rates at single thresholds; 0 = the none/low boundary (estimate > 0).
+flip_boundaries: [0, 3, 5, 10, 20]
+
+n_bootstrap: 1000

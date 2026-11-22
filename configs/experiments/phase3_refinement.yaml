@@ -1,0 +1,22 @@
+# Phase 3 step 3: tuning of the C1 lesion refinement on the tuning images.
+# The grids, tune_on and resolution_limit were written and committed on 2026-11-14, BEFORE any
+# refinement result on any image was looked at (docs/phase3_plan.md section 4).
+name: phase3_refinement
+
+# Model for method B. Set after the leakage-fix re-scoring from report/tables/baselines.md
+# (the retrained model with the higher test IoU: SegFormer-B0, 0.658 against 0.586); it does not depend on any tuning result.
+model: segformer
+checkpoint: experiments/20261114_100055_segformer/best_model.pt
+
+# One threshold per disease group, about 5 values each.
+c1_grid:
+  rust: [0, 5, 10, 15, 20]        # keep pixels with Lab a* >= value (orange to orange-brown pustules)
+  necrotic: [-5, 0, 5, 10, 15]    # keep pixels with Lab a* >= value (brown dead tissue; browns are less red than pustules)
+  mildew: [8, 12, 16, 20, 25]     # keep pixels with Lab chroma <= value and L* >= 35 (white or grey)
+
+# Thresholds are chosen on input B (model prediction), because C on B is what the app runs.
+# The same thresholds are then applied to A. Ties go to the value listed first.
+tune_on: B
+
+# Fallback rule (Adrija): C1 is used only if it beats C0 on tuning MAE (input above) by more than this.
+resolution_limit: 3.64

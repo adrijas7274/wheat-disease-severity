@@ -1,0 +1,82 @@
+position,name,plant,disease,split
+0,wheat_stripe_rust_Bing_0054.jpg,Wheat,wheat stripe rust,Validation
+1,wheat_stripe_rust_Baidu_0204.jpg,Wheat,wheat stripe rust,Validation
+2,wheat_stripe_rust_Baidu_0168.jpg,Wheat,wheat stripe rust,Validation
+3,wheat_stripe_rust_Bing_0094.jpg,Wheat,wheat stripe rust,Validation
+4,wheat_stripe_rust_Baidu_0192.jpg,Wheat,wheat stripe rust,Validation
+5,wheat_stripe_rust_Baidu_0396.jpg,Wheat,wheat stripe rust,Validation
+6,wheat_stripe_rust_Baidu_0430.jpg,Wheat,wheat stripe rust,Validation
+7,wheat_stripe_rust_Baidu_0024.jpg,Wheat,wheat stripe rust,Validation
+8,wheat_stripe_rust_Bing_0195.jpg,Wheat,wheat stripe rust,Validation
+9,wheat_stripe_rust_Bing_0082.jpg,Wheat,wheat stripe rust,Validation
+10,wheat_stripe_rust_Baidu_0005.jpg,Wheat,wheat stripe rust,Validation
+11,wheat_stripe_rust_Bing_0026.jpg,Wheat,wheat stripe rust,Validation
+12,wheat_stripe_rust_Bing_0071.jpg,Wheat,wheat stripe rust,Validation
+13,wheat_stripe_rust_Baidu_0438.jpg,Wheat,wheat stripe rust,Validation
+14,wheat_stripe_rust_Google_0019.jpg,Wheat,wheat stripe rust,Validation
+15,wheat_stripe_rust_Bing_0247.jpg,Wheat,wheat stripe rust,Validation
+16,wheat_stripe_rust_Bing_0064.jpg,Wheat,wheat stripe rust,Validation
+17,wheat_stripe_rust_Bing_0037.jpg,Wheat,wheat stripe rust,Validation
+18,wheat_stripe_rust_Bing_0300.jpg,Wheat,wheat stripe rust,Validation
+19,wheat_stripe_rust_Baidu_0341.jpg,Wheat,wheat stripe rust,Validation
+20,wheat_stripe_rust_Bing_0008.jpg,Wheat,wheat stripe rust,Validation
+21,wheat_stripe_rust_Baidu_0299.jpg,Wheat,wheat stripe rust,Validation
+22,wheat_stripe_rust_Bing_0290.jpg,Wheat,wheat stripe rust,Validation
+23,wheat_stripe_rust_Bing_0063.jpg,Wheat,wheat stripe rust,Validation
+24,wheat_stripe_rust_Baidu_0240.jpg,Wheat,wheat stripe rust,Validation
+25,wheat_leaf_rust_Bing_0046.jpg,Wheat,wheat leaf rust,Validation
+26,wheat_leaf_rust_Baidu_0122.jpg,Wheat,wheat leaf rust,Validation
+27,wheat_leaf_rust_Google_0251.jpg,Wheat,wheat leaf rust,Validation
+28,wheat_leaf_rust_Google_0000.jpg,Wheat,wheat leaf rust,Validation
+29,wheat_leaf_rust_Baidu_0007.jpg,Wheat,wheat leaf rust,Validation
+30,wheat_leaf_rust_Bing_0025.jpg,Wheat,wheat leaf rust,Validation
+31,wheat_powdery_mildew_Google_0073.jpg,Wheat,wheat powdery mildew,Validation
+32,wheat_powdery_mildew_Bing_0173.jpg,Wheat,wheat powdery mildew,Validation
+33,wheat_powdery_mildew_Bing_0096.jpg,Wheat,wheat powdery mildew,Validation
+34,wheat_powdery_mildew_Baidu_0043.jpg,Wheat,wheat powdery mildew,Validation
+35,wheat_powdery_mildew_Bing_0258.jpg,Wheat,wheat powdery mildew,Validation
+36,wheat_powdery_mildew_Baidu_0031.jpg,Wheat,wheat powdery mildew,Validation
+37,wheat_powdery_mildew_Bing_0108.jpg,Wheat,wheat powdery mildew,Validation
+38,wheat_powdery_mildew_Google_0090.jpg,Wheat,wheat powdery mildew,Validation
+39,wheat_powdery_mildew_Baidu_0022.jpg,Wheat,wheat powdery mildew,Validation
+40,wheat_powdery_mildew_Bing_0172.jpg,Wheat,wheat powdery mildew,Validation
+41,wheat_powdery_mildew_Baidu_0316.jpg,Wheat,wheat powdery mildew,Validation
+42,wheat_powdery_mildew_Baidu_0000.jpg,Wheat,wheat powdery mildew,Validation
+43,wheat_powdery_mildew_Baidu_0066.jpg,Wheat,wheat powdery mildew,Validation
+44,wheat_powdery_mildew_Baidu_0042.jpg,Wheat,wheat powdery mildew,Validation
+45,wheat_powdery_mildew_Baidu_0296.jpg,Wheat,wheat powdery mildew,Validation
+46,wheat_powdery_mildew_Google_0137.jpg,Wheat,wheat powdery mildew,Validation
+47,wheat_powdery_mildew_Bing_0193.jpg,Wheat,wheat powdery mildew,Validation
+48,wheat_powdery_mildew_Baidu_0309.jpg,Wheat,wheat powdery mildew,Validation
+49,wheat_powdery_mildew_Bing_0004.jpg,Wheat,wheat powdery mildew,Validation
+50,wheat_powdery_mildew_Google_0298.jpg,Wheat,wheat powdery mildew,Validation
+51,wheat_powdery_mildew_Baidu_0179.jpg,Wheat,wheat powdery mildew,Validation
+52,wheat_septoria_blotch_blotch (59).jpg,Wheat,wheat septoria blotch,Validation
+53,wheat_septoria_blotch_blotch (55).jpg,Wheat,wheat septoria blotch,Validation
+54,wheat_septoria_blotch_blotch (125).jpg,Wheat,wheat septoria blotch,Validation
+55,wheat_septoria_blotch_Google_0212.jpg,Wheat,wheat septoria blotch,Validation
+56,wheat_septoria_blotch_blotch (105).jpg,Wheat,wheat septoria blotch,Validation
+57,wheat_septoria_blotch_blotch (132).jpg,Wheat,wheat septoria blotch,Validation
+58,wheat_septoria_blotch_google_septoria (25).jpg,Wheat,wheat septoria blotch,Validation
+59,wheat_septoria_blotch_Baidu_0124.jpg,Wheat,wheat septoria blotch,Validation
+60,wheat_septoria_blotch_blotch (104).jpg,Wheat,wheat septoria blotch,Validation
+61,wheat_septoria_blotch_blotch (123).jpg,Wheat,wheat septoria blotch,Validation
+62,wheat_septoria_blotch_blotch (91).jpg,Wheat,wheat septoria blotch,Validation
+63,wheat_septoria_blotch_Google_0287.jpg,Wheat,wheat septoria blotch,Validation
+64,wheat_septoria_blotch_google_septoria (5).jpg,Wheat,wheat septoria blotch,Validation
+65,wheat_septoria_blotch_blotch (16).jpg,Wheat,wheat septoria blotch,Validation
+66,wheat_septoria_blotch_Google_0165.jpg,Wheat,wheat septoria blotch,Validation
+67,wheat_septoria_blotch_Google_0002.jpg,Wheat,wheat septoria blotch,Validation
+68,wheat_septoria_blotch_blotch (20).jpg,Wheat,wheat septoria blotch,Validation
+69,wheat_septoria_blotch_blotch (18).jpg,Wheat,wheat septoria blotch,Validation
+70,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (6).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+71,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (10).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+72,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0002.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+73,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0016.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+74,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0214.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+75,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (27).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+76,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0024.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+77,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0210.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+78,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (12).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+79,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (14).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation
+80,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0015.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation

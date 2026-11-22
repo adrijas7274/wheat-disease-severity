@@ -1,0 +1,743 @@
+name,plant,disease,split,original_tag,tag,tag_source,tagged_at,review_reason,disputed
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0002.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T05:41:49.971389+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0013.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T05:41:52.753576+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0031.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T05:41:58.034666+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0039.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T05:41:59.818991+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0040.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T05:42:02.068881+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0059.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T05:42:06.289833+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0169.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T05:42:08.134639+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0202.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T05:42:11.381664+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0206.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T05:42:15.966327+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0210.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T05:42:21.516126+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0214.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T08:59:41.755637+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0215.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:42.258295+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0217.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T08:59:42.938049+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0218.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:43.606190+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0226.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:44.356595+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0235.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T08:59:45.033753+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0245.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:45.580618+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0256.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:46.474545+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0266.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:47.321463+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0271.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:48.045224+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0275.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T08:59:48.621786+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0277.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:49.271631+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0281.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:49.552859+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0001.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:50.139299+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0002.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T08:59:50.672748+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0003.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:51.504618+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0004.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T08:59:52.094175+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0006.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:52.702065+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0008.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:53.556265+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0009.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T08:59:54.328849+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0010.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:55.100130+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0011.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:56.121609+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0014.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:57.254708+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0015.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T08:59:57.720725+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0016.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T08:59:58.538869+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0018.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T08:59:59.378562+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0019.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:00.270258+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0020.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:00.621102+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0024.jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T09:00:00.932170+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0027.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:01.654799+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0028.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:02.379897+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0030.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:03.070533+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0031.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:03.953065+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0037.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:04.620904+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0052.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:05.494086+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0086.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:06.403465+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0099.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:06.838386+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:07.273067+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0142.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:07.637092+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0283.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:08.352067+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0314.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:09.118612+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0318.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:09.620030+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0363.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:09.936207+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0378.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:10.737138+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (1).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:11.420018+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (10).jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:12.145010+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (11).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:12.652899+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (12).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T09:00:13.474032+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (13).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:14.140909+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (15).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:14.858144+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (17).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:16.242493+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (2).jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:17.034459+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (21).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:17.927104+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (25).jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:18.588009+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (26).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:20.889093+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (27).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T09:00:21.401241+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (3).jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:22.068350+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (4).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:22.755314+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (5).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:23.518255+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (6).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:24.178332+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (10).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T09:00:24.467303+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (11).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:25.217748+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (12).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:25.908502+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (13).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:26.563672+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (14).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T09:00:27.351101+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (15).jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:28.102169+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (17).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:28.797045+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (18).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:29.549933+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (2).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:30.247001+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (3).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:30.596772+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (5).jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,close_up,human,2026-10-03T09:00:31.876884+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (6).jpg,Wheat,wheat bacterial leaf streak (black chaff),Validation,close_up,close_up,human,2026-10-03T09:00:32.583631+00:00,,false
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (7).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training,close_up,close_up,human,2026-10-03T09:00:33.366855+00:00,,false
+wheat_leaf_rust_Baidu_0000.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:23:40.288285+00:00,,true
+wheat_leaf_rust_Baidu_0004.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:23:45.186208+00:00,,false
+wheat_leaf_rust_Baidu_0007.jpg,Wheat,wheat leaf rust,Validation,close_up,close_up,human,2026-10-03T05:23:47.782894+00:00,,false
+wheat_leaf_rust_Baidu_0009.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:23:50.016441+00:00,,false
+wheat_leaf_rust_Baidu_0017.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:23:51.216274+00:00,,false
+wheat_leaf_rust_Baidu_0025.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T05:23:52.298138+00:00,,false
+wheat_leaf_rust_Baidu_0027.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:23:53.465325+00:00,,false
+wheat_leaf_rust_Baidu_0030.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:27:21.168134+00:00,,false
+wheat_leaf_rust_Baidu_0032.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:27:30.955335+00:00,,true
+wheat_leaf_rust_Baidu_0072.jpg,Wheat,wheat leaf rust,Test,wide,wide,human,2026-10-03T05:27:35.174658+00:00,,true
+wheat_leaf_rust_Baidu_0080.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:27:46.678979+00:00,,true
+wheat_leaf_rust_Baidu_0081.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:27:54.811011+00:00,,true
+wheat_leaf_rust_Baidu_0112.jpg,Wheat,wheat leaf rust,Training,non_photo,non_photo,human,2026-10-03T05:27:59.511853+00:00,,true
+wheat_leaf_rust_Baidu_0122.jpg,Wheat,wheat leaf rust,Validation,close_up,close_up,human,2026-10-03T05:32:29.712076+00:00,,false
+wheat_leaf_rust_Baidu_0207.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:32:38.519599+00:00,,false
+wheat_leaf_rust_Baidu_0216.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:32:44.854114+00:00,,false
+wheat_leaf_rust_Baidu_0233.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:32:48.735477+00:00,,false
+wheat_leaf_rust_Baidu_0263.jpg,Wheat,wheat leaf rust,Test,wide,wide,human,2026-10-03T05:32:52.164922+00:00,,true
+wheat_leaf_rust_Baidu_0317.jpg,Wheat,wheat leaf rust,Test,non_photo,non_photo,human,2026-10-03T05:32:56.158060+00:00,,true
+wheat_leaf_rust_Baidu_0320.jpg,Wheat,wheat leaf rust,Training,non_photo,non_photo,human,2026-10-03T05:33:06.849463+00:00,,true
+wheat_leaf_rust_Baidu_0345.jpg,Wheat,wheat leaf rust,Validation,wide,wide,human,2026-10-03T05:33:11.016232+00:00,,true
+wheat_leaf_rust_Baidu_0360.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:33:18.659511+00:00,,false
+wheat_leaf_rust_Baidu_0499.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:33:34.612752+00:00,,true
+wheat_leaf_rust_Bing_0001.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:38:25.502657+00:00,,false
+wheat_leaf_rust_Bing_0006.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:38:31.218643+00:00,,true
+wheat_leaf_rust_Bing_0007.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:38:42.783042+00:00,,false
+wheat_leaf_rust_Bing_0009.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:38:48.199722+00:00,,true
+wheat_leaf_rust_Bing_0011.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:38:58.012932+00:00,,false
+wheat_leaf_rust_Bing_0014.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:39:02.980307+00:00,,true
+wheat_leaf_rust_Bing_0015.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:39:08.862276+00:00,,false
+wheat_leaf_rust_Bing_0016.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:39:12.945471+00:00,,true
+wheat_leaf_rust_Bing_0020.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T05:39:15.360515+00:00,,false
+wheat_leaf_rust_Bing_0024.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:39:17.754896+00:00,,true
+wheat_leaf_rust_Bing_0025.jpg,Wheat,wheat leaf rust,Validation,close_up,close_up,human,2026-10-03T05:39:20.427773+00:00,,false
+wheat_leaf_rust_Bing_0027.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:39:22.958829+00:00,,true
+wheat_leaf_rust_Bing_0028.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:39:26.292455+00:00,,false
+wheat_leaf_rust_Bing_0030.jpg,Wheat,wheat leaf rust,Training,wide,wide,human,2026-10-03T05:39:31.782641+00:00,,true
+wheat_leaf_rust_Bing_0032.jpg,Wheat,wheat leaf rust,Test,non_photo,non_photo,human,2026-10-03T05:39:38.023718+00:00,,true
+wheat_leaf_rust_Bing_0034.jpg,Wheat,wheat leaf rust,Test,non_photo,non_photo,human,2026-10-03T05:39:41.006246+00:00,,true
+wheat_leaf_rust_Bing_0042.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T05:43:20.105364+00:00,,false
+wheat_leaf_rust_Bing_0044.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:44:50.869824+00:00,,false
+wheat_leaf_rust_Bing_0045.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:44:56.881958+00:00,,false
+wheat_leaf_rust_Bing_0046.jpg,Wheat,wheat leaf rust,Validation,close_up,close_up,human,2026-10-03T05:45:02.264201+00:00,,false
+wheat_leaf_rust_Bing_0051.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:04.941789+00:00,,false
+wheat_leaf_rust_Bing_0056.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:08.118248+00:00,,false
+wheat_leaf_rust_Bing_0058.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:10.419149+00:00,,false
+wheat_leaf_rust_Bing_0059.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:12.913546+00:00,,false
+wheat_leaf_rust_Bing_0061.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:18.175919+00:00,,false
+wheat_leaf_rust_Google_0000.jpg,Wheat,wheat leaf rust,Validation,close_up,close_up,human,2026-10-03T05:45:22.799626+00:00,,false
+wheat_leaf_rust_Google_0003.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:26.898230+00:00,,false
+wheat_leaf_rust_Google_0009.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:28.328880+00:00,,false
+wheat_leaf_rust_Google_0038.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:33.004614+00:00,,false
+wheat_leaf_rust_Google_0040.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T05:45:36.281349+00:00,,false
+wheat_leaf_rust_Google_0044.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:37.863634+00:00,,false
+wheat_leaf_rust_Google_0058.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T05:45:39.329428+00:00,,false
+wheat_leaf_rust_Google_0066.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:41.612696+00:00,,false
+wheat_leaf_rust_Google_0098.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:44.425411+00:00,,false
+wheat_leaf_rust_Google_0103.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T05:45:46.129684+00:00,,false
+wheat_leaf_rust_Google_0186.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:47.679159+00:00,,false
+wheat_leaf_rust_Google_0227.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:49.001994+00:00,,false
+wheat_leaf_rust_Google_0235.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:50.941679+00:00,,false
+wheat_leaf_rust_Google_0244.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:52.427405+00:00,,false
+wheat_leaf_rust_Google_0251.jpg,Wheat,wheat leaf rust,Validation,close_up,close_up,human,2026-10-03T05:45:54.011120+00:00,,false
+wheat_leaf_rust_Google_0263.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T05:45:55.667611+00:00,,false
+wheat_leaf_rust_Google_0266.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T06:05:34.922348+00:00,,false
+wheat_leaf_rust_Google_0288.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T06:05:37.018193+00:00,,false
+wheat_leaf_rust_Google_0328.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T06:05:38.508111+00:00,,false
+wheat_leaf_rust_Google_0339.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T06:05:40.530501+00:00,,false
+wheat_leaf_rust_Google_0355.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T06:05:44.047946+00:00,,false
+wheat_leaf_rust_Google_0358.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T06:05:47.008797+00:00,,false
+wheat_leaf_rust_Google_0366.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T06:05:52.355639+00:00,,false
+wheat_leaf_rust_Google_0367.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T06:05:52.709732+00:00,,false
+wheat_leaf_rust_Google_0374.jpg,Wheat,wheat leaf rust,Test,close_up,close_up,human,2026-10-03T06:05:56.074118+00:00,,false
+wheat_leaf_rust_Google_0382.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T06:05:59.338086+00:00,,false
+wheat_leaf_rust_Google_0387.jpg,Wheat,wheat leaf rust,Training,close_up,close_up,human,2026-10-03T08:49:04.638036+00:00,,false
+wheat_powdery_mildew_Baidu_0000.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T05:40:11.517704+00:00,,false
+wheat_powdery_mildew_Baidu_0001.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T05:40:15.935591+00:00,,false
+wheat_powdery_mildew_Baidu_0002.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T05:40:18.770159+00:00,,false
+wheat_powdery_mildew_Baidu_0003.jpg,Wheat,wheat powdery mildew,Training,wide,wide,human,2026-10-03T05:40:31.333906+00:00,,true
+wheat_powdery_mildew_Baidu_0004.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T05:40:36.848182+00:00,,false
+wheat_powdery_mildew_Baidu_0005.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T05:40:42.099387+00:00,,false
+wheat_powdery_mildew_Baidu_0006.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T05:40:51.697814+00:00,,false
+wheat_powdery_mildew_Baidu_0007.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T05:40:54.818809+00:00,,false
+wheat_powdery_mildew_Baidu_0008.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T05:41:02.978270+00:00,,false
+wheat_powdery_mildew_Baidu_0010.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T05:41:06.205456+00:00,,false
+wheat_powdery_mildew_Baidu_0012.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T05:41:10.984059+00:00,,false
+wheat_powdery_mildew_Baidu_0016.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T05:41:20.829055+00:00,,false
+wheat_powdery_mildew_Baidu_0017.jpg,Wheat,wheat powdery mildew,Validation,wide,wide,human,2026-10-03T05:41:25.666390+00:00,,false
+wheat_powdery_mildew_Baidu_0018.jpg,Wheat,wheat powdery mildew,Training,wide,wide,human,2026-10-03T05:41:29.978648+00:00,,true
+wheat_powdery_mildew_Baidu_0019.jpg,Wheat,wheat powdery mildew,Test,wide,wide,human,2026-10-03T05:41:32.441009+00:00,,true
+wheat_powdery_mildew_Baidu_0020.jpg,Wheat,wheat powdery mildew,Training,non_photo,non_photo,human,2026-10-03T05:41:37.585965+00:00,,true
+wheat_powdery_mildew_Baidu_0022.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T06:10:39.328303+00:00,,false
+wheat_powdery_mildew_Baidu_0024.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:56:54.950300+00:00,,false
+wheat_powdery_mildew_Baidu_0026.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:56:56.125784+00:00,,false
+wheat_powdery_mildew_Baidu_0027.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:56:56.997461+00:00,,false
+wheat_powdery_mildew_Baidu_0030.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:56:57.615048+00:00,,false
+wheat_powdery_mildew_Baidu_0031.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:56:58.415008+00:00,,false
+wheat_powdery_mildew_Baidu_0033.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:56:58.930227+00:00,,false
+wheat_powdery_mildew_Baidu_0034.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:56:59.447853+00:00,,false
+wheat_powdery_mildew_Baidu_0035.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:00.232074+00:00,,false
+wheat_powdery_mildew_Baidu_0039.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:01.097553+00:00,,false
+wheat_powdery_mildew_Baidu_0040.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:01.913939+00:00,,false
+wheat_powdery_mildew_Baidu_0042.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:57:02.748075+00:00,,false
+wheat_powdery_mildew_Baidu_0043.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:57:03.715799+00:00,,false
+wheat_powdery_mildew_Baidu_0044.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:04.231511+00:00,,false
+wheat_powdery_mildew_Baidu_0046.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:05.137102+00:00,,false
+wheat_powdery_mildew_Baidu_0049.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:05.762715+00:00,,false
+wheat_powdery_mildew_Baidu_0050.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:06.246962+00:00,,false
+wheat_powdery_mildew_Baidu_0052.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:07.086520+00:00,,true
+wheat_powdery_mildew_Baidu_0053.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:07.597549+00:00,,false
+wheat_powdery_mildew_Baidu_0058.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:07.897266+00:00,,false
+wheat_powdery_mildew_Baidu_0059.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:08.728865+00:00,,false
+wheat_powdery_mildew_Baidu_0066.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:57:09.246373+00:00,,false
+wheat_powdery_mildew_Baidu_0067.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:09.762365+00:00,,false
+wheat_powdery_mildew_Baidu_0070.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:10.813801+00:00,,false
+wheat_powdery_mildew_Baidu_0076.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:11.396113+00:00,,false
+wheat_powdery_mildew_Baidu_0082.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:12.145734+00:00,,false
+wheat_powdery_mildew_Baidu_0083.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:12.978131+00:00,,false
+wheat_powdery_mildew_Baidu_0085.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:13.868008+00:00,,false
+wheat_powdery_mildew_Baidu_0089.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:14.346120+00:00,,false
+wheat_powdery_mildew_Baidu_0092.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:15.220857+00:00,,false
+wheat_powdery_mildew_Baidu_0094.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:16.029706+00:00,,false
+wheat_powdery_mildew_Baidu_0102.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:16.446297+00:00,,false
+wheat_powdery_mildew_Baidu_0108.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:17.448242+00:00,,false
+wheat_powdery_mildew_Baidu_0118.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:18.484954+00:00,,false
+wheat_powdery_mildew_Baidu_0126.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:19.345181+00:00,,false
+wheat_powdery_mildew_Baidu_0128.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:20.091588+00:00,,false
+wheat_powdery_mildew_Baidu_0169.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:20.945797+00:00,,false
+wheat_powdery_mildew_Baidu_0175.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:21.660195+00:00,,false
+wheat_powdery_mildew_Baidu_0178.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:22.435843+00:00,,false
+wheat_powdery_mildew_Baidu_0179.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:57:23.180713+00:00,,false
+wheat_powdery_mildew_Baidu_0180.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:23.793228+00:00,,false
+wheat_powdery_mildew_Baidu_0181.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:24.411314+00:00,,false
+wheat_powdery_mildew_Baidu_0184.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:24.995036+00:00,,false
+wheat_powdery_mildew_Baidu_0185.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:25.582683+00:00,,false
+wheat_powdery_mildew_Baidu_0186.jpg,Wheat,wheat powdery mildew,Training,wide,wide,human,2026-10-03T08:57:27.427055+00:00,,true
+wheat_powdery_mildew_Baidu_0187.jpg,Wheat,wheat powdery mildew,Training,non_photo,non_photo,human,2026-10-03T08:57:30.627525+00:00,,true
+wheat_powdery_mildew_Baidu_0188.jpg,Wheat,wheat powdery mildew,Validation,non_photo,non_photo,human,2026-10-03T08:57:32.512076+00:00,,true
+wheat_powdery_mildew_Baidu_0189.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:57:36.573727+00:00,,false
+wheat_powdery_mildew_Baidu_0190.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:39.759304+00:00,,false
+wheat_powdery_mildew_Baidu_0191.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:40.594959+00:00,,false
+wheat_powdery_mildew_Baidu_0192.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:41.509281+00:00,,false
+wheat_powdery_mildew_Baidu_0194.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:42.214916+00:00,,false
+wheat_powdery_mildew_Baidu_0195.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:43.342453+00:00,,false
+wheat_powdery_mildew_Baidu_0198.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:44.841820+00:00,,false
+wheat_powdery_mildew_Baidu_0199.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:46.026162+00:00,,false
+wheat_powdery_mildew_Baidu_0204.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:46.907407+00:00,,false
+wheat_powdery_mildew_Baidu_0205.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:47.491445+00:00,,false
+wheat_powdery_mildew_Baidu_0206.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:48.392546+00:00,,false
+wheat_powdery_mildew_Baidu_0208.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:48.957659+00:00,,false
+wheat_powdery_mildew_Baidu_0213.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:49.797970+00:00,,false
+wheat_powdery_mildew_Baidu_0214.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:50.870395+00:00,,false
+wheat_powdery_mildew_Baidu_0215.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:51.539706+00:00,,false
+wheat_powdery_mildew_Baidu_0216.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:52.089820+00:00,,false
+wheat_powdery_mildew_Baidu_0217.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:53.236972+00:00,,false
+wheat_powdery_mildew_Baidu_0223.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:54.339631+00:00,,false
+wheat_powdery_mildew_Baidu_0233.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:55.474962+00:00,,false
+wheat_powdery_mildew_Baidu_0238.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:56.286356+00:00,,false
+wheat_powdery_mildew_Baidu_0243.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:57.286144+00:00,,false
+wheat_powdery_mildew_Baidu_0252.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:57:58.253818+00:00,,false
+wheat_powdery_mildew_Baidu_0264.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:58.788482+00:00,,false
+wheat_powdery_mildew_Baidu_0269.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:57:59.805484+00:00,,false
+wheat_powdery_mildew_Baidu_0272.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:00.787764+00:00,,false
+wheat_powdery_mildew_Baidu_0280.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:01.294269+00:00,,false
+wheat_powdery_mildew_Baidu_0282.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:01.740550+00:00,,false
+wheat_powdery_mildew_Baidu_0284.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:02.622845+00:00,,false
+wheat_powdery_mildew_Baidu_0286.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:03.735258+00:00,,false
+wheat_powdery_mildew_Baidu_0294.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:04.755360+00:00,,false
+wheat_powdery_mildew_Baidu_0295.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:05.255768+00:00,,false
+wheat_powdery_mildew_Baidu_0296.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:06.155574+00:00,,false
+wheat_powdery_mildew_Baidu_0309.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:06.638405+00:00,,false
+wheat_powdery_mildew_Baidu_0316.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:07.471977+00:00,,false
+wheat_powdery_mildew_Bing_0003.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:08.394069+00:00,,false
+wheat_powdery_mildew_Bing_0004.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:09.303219+00:00,,false
+wheat_powdery_mildew_Bing_0006.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:09.821839+00:00,,false
+wheat_powdery_mildew_Bing_0010.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:10.355342+00:00,,false
+wheat_powdery_mildew_Bing_0011.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:11.269578+00:00,,false
+wheat_powdery_mildew_Bing_0013.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:11.752962+00:00,,false
+wheat_powdery_mildew_Bing_0014.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:12.604628+00:00,,false
+wheat_powdery_mildew_Bing_0016.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:13.525857+00:00,,false
+wheat_powdery_mildew_Bing_0018.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:14.461125+00:00,,false
+wheat_powdery_mildew_Bing_0020.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:15.326278+00:00,,false
+wheat_powdery_mildew_Bing_0021.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:16.186526+00:00,,false
+wheat_powdery_mildew_Bing_0022.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:17.102598+00:00,,false
+wheat_powdery_mildew_Bing_0023.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:17.936065+00:00,,false
+wheat_powdery_mildew_Bing_0028.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:18.311967+00:00,,false
+wheat_powdery_mildew_Bing_0033.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:19.132500+00:00,,false
+wheat_powdery_mildew_Bing_0034.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:19.512759+00:00,,false
+wheat_powdery_mildew_Bing_0035.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:20.239309+00:00,,false
+wheat_powdery_mildew_Bing_0047.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:20.949397+00:00,,false
+wheat_powdery_mildew_Bing_0048.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:21.778563+00:00,,false
+wheat_powdery_mildew_Bing_0053.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:22.568783+00:00,,false
+wheat_powdery_mildew_Bing_0054.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:24.494426+00:00,,false
+wheat_powdery_mildew_Bing_0059.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:25.670139+00:00,,false
+wheat_powdery_mildew_Bing_0066.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:26.335566+00:00,,false
+wheat_powdery_mildew_Bing_0072.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:26.700104+00:00,,false
+wheat_powdery_mildew_Bing_0074.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:27.084100+00:00,,false
+wheat_powdery_mildew_Bing_0078.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:27.870974+00:00,,false
+wheat_powdery_mildew_Bing_0083.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:28.688158+00:00,,false
+wheat_powdery_mildew_Bing_0084.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:29.451113+00:00,,false
+wheat_powdery_mildew_Bing_0090.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:30.251011+00:00,,false
+wheat_powdery_mildew_Bing_0095.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:30.651566+00:00,,false
+wheat_powdery_mildew_Bing_0096.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:31.451714+00:00,,false
+wheat_powdery_mildew_Bing_0098.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:32.140863+00:00,,false
+wheat_powdery_mildew_Bing_0102.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:32.933944+00:00,,false
+wheat_powdery_mildew_Bing_0106.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:34.102991+00:00,,false
+wheat_powdery_mildew_Bing_0108.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:35.018603+00:00,,false
+wheat_powdery_mildew_Bing_0109.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:35.989879+00:00,,false
+wheat_powdery_mildew_Bing_0111.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:36.719689+00:00,,false
+wheat_powdery_mildew_Bing_0112.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:37.084747+00:00,,false
+wheat_powdery_mildew_Bing_0115.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:37.933991+00:00,,false
+wheat_powdery_mildew_Bing_0119.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:38.457902+00:00,,false
+wheat_powdery_mildew_Bing_0127.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:38.869165+00:00,,false
+wheat_powdery_mildew_Bing_0136.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:39.615024+00:00,,false
+wheat_powdery_mildew_Bing_0163.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:40.639275+00:00,,false
+wheat_powdery_mildew_Bing_0170.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:41.196312+00:00,,false
+wheat_powdery_mildew_Bing_0172.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:41.733123+00:00,,false
+wheat_powdery_mildew_Bing_0173.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:42.339475+00:00,,false
+wheat_powdery_mildew_Bing_0174.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:43.586736+00:00,,false
+wheat_powdery_mildew_Bing_0193.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:46.731326+00:00,,false
+wheat_powdery_mildew_Bing_0214.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:47.264991+00:00,,false
+wheat_powdery_mildew_Bing_0258.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:47.929775+00:00,,false
+wheat_powdery_mildew_Bing_0270.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:48.448732+00:00,,false
+wheat_powdery_mildew_Bing_0271.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:49.050349+00:00,,false
+wheat_powdery_mildew_Google_0012.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:49.664265+00:00,,false
+wheat_powdery_mildew_Google_0014.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:50.198374+00:00,,false
+wheat_powdery_mildew_Google_0016.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:50.831865+00:00,,false
+wheat_powdery_mildew_Google_0042.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:51.415221+00:00,,false
+wheat_powdery_mildew_Google_0051.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:51.961453+00:00,,false
+wheat_powdery_mildew_Google_0056.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:52.580904+00:00,,false
+wheat_powdery_mildew_Google_0062.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:53.195715+00:00,,false
+wheat_powdery_mildew_Google_0073.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:53.796571+00:00,,false
+wheat_powdery_mildew_Google_0084.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:54.347721+00:00,,false
+wheat_powdery_mildew_Google_0090.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:58:54.935554+00:00,,false
+wheat_powdery_mildew_Google_0093.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:58:55.536717+00:00,,false
+wheat_powdery_mildew_Google_0101.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:56.110654+00:00,,false
+wheat_powdery_mildew_Google_0115.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:56.697100+00:00,,false
+wheat_powdery_mildew_Google_0122.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:58:59.129313+00:00,,false
+wheat_powdery_mildew_Google_0137.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:59:00.263826+00:00,,false
+wheat_powdery_mildew_Google_0143.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:01.263796+00:00,,false
+wheat_powdery_mildew_Google_0144.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:01.906282+00:00,,false
+wheat_powdery_mildew_Google_0163.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:02.529111+00:00,,false
+wheat_powdery_mildew_Google_0178.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:03.514357+00:00,,false
+wheat_powdery_mildew_Google_0197.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:04.263943+00:00,,false
+wheat_powdery_mildew_Google_0209.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:05.010676+00:00,,false
+wheat_powdery_mildew_Google_0263.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:59:05.862394+00:00,,false
+wheat_powdery_mildew_Google_0298.jpg,Wheat,wheat powdery mildew,Validation,close_up,close_up,human,2026-10-03T08:59:06.580756+00:00,,false
+wheat_powdery_mildew_Google_0307.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:07.348266+00:00,,false
+wheat_powdery_mildew_Google_0309.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:07.996281+00:00,,true
+wheat_powdery_mildew_Google_0317.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:59:08.726199+00:00,,false
+wheat_powdery_mildew_Google_0329.jpg,Wheat,wheat powdery mildew,Test,close_up,close_up,human,2026-10-03T08:59:09.427427+00:00,,false
+wheat_powdery_mildew_Google_0345.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:10.262339+00:00,,false
+wheat_powdery_mildew_Google_0390.jpg,Wheat,wheat powdery mildew,Training,close_up,close_up,human,2026-10-03T08:59:12.637826+00:00,,false
+wheat_septoria_blotch_Baidu_0002.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:46:07.642342+00:00,,false
+wheat_septoria_blotch_Baidu_0003.jpg,Wheat,wheat septoria blotch,Training,wide,wide,human,2026-10-03T05:46:10.142061+00:00,,true
+wheat_septoria_blotch_Baidu_0010.jpg,Wheat,wheat septoria blotch,Validation,non_photo,non_photo,human,2026-10-03T05:46:13.465425+00:00,,true
+wheat_septoria_blotch_Baidu_0030.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:46:16.573214+00:00,,false
+wheat_septoria_blotch_Baidu_0033.jpg,Wheat,wheat septoria blotch,Test,wide,wide,human,2026-10-03T05:46:21.855955+00:00,,true
+wheat_septoria_blotch_Baidu_0034.jpg,Wheat,wheat septoria blotch,Training,non_photo,non_photo,human,2026-10-03T05:46:26.255922+00:00,,true
+wheat_septoria_blotch_Baidu_0035.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:46:29.671372+00:00,,false
+wheat_septoria_blotch_Baidu_0049.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:46:32.687287+00:00,,false
+wheat_septoria_blotch_Baidu_0070.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:46:35.571046+00:00,,false
+wheat_septoria_blotch_Baidu_0075.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:46:37.337103+00:00,,false
+wheat_septoria_blotch_Baidu_0089.jpg,Wheat,wheat septoria blotch,Training,wide,wide,human,2026-10-03T05:46:39.723055+00:00,,true
+wheat_septoria_blotch_Baidu_0092.jpg,Wheat,wheat septoria blotch,Training,non_photo,non_photo,human,2026-10-03T05:46:42.318916+00:00,,true
+wheat_septoria_blotch_Baidu_0098.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T05:47:04.732738+00:00,,false
+wheat_septoria_blotch_Baidu_0123.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T05:47:08.513489+00:00,,false
+wheat_septoria_blotch_Baidu_0124.jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T05:47:12.062928+00:00,,false
+wheat_septoria_blotch_Baidu_0152.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:47:15.776638+00:00,,false
+wheat_septoria_blotch_Bing_0003.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:47:18.030116+00:00,,false
+wheat_septoria_blotch_Bing_0010.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:47:19.995786+00:00,,false
+wheat_septoria_blotch_Bing_0011.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:47:23.846788+00:00,,false
+wheat_septoria_blotch_Bing_0017.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:47:26.644991+00:00,,false
+wheat_septoria_blotch_Bing_0018.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T05:47:49.238761+00:00,,false
+wheat_septoria_blotch_Bing_0031.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:00:53.468650+00:00,,false
+wheat_septoria_blotch_Bing_0035.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:00:54.045236+00:00,,false
+wheat_septoria_blotch_Bing_0043.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:00:54.712886+00:00,,false
+wheat_septoria_blotch_Bing_0044.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:00:55.476466+00:00,,false
+wheat_septoria_blotch_Bing_0045.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:00:56.011672+00:00,,false
+wheat_septoria_blotch_Bing_0047.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:00:59.692914+00:00,,false
+wheat_septoria_blotch_Google_0002.jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:00.972078+00:00,,false
+wheat_septoria_blotch_Google_0005.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:01.878059+00:00,,false
+wheat_septoria_blotch_Google_0016.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:03.394019+00:00,,false
+wheat_septoria_blotch_Google_0021.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:04.478095+00:00,,false
+wheat_septoria_blotch_Google_0031.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:05.314123+00:00,,false
+wheat_septoria_blotch_Google_0034.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:06.494388+00:00,,false
+wheat_septoria_blotch_Google_0040.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:07.397191+00:00,,false
+wheat_septoria_blotch_Google_0049.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:08.260489+00:00,,false
+wheat_septoria_blotch_Google_0058.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:09.159854+00:00,,false
+wheat_septoria_blotch_Google_0115.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:09.974068+00:00,,false
+wheat_septoria_blotch_Google_0150.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:10.693826+00:00,,false
+wheat_septoria_blotch_Google_0165.jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:11.411195+00:00,,false
+wheat_septoria_blotch_Google_0174.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:12.025931+00:00,,false
+wheat_septoria_blotch_Google_0183.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:12.676953+00:00,,false
+wheat_septoria_blotch_Google_0197.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:13.345065+00:00,,false
+wheat_septoria_blotch_Google_0206.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:13.940366+00:00,,false
+wheat_septoria_blotch_Google_0212.jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:14.443903+00:00,,false
+wheat_septoria_blotch_Google_0235.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:14.953636+00:00,,false
+wheat_septoria_blotch_Google_0272.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:15.526397+00:00,,false
+wheat_septoria_blotch_Google_0280.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:16.136780+00:00,,false
+wheat_septoria_blotch_Google_0287.jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:16.725297+00:00,,false
+wheat_septoria_blotch_Google_0309.jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:17.266930+00:00,,false
+wheat_septoria_blotch_Google_0336.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:21.540480+00:00,,false
+wheat_septoria_blotch_Google_0338.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:22.009260+00:00,,false
+wheat_septoria_blotch_Google_0340.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:22.724217+00:00,,false
+wheat_septoria_blotch_Google_0382.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:23.357946+00:00,,false
+wheat_septoria_blotch_Google_0391.jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:23.908536+00:00,,false
+wheat_septoria_blotch_blotch (10).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:24.485698+00:00,,false
+wheat_septoria_blotch_blotch (100).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:25.275593+00:00,,false
+wheat_septoria_blotch_blotch (104).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:25.539554+00:00,,false
+wheat_septoria_blotch_blotch (105).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:26.307880+00:00,,false
+wheat_septoria_blotch_blotch (107).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:26.841860+00:00,,false
+wheat_septoria_blotch_blotch (11).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:27.573598+00:00,,false
+wheat_septoria_blotch_blotch (112).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:28.282223+00:00,,false
+wheat_septoria_blotch_blotch (113).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:28.750162+00:00,,false
+wheat_septoria_blotch_blotch (114).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:29.457322+00:00,,false
+wheat_septoria_blotch_blotch (116).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:29.876055+00:00,,false
+wheat_septoria_blotch_blotch (118).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:30.340435+00:00,,false
+wheat_septoria_blotch_blotch (12).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:31.190764+00:00,,false
+wheat_septoria_blotch_blotch (121).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:31.672054+00:00,,false
+wheat_septoria_blotch_blotch (122).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:32.296324+00:00,,false
+wheat_septoria_blotch_blotch (123).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:33.190810+00:00,,false
+wheat_septoria_blotch_blotch (125).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:33.607630+00:00,,false
+wheat_septoria_blotch_blotch (126).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:34.322926+00:00,,false
+wheat_septoria_blotch_blotch (127).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:35.007275+00:00,,false
+wheat_septoria_blotch_blotch (129).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:35.470486+00:00,,false
+wheat_septoria_blotch_blotch (130).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:36.290542+00:00,,false
+wheat_septoria_blotch_blotch (132).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:37.054666+00:00,,false
+wheat_septoria_blotch_blotch (14).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:37.486861+00:00,,false
+wheat_septoria_blotch_blotch (16).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:37.948932+00:00,,false
+wheat_septoria_blotch_blotch (18).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:38.690209+00:00,,false
+wheat_septoria_blotch_blotch (20).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:39.324251+00:00,,false
+wheat_septoria_blotch_blotch (22).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:40.088507+00:00,,false
+wheat_septoria_blotch_blotch (23).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:40.755143+00:00,,false
+wheat_septoria_blotch_blotch (25).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:41.269449+00:00,,false
+wheat_septoria_blotch_blotch (29).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:41.954939+00:00,,false
+wheat_septoria_blotch_blotch (30).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:42.662119+00:00,,false
+wheat_septoria_blotch_blotch (32).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:43.071135+00:00,,false
+wheat_septoria_blotch_blotch (33).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:43.806408+00:00,,false
+wheat_septoria_blotch_blotch (35).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:44.514933+00:00,,false
+wheat_septoria_blotch_blotch (36).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:45.188569+00:00,,false
+wheat_septoria_blotch_blotch (38).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:45.919867+00:00,,false
+wheat_septoria_blotch_blotch (4).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:46.612254+00:00,,false
+wheat_septoria_blotch_blotch (40).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:47.085112+00:00,,false
+wheat_septoria_blotch_blotch (41).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:47.785641+00:00,,false
+wheat_septoria_blotch_blotch (42).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:48.521473+00:00,,false
+wheat_septoria_blotch_blotch (46).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:49.188014+00:00,,false
+wheat_septoria_blotch_blotch (47).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:49.686875+00:00,,false
+wheat_septoria_blotch_blotch (49).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:50.086773+00:00,,false
+wheat_septoria_blotch_blotch (5).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:50.867367+00:00,,false
+wheat_septoria_blotch_blotch (51).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:51.103346+00:00,,false
+wheat_septoria_blotch_blotch (52).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:51.638037+00:00,,false
+wheat_septoria_blotch_blotch (53).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:52.408000+00:00,,false
+wheat_septoria_blotch_blotch (54).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:53.018841+00:00,,false
+wheat_septoria_blotch_blotch (55).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:53.569320+00:00,,false
+wheat_septoria_blotch_blotch (56).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:54.162818+00:00,,false
+wheat_septoria_blotch_blotch (59).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:01:54.771020+00:00,,false
+wheat_septoria_blotch_blotch (6).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:55.443182+00:00,,false
+wheat_septoria_blotch_blotch (62).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:56.314586+00:00,,false
+wheat_septoria_blotch_blotch (64).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:57.169113+00:00,,false
+wheat_septoria_blotch_blotch (65).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:57.753625+00:00,,false
+wheat_septoria_blotch_blotch (66).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:58.085821+00:00,,false
+wheat_septoria_blotch_blotch (68).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:58.358381+00:00,,false
+wheat_septoria_blotch_blotch (69).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:01:58.602238+00:00,,false
+wheat_septoria_blotch_blotch (7).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:01:59.470231+00:00,,false
+wheat_septoria_blotch_blotch (70).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:00.240986+00:00,,false
+wheat_septoria_blotch_blotch (72).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:00.873015+00:00,,false
+wheat_septoria_blotch_blotch (73).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:03.314514+00:00,,false
+wheat_septoria_blotch_blotch (77).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:04.102597+00:00,,false
+wheat_septoria_blotch_blotch (78).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:04.828165+00:00,,false
+wheat_septoria_blotch_blotch (79).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:02:05.653645+00:00,,false
+wheat_septoria_blotch_blotch (8).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:06.451584+00:00,,false
+wheat_septoria_blotch_blotch (82).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:07.205143+00:00,,false
+wheat_septoria_blotch_blotch (84).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:07.734456+00:00,,false
+wheat_septoria_blotch_blotch (87).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:02:08.602773+00:00,,false
+wheat_septoria_blotch_blotch (88).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:08.884143+00:00,,false
+wheat_septoria_blotch_blotch (89).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:09.568714+00:00,,false
+wheat_septoria_blotch_blotch (9).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:09.883774+00:00,,false
+wheat_septoria_blotch_blotch (91).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:02:10.188710+00:00,,false
+wheat_septoria_blotch_blotch (93).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:10.707827+00:00,,false
+wheat_septoria_blotch_blotch (95).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:11.168905+00:00,,false
+wheat_septoria_blotch_blotch (96).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:11.768795+00:00,,false
+wheat_septoria_blotch_google_septoria (1).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:12.120016+00:00,,false
+wheat_septoria_blotch_google_septoria (10).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:12.714869+00:00,,false
+wheat_septoria_blotch_google_septoria (13).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:13.104487+00:00,,false
+wheat_septoria_blotch_google_septoria (17).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:13.547969+00:00,,false
+wheat_septoria_blotch_google_septoria (18).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:02:13.833420+00:00,,false
+wheat_septoria_blotch_google_septoria (21).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:14.200380+00:00,,false
+wheat_septoria_blotch_google_septoria (23).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:02:14.785565+00:00,,false
+wheat_septoria_blotch_google_septoria (25).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:02:15.184708+00:00,,false
+wheat_septoria_blotch_google_septoria (26).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:15.373555+00:00,,false
+wheat_septoria_blotch_google_septoria (27).jpg,Wheat,wheat septoria blotch,Test,close_up,close_up,human,2026-10-03T09:02:16.132493+00:00,,false
+wheat_septoria_blotch_google_septoria (5).jpg,Wheat,wheat septoria blotch,Validation,close_up,close_up,human,2026-10-03T09:02:16.660760+00:00,,false
+wheat_septoria_blotch_google_septoria (6).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:17.320823+00:00,,false
+wheat_septoria_blotch_google_septoria (7).jpg,Wheat,wheat septoria blotch,Training,close_up,close_up,human,2026-10-03T09:02:17.633848+00:00,,false
+wheat_stripe_rust_Baidu_0000.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:49:19.250003+00:00,,false
+wheat_stripe_rust_Baidu_0002.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:49:22.616843+00:00,,false
+wheat_stripe_rust_Baidu_0003.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:49:25.101668+00:00,,false
+wheat_stripe_rust_Baidu_0004.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:49:27.304456+00:00,,false
+wheat_stripe_rust_Baidu_0005.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:49:28.965950+00:00,,false
+wheat_stripe_rust_Baidu_0007.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:49:31.183435+00:00,,false
+wheat_stripe_rust_Baidu_0008.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:18.240130+00:00,,false
+wheat_stripe_rust_Baidu_0011.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:52:18.956642+00:00,,false
+wheat_stripe_rust_Baidu_0012.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:19.704149+00:00,,false
+wheat_stripe_rust_Baidu_0013.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:20.322704+00:00,,false
+wheat_stripe_rust_Baidu_0024.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:52:21.086623+00:00,,false
+wheat_stripe_rust_Baidu_0026.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:21.862549+00:00,,false
+wheat_stripe_rust_Baidu_0027.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:22.529340+00:00,,false
+wheat_stripe_rust_Baidu_0029.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:52:23.187000+00:00,,false
+wheat_stripe_rust_Baidu_0030.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:52:23.700293+00:00,,false
+wheat_stripe_rust_Baidu_0038.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:25.022048+00:00,,false
+wheat_stripe_rust_Baidu_0039.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:26.237645+00:00,,false
+wheat_stripe_rust_Baidu_0042.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:27.252020+00:00,,false
+wheat_stripe_rust_Baidu_0046.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:27.755486+00:00,,false
+wheat_stripe_rust_Baidu_0047.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:52:28.488848+00:00,,false
+wheat_stripe_rust_Baidu_0048.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:29.155387+00:00,,false
+wheat_stripe_rust_Baidu_0054.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:29.758464+00:00,,false
+wheat_stripe_rust_Baidu_0056.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:30.338445+00:00,,false
+wheat_stripe_rust_Baidu_0059.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:30.949483+00:00,,false
+wheat_stripe_rust_Baidu_0064.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:31.682771+00:00,,false
+wheat_stripe_rust_Baidu_0065.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:32.355567+00:00,,false
+wheat_stripe_rust_Baidu_0071.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:52:33.001187+00:00,,false
+wheat_stripe_rust_Baidu_0080.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:09.265399+00:00,,false
+wheat_stripe_rust_Baidu_0086.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:09.833731+00:00,,false
+wheat_stripe_rust_Baidu_0087.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:10.555185+00:00,,false
+wheat_stripe_rust_Baidu_0092.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:11.172885+00:00,,false
+wheat_stripe_rust_Baidu_0094.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:11.618741+00:00,,false
+wheat_stripe_rust_Baidu_0097.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:12.494302+00:00,,false
+wheat_stripe_rust_Baidu_0106.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:13.073002+00:00,,false
+wheat_stripe_rust_Baidu_0108.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:13.738228+00:00,,false
+wheat_stripe_rust_Baidu_0109.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:14.155484+00:00,,false
+wheat_stripe_rust_Baidu_0120.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:14.803545+00:00,,false
+wheat_stripe_rust_Baidu_0129.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:15.435911+00:00,,false
+wheat_stripe_rust_Baidu_0133.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:15.975557+00:00,,false
+wheat_stripe_rust_Baidu_0142.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:16.557203+00:00,,false
+wheat_stripe_rust_Baidu_0143.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:17.137483+00:00,,false
+wheat_stripe_rust_Baidu_0149.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:17.748829+00:00,,false
+wheat_stripe_rust_Baidu_0154.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:18.304631+00:00,,false
+wheat_stripe_rust_Baidu_0158.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:18.769615+00:00,,false
+wheat_stripe_rust_Baidu_0165.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:19.124560+00:00,,false
+wheat_stripe_rust_Baidu_0168.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:54:19.889102+00:00,,false
+wheat_stripe_rust_Baidu_0186.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:20.488510+00:00,,false
+wheat_stripe_rust_Baidu_0187.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:22.371235+00:00,,false
+wheat_stripe_rust_Baidu_0192.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:54:23.023522+00:00,,false
+wheat_stripe_rust_Baidu_0196.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:23.704936+00:00,,false
+wheat_stripe_rust_Baidu_0202.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:24.455322+00:00,,false
+wheat_stripe_rust_Baidu_0203.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:25.071204+00:00,,false
+wheat_stripe_rust_Baidu_0204.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:54:25.723253+00:00,,false
+wheat_stripe_rust_Baidu_0205.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:26.337919+00:00,,false
+wheat_stripe_rust_Baidu_0213.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:26.868871+00:00,,false
+wheat_stripe_rust_Baidu_0215.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:27.415725+00:00,,false
+wheat_stripe_rust_Baidu_0216.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:27.967348+00:00,,false
+wheat_stripe_rust_Baidu_0217.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:28.655704+00:00,,false
+wheat_stripe_rust_Baidu_0219.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:29.254423+00:00,,false
+wheat_stripe_rust_Baidu_0224.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:30.053868+00:00,,false
+wheat_stripe_rust_Baidu_0234.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:30.566818+00:00,,false
+wheat_stripe_rust_Baidu_0235.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:30.898454+00:00,,false
+wheat_stripe_rust_Baidu_0240.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:54:31.419824+00:00,,false
+wheat_stripe_rust_Baidu_0242.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:32.094659+00:00,,false
+wheat_stripe_rust_Baidu_0243.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:32.852165+00:00,,false
+wheat_stripe_rust_Baidu_0245.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:33.597215+00:00,,false
+wheat_stripe_rust_Baidu_0246.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:34.252726+00:00,,false
+wheat_stripe_rust_Baidu_0256.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:35.070345+00:00,,false
+wheat_stripe_rust_Baidu_0259.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:35.718582+00:00,,false
+wheat_stripe_rust_Baidu_0262.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:36.353563+00:00,,false
+wheat_stripe_rust_Baidu_0264.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:36.851351+00:00,,false
+wheat_stripe_rust_Baidu_0269.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:37.405200+00:00,,false
+wheat_stripe_rust_Baidu_0273.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:37.753832+00:00,,false
+wheat_stripe_rust_Baidu_0286.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:38.400154+00:00,,false
+wheat_stripe_rust_Baidu_0297.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:39.134441+00:00,,false
+wheat_stripe_rust_Baidu_0299.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:54:39.817796+00:00,,false
+wheat_stripe_rust_Baidu_0307.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:40.611801+00:00,,false
+wheat_stripe_rust_Baidu_0311.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:41.366941+00:00,,false
+wheat_stripe_rust_Baidu_0317.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:42.071080+00:00,,false
+wheat_stripe_rust_Baidu_0320.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:42.633090+00:00,,false
+wheat_stripe_rust_Baidu_0321.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:43.317775+00:00,,false
+wheat_stripe_rust_Baidu_0322.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:44.678930+00:00,,false
+wheat_stripe_rust_Baidu_0329.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:46.217640+00:00,,false
+wheat_stripe_rust_Baidu_0330.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:48.482542+00:00,,false
+wheat_stripe_rust_Baidu_0336.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:49.734478+00:00,,false
+wheat_stripe_rust_Baidu_0341.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:54:50.398039+00:00,,false
+wheat_stripe_rust_Baidu_0349.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:50.950227+00:00,,false
+wheat_stripe_rust_Baidu_0353.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:51.665950+00:00,,false
+wheat_stripe_rust_Baidu_0355.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:52.233436+00:00,,false
+wheat_stripe_rust_Baidu_0359.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:52.801074+00:00,,false
+wheat_stripe_rust_Baidu_0363.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:53.532229+00:00,,false
+wheat_stripe_rust_Baidu_0364.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:54.117799+00:00,,false
+wheat_stripe_rust_Baidu_0365.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:54.666929+00:00,,false
+wheat_stripe_rust_Baidu_0368.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:55.069588+00:00,,false
+wheat_stripe_rust_Baidu_0375.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:55.799562+00:00,,false
+wheat_stripe_rust_Baidu_0376.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:56.482601+00:00,,false
+wheat_stripe_rust_Baidu_0378.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:56.914887+00:00,,false
+wheat_stripe_rust_Baidu_0396.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:54:57.466987+00:00,,false
+wheat_stripe_rust_Baidu_0397.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:58.188717+00:00,,false
+wheat_stripe_rust_Baidu_0401.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:54:58.967514+00:00,,false
+wheat_stripe_rust_Baidu_0404.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:54:59.682828+00:00,,false
+wheat_stripe_rust_Baidu_0407.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:00.216585+00:00,,false
+wheat_stripe_rust_Baidu_0408.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:00.879716+00:00,,false
+wheat_stripe_rust_Baidu_0409.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:01.583108+00:00,,false
+wheat_stripe_rust_Baidu_0415.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:02.196492+00:00,,false
+wheat_stripe_rust_Baidu_0420.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:02.614171+00:00,,false
+wheat_stripe_rust_Baidu_0421.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:03.208679+00:00,,false
+wheat_stripe_rust_Baidu_0422.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:03.738896+00:00,,false
+wheat_stripe_rust_Baidu_0423.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:04.248281+00:00,,false
+wheat_stripe_rust_Baidu_0430.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:04.916129+00:00,,false
+wheat_stripe_rust_Baidu_0433.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:05.431467+00:00,,false
+wheat_stripe_rust_Baidu_0438.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:06.059634+00:00,,false
+wheat_stripe_rust_Baidu_0441.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:06.598577+00:00,,false
+wheat_stripe_rust_Baidu_0442.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:07.083443+00:00,,false
+wheat_stripe_rust_Baidu_0447.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:07.785243+00:00,,false
+wheat_stripe_rust_Baidu_0448.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:08.214828+00:00,,false
+wheat_stripe_rust_Baidu_0449.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:08.747628+00:00,,false
+wheat_stripe_rust_Baidu_0451.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:09.378779+00:00,,false
+wheat_stripe_rust_Baidu_0455.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:10.081206+00:00,,false
+wheat_stripe_rust_Baidu_0456.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:10.663547+00:00,,false
+wheat_stripe_rust_Baidu_0459.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:11.381532+00:00,,false
+wheat_stripe_rust_Baidu_0466.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:11.900215+00:00,,false
+wheat_stripe_rust_Baidu_0468.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:12.495242+00:00,,false
+wheat_stripe_rust_Baidu_0472.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:13.101194+00:00,,false
+wheat_stripe_rust_Baidu_0484.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:13.653060+00:00,,false
+wheat_stripe_rust_Baidu_0487.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:14.102253+00:00,,false
+wheat_stripe_rust_Bing_0000.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:14.730410+00:00,,false
+wheat_stripe_rust_Bing_0001.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:15.611210+00:00,,false
+wheat_stripe_rust_Bing_0002.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:16.220446+00:00,,false
+wheat_stripe_rust_Bing_0003.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:17.038820+00:00,,false
+wheat_stripe_rust_Bing_0006.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:17.645389+00:00,,false
+wheat_stripe_rust_Bing_0007.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:18.269477+00:00,,false
+wheat_stripe_rust_Bing_0008.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:18.979313+00:00,,false
+wheat_stripe_rust_Bing_0011.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:19.480257+00:00,,false
+wheat_stripe_rust_Bing_0016.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:20.129295+00:00,,false
+wheat_stripe_rust_Bing_0020.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:20.792834+00:00,,false
+wheat_stripe_rust_Bing_0026.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:21.347320+00:00,,false
+wheat_stripe_rust_Bing_0028.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:21.993878+00:00,,false
+wheat_stripe_rust_Bing_0029.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:22.911265+00:00,,false
+wheat_stripe_rust_Bing_0031.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:23.628247+00:00,,false
+wheat_stripe_rust_Bing_0037.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:24.196744+00:00,,false
+wheat_stripe_rust_Bing_0039.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:24.445744+00:00,,false
+wheat_stripe_rust_Bing_0044.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:25.030060+00:00,,false
+wheat_stripe_rust_Bing_0048.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:25.863216+00:00,,false
+wheat_stripe_rust_Bing_0054.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:26.659668+00:00,,false
+wheat_stripe_rust_Bing_0055.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:27.144807+00:00,,false
+wheat_stripe_rust_Bing_0058.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:27.610534+00:00,,false
+wheat_stripe_rust_Bing_0063.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:28.460524+00:00,,false
+wheat_stripe_rust_Bing_0064.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:29.073407+00:00,,false
+wheat_stripe_rust_Bing_0066.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:29.828695+00:00,,false
+wheat_stripe_rust_Bing_0068.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:30.414076+00:00,,false
+wheat_stripe_rust_Bing_0071.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:31.043053+00:00,,false
+wheat_stripe_rust_Bing_0073.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:31.876467+00:00,,false
+wheat_stripe_rust_Bing_0075.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:32.361455+00:00,,false
+wheat_stripe_rust_Bing_0079.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:32.944396+00:00,,false
+wheat_stripe_rust_Bing_0080.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:33.658477+00:00,,false
+wheat_stripe_rust_Bing_0081.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:34.643806+00:00,,false
+wheat_stripe_rust_Bing_0082.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:35.259603+00:00,,false
+wheat_stripe_rust_Bing_0085.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:35.843633+00:00,,false
+wheat_stripe_rust_Bing_0088.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:36.411564+00:00,,false
+wheat_stripe_rust_Bing_0093.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:37.075707+00:00,,false
+wheat_stripe_rust_Bing_0094.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:37.745170+00:00,,false
+wheat_stripe_rust_Bing_0095.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:38.393249+00:00,,false
+wheat_stripe_rust_Bing_0096.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:38.759875+00:00,,false
+wheat_stripe_rust_Bing_0111.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:39.760707+00:00,,false
+wheat_stripe_rust_Bing_0113.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:40.476202+00:00,,false
+wheat_stripe_rust_Bing_0117.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:41.176570+00:00,,false
+wheat_stripe_rust_Bing_0122.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:41.840805+00:00,,false
+wheat_stripe_rust_Bing_0123.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:42.411147+00:00,,false
+wheat_stripe_rust_Bing_0130.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:43.109239+00:00,,false
+wheat_stripe_rust_Bing_0137.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:43.726684+00:00,,false
+wheat_stripe_rust_Bing_0139.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:44.309722+00:00,,false
+wheat_stripe_rust_Bing_0144.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:44.955926+00:00,,false
+wheat_stripe_rust_Bing_0145.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:45.575221+00:00,,false
+wheat_stripe_rust_Bing_0162.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:49.422800+00:00,,false
+wheat_stripe_rust_Bing_0163.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:50.059589+00:00,,false
+wheat_stripe_rust_Bing_0170.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:50.673719+00:00,,false
+wheat_stripe_rust_Bing_0173.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:51.791274+00:00,,false
+wheat_stripe_rust_Bing_0178.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:52.472581+00:00,,false
+wheat_stripe_rust_Bing_0181.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:53.504532+00:00,,false
+wheat_stripe_rust_Bing_0184.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:54.356740+00:00,,false
+wheat_stripe_rust_Bing_0185.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:55.256364+00:00,,false
+wheat_stripe_rust_Bing_0187.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:56.008185+00:00,,false
+wheat_stripe_rust_Bing_0195.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:55:57.139449+00:00,,false
+wheat_stripe_rust_Bing_0203.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:57.861629+00:00,,false
+wheat_stripe_rust_Bing_0209.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:58.496711+00:00,,false
+wheat_stripe_rust_Bing_0233.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:55:59.023803+00:00,,false
+wheat_stripe_rust_Bing_0237.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:55:59.621770+00:00,,false
+wheat_stripe_rust_Bing_0240.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:00.242847+00:00,,false
+wheat_stripe_rust_Bing_0243.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:00.897804+00:00,,false
+wheat_stripe_rust_Bing_0247.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:56:01.553469+00:00,,false
+wheat_stripe_rust_Bing_0257.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:56:02.123073+00:00,,false
+wheat_stripe_rust_Bing_0258.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:02.731469+00:00,,false
+wheat_stripe_rust_Bing_0263.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:03.916711+00:00,,false
+wheat_stripe_rust_Bing_0264.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:04.537422+00:00,,false
+wheat_stripe_rust_Bing_0290.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:56:05.139232+00:00,,false
+wheat_stripe_rust_Bing_0300.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:56:06.298250+00:00,,false
+wheat_stripe_rust_Bing_0312.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:06.977003+00:00,,false
+wheat_stripe_rust_Google_0009.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:07.570764+00:00,,false
+wheat_stripe_rust_Google_0010.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:08.159034+00:00,,false
+wheat_stripe_rust_Google_0019.jpg,Wheat,wheat stripe rust,Validation,close_up,close_up,human,2026-10-03T08:56:08.805452+00:00,,false
+wheat_stripe_rust_Google_0021.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:09.387334+00:00,,false
+wheat_stripe_rust_Google_0026.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:10.006055+00:00,,false
+wheat_stripe_rust_Google_0027.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:10.636357+00:00,,false
+wheat_stripe_rust_Google_0029.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:56:11.155809+00:00,,false
+wheat_stripe_rust_Google_0034.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:11.839201+00:00,,false
+wheat_stripe_rust_Google_0035.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:12.404876+00:00,,false
+wheat_stripe_rust_Google_0045.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:56:13.055085+00:00,,false
+wheat_stripe_rust_Google_0048.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:13.605378+00:00,,false
+wheat_stripe_rust_Google_0055.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:14.851455+00:00,,false
+wheat_stripe_rust_Google_0064.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:56:15.470062+00:00,,false
+wheat_stripe_rust_Google_0085.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:16.055404+00:00,,false
+wheat_stripe_rust_Google_0122.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:16.654313+00:00,,false
+wheat_stripe_rust_Google_0123.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:17.253013+00:00,,false
+wheat_stripe_rust_Google_0131.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:17.820752+00:00,,false
+wheat_stripe_rust_Google_0147.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:18.354525+00:00,,false
+wheat_stripe_rust_Google_0148.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:56:19.488687+00:00,,false
+wheat_stripe_rust_Google_0154.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:20.685010+00:00,,true
+wheat_stripe_rust_Google_0171.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:21.772221+00:00,,false
+wheat_stripe_rust_Google_0180.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:22.316121+00:00,,false
+wheat_stripe_rust_Google_0212.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:22.854148+00:00,,false
+wheat_stripe_rust_Google_0213.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:24.011296+00:00,,false
+wheat_stripe_rust_Google_0215.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:24.555021+00:00,,false
+wheat_stripe_rust_Google_0223.jpg,Wheat,wheat stripe rust,Test,close_up,close_up,human,2026-10-03T08:56:25.188436+00:00,,false
+wheat_stripe_rust_Google_0311.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:26.572600+00:00,,false
+wheat_stripe_rust_Google_0316.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:27.534731+00:00,,false
+wheat_stripe_rust_Google_0335.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:28.618535+00:00,,false
+wheat_stripe_rust_Google_0374.jpg,Wheat,wheat stripe rust,Training,close_up,close_up,human,2026-10-03T08:56:29.685458+00:00,,false
+wheat_powdery_mildew_Google_0309.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.147451+00:00,"mask covers ~100% of frame, no leaf-specific boundary, many overlapping leaves",true
+wheat_powdery_mildew_Baidu_0049.jpg,Wheat,wheat powdery mildew,Test,close_up,skip,claude_review,2026-10-03T10:26:12.163491+00:00,"mask covers whole canopy, no leaf-specific boundary",false
+wheat_powdery_mildew_Baidu_0003.jpg,Wheat,wheat powdery mildew,Training,wide,skip,claude_review,2026-10-03T10:26:12.185454+00:00,"mask covers whole canopy, many leaves plus background",true
+wheat_powdery_mildew_Baidu_0188.jpg,Wheat,wheat powdery mildew,Validation,non_photo,skip,claude_review,2026-10-03T10:26:12.210842+00:00,"mask covers whole canopy incl. soil background; also looks like a real photo, not non_photo",true
+wheat_powdery_mildew_Baidu_0286.jpg,Wheat,wheat powdery mildew,Test,close_up,skip,claude_review,2026-10-03T10:26:12.219844+00:00,"mask covers many overlapping leaves, not one leaf",false
+wheat_powdery_mildew_Baidu_0085.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.236370+00:00,mask covers many overlapping leaves,false
+wheat_powdery_mildew_Bing_0074.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.245219+00:00,mask covers many overlapping leaves,false
+wheat_powdery_mildew_Baidu_0035.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.269290+00:00,mask covers whole canopy cluster,false
+wheat_powdery_mildew_Baidu_0190.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.274964+00:00,mask covers many overlapping leaves,false
+wheat_powdery_mildew_Baidu_0052.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.274964+00:00,mask covers leaves plus visible soil background,true
+wheat_powdery_mildew_Baidu_0006.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.286948+00:00,mask covers many overlapping leaves,false
+wheat_powdery_mildew_Baidu_0272.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.289316+00:00,"mask covers a mini wheat-field view including heads, not one leaf",false
+wheat_powdery_mildew_Baidu_0024.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.291062+00:00,mask covers multiple overlapping leaf blades,false
+wheat_powdery_mildew_Bing_0010.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.291062+00:00,mask covers leaves plus visible soil background,false
+wheat_powdery_mildew_Baidu_0017.jpg,Wheat,wheat powdery mildew,Validation,wide,skip,claude_review,2026-10-03T10:26:12.291062+00:00,mask covers a head/spike cluster plus background,false
+wheat_powdery_mildew_Google_0093.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.303456+00:00,"mask covers a whole crop-row view, many plants plus background",false
+wheat_powdery_mildew_Baidu_0204.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.305230+00:00,mask covers leaves plus dark soil background,false
+wheat_powdery_mildew_Baidu_0208.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.307055+00:00,mask covers many parallel leaf blades,false
+wheat_powdery_mildew_Baidu_0169.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.307055+00:00,"mask traces a wheat spike/stem structure, not a leaf",false
+wheat_powdery_mildew_Baidu_0181.jpg,Wheat,wheat powdery mildew,Test,close_up,skip,claude_review,2026-10-03T10:26:12.307055+00:00,mask spans many leaf blades across a wide irregular area,false
+wheat_powdery_mildew_Baidu_0102.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.307055+00:00,mask covers a cluster of overlapping leaves,false
+wheat_powdery_mildew_Baidu_0189.jpg,Wheat,wheat powdery mildew,Validation,close_up,skip,claude_review,2026-10-03T10:26:12.320749+00:00,"image is a multi-panel composite with labelled sub-regions, not a single clean photo",false
+wheat_powdery_mildew_Baidu_0199.jpg,Wheat,wheat powdery mildew,Training,close_up,skip,claude_review,2026-10-03T10:26:12.322306+00:00,"image is two stacked photo panels (collage), not a single photo",false
+wheat_septoria_blotch_blotch (77).jpg,Wheat,wheat septoria blotch,Training,close_up,non_photo,human_annotation,2026-11-01T06:46:42+00:00,Phase 3 annotation (pilot set): not a real photo (mis-tagged),false
+wheat_stripe_rust_Baidu_0459.jpg,Wheat,wheat stripe rust,Training,close_up,non_photo,human_annotation,2026-11-02T08:13:06+00:00,Manual re-tag 2026-11-02: collage / multi-panel image (seen in mask-tool pilot 2),false
+wheat_stripe_rust_Bing_0016.jpg,Wheat,wheat stripe rust,Training,close_up,non_photo,human_annotation,2026-11-02T08:38:27+00:00,Phase 3 annotation (pilot set): collage / multi-panel image,false
+wheat_powdery_mildew_Baidu_0252.jpg,Wheat,wheat powdery mildew,Test,close_up,non_photo,human_annotation,2026-11-02T11:08:29+00:00,Phase 3 annotation (gold set): not a real photo (mis-tagged),false
+wheat_powdery_mildew_Bing_0163.jpg,Wheat,wheat powdery mildew,Test,close_up,non_photo,human_annotation,2026-11-02T11:09:02+00:00,Phase 3 annotation (gold set): not a real photo (mis-tagged),false
+wheat_powdery_mildew_Baidu_0108.jpg,Wheat,wheat powdery mildew,Test,close_up,non_photo,human_annotation,2026-11-02T11:09:18+00:00,Phase 3 annotation (gold set): not a real photo (mis-tagged),false
+wheat_septoria_blotch_google_septoria (18).jpg,Wheat,wheat septoria blotch,Test,close_up,non_photo,human_annotation,2026-11-02T11:10:10+00:00,Phase 3 annotation (gold set): not a real photo (mis-tagged),false
+wheat_septoria_blotch_Baidu_0123.jpg,Wheat,wheat septoria blotch,Test,close_up,non_photo,human_annotation,2026-11-02T11:10:14+00:00,Phase 3 annotation (gold set): not a real photo (mis-tagged),false
+wheat_septoria_blotch_Google_0021.jpg,Wheat,wheat septoria blotch,Test,close_up,non_photo,human_annotation,2026-11-04T11:42:12+00:00,Phase 3 annotation (gold set): not a real photo (mis-tagged),false
+wheat_leaf_rust_Google_0251.jpg,Wheat,wheat leaf rust,Validation,close_up,non_photo,human_annotation,2026-11-04T11:42:33+00:00,Phase 3 annotation (tuning set): collage / multi-panel image,false
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0031.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,non_photo,human_annotation,2026-11-04T11:43:56+00:00,Phase 3 annotation (gold set): not a real photo (mis-tagged),false
+wheat_leaf_rust_Google_0358.jpg,Wheat,wheat leaf rust,Test,close_up,non_photo,human_decision,2026-11-14T04:11:24+00:00,"collage / multi-panel image (three panels), found in the gold wrong-leaf check; decided by Adrija 2026-11-14",false
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg,Wheat,wheat bacterial leaf streak (black chaff),Test,close_up,non_photo,human_decision,2026-11-14T04:11:24+00:00,"collage / multi-panel image (two panels), found in the gold wrong-leaf check; decided by Adrija 2026-11-14",false

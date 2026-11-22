@@ -1,0 +1,31 @@
+# Phase 7, JIC: INDEPENDENT external test (Adrija, 2026-11-18). JIC wheat disease images (Zenodo 7573133,
+# CC BY 4.0), not downloaded or looked at before the final pipeline was tagged (final-v1). Evaluated ONCE with the
+# final pipeline: Phase 5 v2 colour stage (no preprocessing) + Phase 6 v2 policy re-fitted on it.
+# Licence and class mapping recorded in report/dataset_versions.md before download. Never trained or tuned on.
+name: phase7_jic
+table_name: phase7_jic.md
+fig_dir: report/figures/phase7_jic
+dataset: the JIC wheat disease images
+dataset_plot: JIC wheat disease images
+title_suffix: " (independent, single evaluation)"
+source: "Held-out field photos from the John Innes Centre (Long, Hartley, Morris & Brown, 2023, CC BY 4.0, Zenodo 7573133), not downloaded before the final pipeline was frozen, and evaluated once. Image-level labels only (yellow rust -> stripe rust, brown rust -> leaf rust, septoria -> septoria blotch, mildew -> powdery mildew, healthy), so these checks cannot measure severity error. "
+
+model: {architecture: segformer, checkpoint: experiments/20261114_100055_segformer/best_model.pt}
+phase6_v2_run: experiments/20261118_182200_phase6_v2
+phase6_v2_experiment: configs/experiments/phase6_v2_on_phase5_v2.yaml
+
+mendeley:   # section name kept so the same runner is used; this is the JIC set
+  dir: data/raw/jic_wheat/extracted
+  # Class mapping fixed 2026-11-18 before download: first keyword found in the photo's folder path (lower case),
+  # in this order. If the layout turns out not to use class folders, only this lookup is adapted (logged), not the mapping.
+  classes:
+    - {keyword: healthy, label: healthy}
+    - {keyword: yellow, label: wheat stripe rust}
+    - {keyword: brown, label: wheat leaf rust}
+    - {keyword: septoria, label: wheat septoria blotch}
+    - {keyword: mildew, label: wheat powdery mildew}
+  healthy_groups: [rust, necrotic, mildew]
+  max_long_side: 2048   # same cap as the Mendeley runs
+  n_overlays_per_class: 4
+
+n_bootstrap: 1000

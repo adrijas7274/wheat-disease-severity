@@ -1,0 +1,19 @@
+# Phase 4: cheap-phone corruption benchmark (project plan Phase 4, docs/phase3_plan.md section 7).
+name: phase4_benchmark
+
+# Benchmarked models: the two Phase 2 baselines retrained after the leakage fix.
+models:
+  segformer: experiments/20261114_100055_segformer/best_model.pt
+  deeplabv3plus: experiments/20261114_094320_deeplabv3plus/best_model.pt
+
+# Leaf click on test images (rule fixed 2026-11-11): deepest point of the largest infected component
+# predicted by this model on the CLEAN image; every benchmarked model uses the same click.
+click_model: segformer
+
+corruptions: [gaussian_blur, motion_blur, defocus_blur, sensor_noise, jpeg, low_resolution, over_exposure, under_exposure, colour_cast, combined]
+levels: [1, 2, 3, 4, 5]   # PLACEHOLDER level parameters, see src/corruptions/corruptions.py
+
+# --debug uses these instead (3 test images and 3 tuning images, never gold)
+debug:
+  corruptions: [gaussian_blur, combined]
+  levels: [1, 5]

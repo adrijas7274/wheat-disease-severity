@@ -1,0 +1,125 @@
+name,split,disease,set,rater,status,skip_reason,click_x,click_y,img_w,img_h,severity_pct,rating_s,notes,saved_at
+wheat_stripe_rust_Bing_0016.jpg,Training,wheat stripe rust,pilot,adrija,done,,276,400,1000,666,14.0,92.8,,2026-11-02T08:15:01+00:00
+wheat_leaf_rust_Google_0266.jpg,Training,wheat leaf rust,pilot,adrija,done,,302,233,612,408,87.5,22.9,,2026-11-02T08:15:24+00:00
+wheat_powdery_mildew_Baidu_0058.jpg,Training,wheat powdery mildew,pilot,adrija,done,,128,133,287,295,22.0,12.5,,2026-11-02T08:15:37+00:00
+wheat_septoria_blotch_blotch (112).jpg,Training,wheat septoria blotch,pilot,adrija,done,,519,290,1200,800,36.0,11.5,,2026-11-02T08:15:48+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0245.jpg,Training,wheat bacterial leaf streak (black chaff),pilot,adrija,done,,274,208,500,374,25.5,11.5,,2026-11-02T08:16:00+00:00
+wheat_stripe_rust_Bing_0016.jpg,Training,wheat stripe rust,pilot,adrija,skipped,collage / multi-panel image,,,1000,666,,,"Logged by Claude on Adrija's instruction 2026-11-02: 2-panel collage, should have been skipped in pilot 3 (replaces the 14.0% rating).",2026-11-02T08:38:27+00:00
+wheat_stripe_rust_Bing_0054.jpg,Validation,wheat stripe rust,tuning,adrija,done,,1471,1421,3648,2736,4.5,10.6,,2026-11-02T11:01:03+00:00
+wheat_stripe_rust_Baidu_0204.jpg,Validation,wheat stripe rust,tuning,adrija,done,,235,115,545,354,13.5,7.7,,2026-11-02T11:01:10+00:00
+wheat_stripe_rust_Baidu_0168.jpg,Validation,wheat stripe rust,tuning,adrija,done,,267,475,640,853,4.0,10.9,,2026-11-02T11:01:21+00:00
+wheat_leaf_rust_Bing_0046.jpg,Validation,wheat leaf rust,tuning,adrija,done,,809,573,1536,1028,68.0,11.9,,2026-11-02T11:01:33+00:00
+wheat_leaf_rust_Baidu_0122.jpg,Validation,wheat leaf rust,tuning,adrija,done,,412,210,600,400,20.0,7.5,,2026-11-02T11:01:41+00:00
+wheat_leaf_rust_Google_0251.jpg,Validation,wheat leaf rust,tuning,adrija,done,,331,208,800,484,24.0,3.9,,2026-11-02T11:01:45+00:00
+wheat_powdery_mildew_Google_0073.jpg,Validation,wheat powdery mildew,tuning,adrija,done,,327,176,539,304,4.5,4.1,,2026-11-02T11:01:49+00:00
+wheat_powdery_mildew_Bing_0173.jpg,Validation,wheat powdery mildew,tuning,adrija,done,,771,567,1547,1059,7.5,4.5,,2026-11-02T11:01:53+00:00
+wheat_powdery_mildew_Bing_0096.jpg,Validation,wheat powdery mildew,tuning,adrija,done,,549,330,800,487,54.5,10.7,,2026-11-02T11:02:04+00:00
+wheat_septoria_blotch_blotch (59).jpg,Validation,wheat septoria blotch,tuning,adrija,done,,614,323,1200,684,13.5,5.0,,2026-11-02T11:02:09+00:00
+wheat_septoria_blotch_blotch (55).jpg,Validation,wheat septoria blotch,tuning,adrija,done,,356,382,683,1024,3.5,4.3,,2026-11-02T11:02:13+00:00
+wheat_septoria_blotch_blotch (125).jpg,Validation,wheat septoria blotch,tuning,adrija,done,,205,112,340,204,6.5,5.0,,2026-11-02T11:02:18+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (6).jpg,Validation,wheat bacterial leaf streak (black chaff),tuning,adrija,done,,211,120,311,400,4.0,5.9,,2026-11-02T11:02:24+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (10).jpg,Validation,wheat bacterial leaf streak (black chaff),tuning,adrija,done,,162,189,316,256,7.0,6.5,,2026-11-02T11:02:31+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0002.jpg,Validation,wheat bacterial leaf streak (black chaff),tuning,adrija,done,,555,414,1200,776,8.0,3.9,,2026-11-02T11:02:35+00:00
+wheat_stripe_rust_Baidu_0259.jpg,Test,wheat stripe rust,gold,adrija,done,,349,282,640,480,3.0,9.6,,2026-11-02T11:02:51+00:00
+wheat_stripe_rust_Baidu_0143.jpg,Test,wheat stripe rust,gold,adrija,done,,247,315,618,526,9.5,4.5,,2026-11-02T11:02:56+00:00
+wheat_stripe_rust_Baidu_0355.jpg,Test,wheat stripe rust,gold,adrija,done,,275,258,500,375,31.0,3.7,,2026-11-02T11:02:59+00:00
+wheat_stripe_rust_Baidu_0243.jpg,Test,wheat stripe rust,gold,adrija,done,,706,658,1200,1600,4.0,6.2,,2026-11-02T11:03:06+00:00
+wheat_stripe_rust_Bing_0080.jpg,Test,wheat stripe rust,gold,adrija,done,,269,319,600,1066,9.0,4.5,,2026-11-02T11:03:10+00:00
+wheat_stripe_rust_Baidu_0448.jpg,Test,wheat stripe rust,gold,adrija,done,,324,161,561,306,4.0,16.6,,2026-11-02T11:03:27+00:00
+wheat_stripe_rust_Bing_0002.jpg,Test,wheat stripe rust,gold,adrija,done,,678,466,1272,960,5.0,3.9,,2026-11-02T11:03:31+00:00
+wheat_stripe_rust_Baidu_0011.jpg,Test,wheat stripe rust,gold,adrija,done,,1030,508,1600,1200,9.0,4.0,,2026-11-02T11:03:35+00:00
+wheat_stripe_rust_Bing_0111.jpg,Test,wheat stripe rust,gold,adrija,done,,280,205,540,810,3.5,3.8,,2026-11-02T11:03:38+00:00
+wheat_stripe_rust_Baidu_0273.jpg,Test,wheat stripe rust,gold,adrija,done,,198,127,370,229,5.0,4.0,,2026-11-02T11:03:42+00:00
+wheat_stripe_rust_Baidu_0286.jpg,Test,wheat stripe rust,gold,adrija,done,,288,228,622,467,11.0,7.3,,2026-11-02T11:03:50+00:00
+wheat_leaf_rust_Google_0339.jpg,Test,wheat leaf rust,gold,adrija,done,,678,359,1200,630,4.0,4.5,,2026-11-02T11:03:54+00:00
+wheat_leaf_rust_Google_0374.jpg,Test,wheat leaf rust,gold,adrija,done,,506,295,1024,576,5.5,6.9,,2026-11-02T11:04:01+00:00
+wheat_leaf_rust_Google_0058.jpg,Test,wheat leaf rust,gold,adrija,done,,418,232,862,485,5.5,6.5,,2026-11-02T11:04:08+00:00
+wheat_leaf_rust_Google_0103.jpg,Test,wheat leaf rust,gold,adrija,done,,643,441,1296,972,3.0,5.0,,2026-11-02T11:04:13+00:00
+wheat_leaf_rust_Google_0328.jpg,Test,wheat leaf rust,gold,adrija,done,,162,116,316,256,3.5,10.4,,2026-11-02T11:04:23+00:00
+wheat_leaf_rust_Bing_0020.jpg,Test,wheat leaf rust,gold,adrija,done,,254,205,500,501,8.5,5.2,,2026-11-02T11:04:28+00:00
+wheat_leaf_rust_Bing_0042.jpg,Test,wheat leaf rust,gold,adrija,done,,609,470,1600,900,4.0,5.3,,2026-11-02T11:04:34+00:00
+wheat_leaf_rust_Google_0040.jpg,Test,wheat leaf rust,gold,adrija,done,,735,420,1648,1900,5.0,6.0,,2026-11-02T11:04:40+00:00
+wheat_leaf_rust_Google_0358.jpg,Test,wheat leaf rust,gold,adrija,done,,392,213,623,348,8.5,4.2,,2026-11-02T11:04:44+00:00
+wheat_leaf_rust_Baidu_0025.jpg,Test,wheat leaf rust,gold,adrija,done,,706,614,1283,1136,34.5,4.1,,2026-11-02T11:04:48+00:00
+wheat_powdery_mildew_Baidu_0206.jpg,Test,wheat powdery mildew,gold,adrija,done,,422,267,640,357,9.5,4.5,,2026-11-02T11:04:53+00:00
+wheat_powdery_mildew_Baidu_0012.jpg,Test,wheat powdery mildew,gold,adrija,done,,393,313,805,601,9.5,4.1,,2026-11-02T11:04:57+00:00
+wheat_powdery_mildew_Google_0014.jpg,Test,wheat powdery mildew,gold,adrija,skipped,no single main leaf,,,316,237,,161.1,,2026-11-02T11:07:38+00:00
+wheat_powdery_mildew_Baidu_0044.jpg,Test,wheat powdery mildew,gold,adrija,done,,624,387,1024,768,5.0,5.6,,2026-11-02T11:07:44+00:00
+wheat_powdery_mildew_Bing_0214.jpg,Test,wheat powdery mildew,gold,adrija,done,,309,128,576,349,5.5,7.4,,2026-11-02T11:07:51+00:00
+wheat_powdery_mildew_Baidu_0040.jpg,Test,wheat powdery mildew,gold,adrija,skipped,main leaf too blurred,,,2000,2667,,6.8,,2026-11-02T11:07:58+00:00
+wheat_powdery_mildew_Google_0056.jpg,Test,wheat powdery mildew,gold,adrija,skipped,main leaf too blurred,,,375,400,,6.1,,2026-11-02T11:08:04+00:00
+wheat_powdery_mildew_Baidu_0007.jpg,Test,wheat powdery mildew,gold,adrija,done,,1007,778,2000,1500,9.5,5.6,,2026-11-02T11:08:10+00:00
+wheat_powdery_mildew_Google_0101.jpg,Test,wheat powdery mildew,gold,adrija,done,,415,399,679,844,35.5,14.8,,2026-11-02T11:08:24+00:00
+wheat_powdery_mildew_Baidu_0252.jpg,Test,wheat powdery mildew,gold,adrija,skipped,not a real photo (mis-tagged),,,1080,1620,,4.7,,2026-11-02T11:08:29+00:00
+wheat_powdery_mildew_Bing_0054.jpg,Test,wheat powdery mildew,gold,adrija,skipped,no single main leaf,616,281,1000,575,,8.8,,2026-11-02T11:08:38+00:00
+wheat_powdery_mildew_Google_0329.jpg,Test,wheat powdery mildew,gold,adrija,skipped,no single main leaf,,,862,485,,4.3,,2026-11-02T11:08:42+00:00
+wheat_powdery_mildew_Baidu_0295.jpg,Test,wheat powdery mildew,gold,adrija,skipped,no single main leaf,,,595,403,,5.5,,2026-11-02T11:08:48+00:00
+wheat_powdery_mildew_Baidu_0001.jpg,Test,wheat powdery mildew,gold,adrija,done,,371,322,661,821,34.0,5.6,,2026-11-02T11:08:54+00:00
+wheat_powdery_mildew_Bing_0163.jpg,Test,wheat powdery mildew,gold,adrija,skipped,not a real photo (mis-tagged),,,500,744,,8.0,,2026-11-02T11:09:02+00:00
+wheat_powdery_mildew_Baidu_0082.jpg,Test,wheat powdery mildew,gold,adrija,skipped,main leaf too blurred,,,500,400,,4.9,,2026-11-02T11:09:07+00:00
+wheat_powdery_mildew_Bing_0023.jpg,Test,wheat powdery mildew,gold,adrija,done,,365,394,683,1024,57.0,5.9,,2026-11-02T11:09:13+00:00
+wheat_powdery_mildew_Baidu_0108.jpg,Test,wheat powdery mildew,gold,adrija,skipped,not a real photo (mis-tagged),,,640,1008,,5.1,,2026-11-02T11:09:18+00:00
+wheat_powdery_mildew_Bing_0014.jpg,Test,wheat powdery mildew,gold,adrija,skipped,main leaf too blurred,,,717,1380,,8.1,,2026-11-02T11:09:26+00:00
+wheat_powdery_mildew_Google_0317.jpg,Test,wheat powdery mildew,gold,adrija,done,,338,183,612,408,5.0,6.5,,2026-11-02T11:09:32+00:00
+wheat_powdery_mildew_Google_0115.jpg,Test,wheat powdery mildew,gold,adrija,done,,234,156,341,512,5.0,4.8,,2026-11-02T11:09:37+00:00
+wheat_powdery_mildew_Bing_0170.jpg,Test,wheat powdery mildew,gold,adrija,skipped,main leaf too blurred,,,299,200,,6.2,,2026-11-02T11:09:43+00:00
+wheat_powdery_mildew_Baidu_0034.jpg,Test,wheat powdery mildew,gold,adrija,skipped,no single main leaf,,,400,533,,4.1,,2026-11-02T11:09:48+00:00
+wheat_powdery_mildew_Google_0263.jpg,Test,wheat powdery mildew,gold,adrija,done,,291,137,576,349,31.5,5.0,,2026-11-02T11:09:52+00:00
+wheat_septoria_blotch_blotch (87).jpg,Test,wheat septoria blotch,gold,adrija,skipped,no single main leaf,,,800,634,,3.9,,2026-11-02T11:09:56+00:00
+wheat_septoria_blotch_Google_0115.jpg,Test,wheat septoria blotch,gold,adrija,done,,395,267,768,442,4.0,8.6,,2026-11-02T11:10:05+00:00
+wheat_septoria_blotch_google_septoria (18).jpg,Test,wheat septoria blotch,gold,adrija,skipped,not a real photo (mis-tagged),223,181,400,328,,5.2,,2026-11-02T11:10:10+00:00
+wheat_septoria_blotch_Baidu_0123.jpg,Test,wheat septoria blotch,gold,adrija,skipped,not a real photo (mis-tagged),,,1707,1280,,3.4,,2026-11-02T11:10:14+00:00
+wheat_septoria_blotch_blotch (29).jpg,Test,wheat septoria blotch,gold,adrija,done,,3094,1789,5312,2988,31.0,5.2,,2026-11-02T11:10:19+00:00
+wheat_septoria_blotch_blotch (12).jpg,Test,wheat septoria blotch,gold,adrija,skipped,no single main leaf,,,800,634,,5.0,,2026-11-02T11:10:24+00:00
+wheat_septoria_blotch_Google_0206.jpg,Test,wheat septoria blotch,gold,adrija,done,,245,121,449,253,20.0,5.4,,2026-11-02T11:10:30+00:00
+wheat_septoria_blotch_Google_0309.jpg,Test,wheat septoria blotch,gold,adrija,done,,186,95,360,203,4.0,8.5,,2026-11-04T11:41:25+00:00
+wheat_septoria_blotch_Google_0016.jpg,Test,wheat septoria blotch,gold,adrija,done,,259,203,530,548,4.0,5.1,,2026-11-04T11:41:31+00:00
+wheat_septoria_blotch_google_septoria (23).jpg,Test,wheat septoria blotch,gold,adrija,skipped,no single main leaf,360,258,750,422,,8.8,,2026-11-04T11:41:39+00:00
+wheat_septoria_blotch_blotch (129).jpg,Test,wheat septoria blotch,gold,adrija,skipped,main leaf too blurred,105,99,210,251,,5.9,,2026-11-04T11:41:45+00:00
+wheat_septoria_blotch_blotch (64).jpg,Test,wheat septoria blotch,gold,adrija,done,,713,518,1536,1152,9.5,5.0,,2026-11-04T11:41:50+00:00
+wheat_septoria_blotch_google_septoria (27).jpg,Test,wheat septoria blotch,gold,adrija,skipped,no single main leaf,215,269,810,1080,,6.6,,2026-11-04T11:41:57+00:00
+wheat_septoria_blotch_blotch (130).jpg,Test,wheat septoria blotch,gold,adrija,skipped,no single main leaf,427,342,1200,800,,8.2,,2026-11-04T11:42:05+00:00
+wheat_septoria_blotch_Google_0021.jpg,Test,wheat septoria blotch,gold,adrija,skipped,not a real photo (mis-tagged),384,218,472,547,,6.2,,2026-11-04T11:42:12+00:00
+wheat_septoria_blotch_Google_0049.jpg,Test,wheat septoria blotch,gold,adrija,done,,489,275,921,661,19.0,5.9,,2026-11-04T11:42:18+00:00
+wheat_septoria_blotch_blotch (35).jpg,Test,wheat septoria blotch,gold,adrija,done,,369,153,700,467,4.5,5.0,,2026-11-04T11:42:23+00:00
+wheat_septoria_blotch_Google_0058.jpg,Test,wheat septoria blotch,gold,adrija,done,,544,297,850,627,16.5,4.4,,2026-11-04T11:42:27+00:00
+wheat_septoria_blotch_Baidu_0098.jpg,Test,wheat septoria blotch,gold,adrija,done,,292,269,585,490,6.5,4.5,,2026-11-04T11:42:32+00:00
+wheat_leaf_rust_Google_0251.jpg,Validation,wheat leaf rust,tuning,adrija,skipped,collage / multi-panel image,,,800,484,,,"Multi-panel plate (A-F). Replaces the 24.0% rating on Adrija's instruction, 2026-11-04.",2026-11-04T11:42:33+00:00
+wheat_septoria_blotch_blotch (79).jpg,Test,wheat septoria blotch,gold,adrija,skipped,no single main leaf,584,381,1200,803,,8.3,,2026-11-04T11:42:40+00:00
+wheat_septoria_blotch_Google_0174.jpg,Test,wheat septoria blotch,gold,adrija,skipped,main leaf too blurred,164,105,316,256,,8.2,,2026-11-04T11:42:48+00:00
+wheat_septoria_blotch_blotch (22).jpg,Test,wheat septoria blotch,gold,adrija,done,,552,197,1200,801,6.5,14.8,,2026-11-04T11:43:03+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0142.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,203,119,311,400,5.0,7.0,,2026-11-04T11:43:10+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (10).jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,no single main leaf,639,321,700,597,,6.9,,2026-11-04T11:43:17+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (3).jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,1672,1100,3216,2136,5.5,5.6,,2026-11-04T11:43:23+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0202.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,main leaf too blurred,238,178,446,326,,4.9,,2026-11-04T11:43:28+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0004.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,611,351,1200,600,16.5,4.6,,2026-11-04T11:43:33+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0235.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,283,184,640,416,5.0,7.6,,2026-11-04T11:43:40+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0040.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,main leaf too blurred,269,199,459,328,,9.5,,2026-11-04T11:43:50+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0031.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,not a real photo (mis-tagged),298,175,640,361,,5.6,,2026-11-04T11:43:55+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0217.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,no single main leaf,348,294,640,460,,5.5,,2026-11-04T11:44:01+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (5).jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,446,185,629,413,11.0,11.6,,2026-11-04T11:44:13+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0314.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,no single main leaf,416,426,1024,768,,6.1,,2026-11-04T11:44:19+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,243,146,752,266,6.5,5.2,,2026-11-04T11:44:24+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0275.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,main leaf too blurred,278,180,405,603,,5.8,,2026-11-04T11:44:30+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (25).jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,588,540,1200,800,9.5,5.2,,2026-11-04T11:44:35+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Google_0283.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,626,446,1024,685,12.0,5.6,,2026-11-04T11:44:41+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (15).jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,skipped,no single main leaf,428,185,587,774,,7.4,,2026-11-04T11:44:49+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (2).jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,380,408,795,1200,5.5,4.9,,2026-11-04T11:44:54+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0009.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,472,532,1023,1461,11.5,6.0,,2026-11-04T11:45:00+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0039.jpg,Test,wheat bacterial leaf streak (black chaff),gold,adrija,done,,277,141,601,271,6.0,8.0,,2026-11-04T11:45:08+00:00
+wheat_leaf_rust_Google_0000.jpg,Validation,wheat leaf rust,tuning,adrija,done,,548,408,1040,1052,7.5,7.4,,2026-11-04T12:03:46+00:00
+wheat_leaf_rust_Google_0328.jpg,Test,wheat leaf rust,recheck,adrija,done,,169,100,316,256,3.0,10.3,,2026-11-09T17:00:09+00:00
+wheat_stripe_rust_Baidu_0448.jpg,Test,wheat stripe rust,recheck,adrija,done,,264,144,561,306,4.0,5.2,,2026-11-09T17:00:15+00:00
+wheat_leaf_rust_Google_0339.jpg,Test,wheat leaf rust,recheck,adrija,done,,483,300,1200,630,4.5,20.3,,2026-11-09T17:00:35+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0004.jpg,Test,wheat bacterial leaf streak (black chaff),recheck,adrija,done,,570,340,1200,600,4.5,5.4,,2026-11-09T17:00:40+00:00
+wheat_septoria_blotch_Google_0115.jpg,Test,wheat septoria blotch,recheck,adrija,done,,209,247,768,442,9.0,6.2,,2026-11-09T17:00:47+00:00
+wheat_stripe_rust_Baidu_0143.jpg,Test,wheat stripe rust,recheck,adrija,done,,280,303,618,526,5.0,5.0,,2026-11-09T17:00:52+00:00
+wheat_septoria_blotch_Google_0016.jpg,Test,wheat septoria blotch,recheck,adrija,done,,261,199,530,548,4.0,5.3,,2026-11-09T17:00:57+00:00
+wheat_powdery_mildew_Google_0115.jpg,Test,wheat powdery mildew,recheck,adrija,done,,211,128,341,512,3.0,10.2,,2026-11-09T17:01:07+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_Bing_0009.jpg,Test,wheat bacterial leaf streak (black chaff),recheck,adrija,done,,451,444,1023,1461,3.5,7.0,,2026-11-09T17:01:14+00:00
+wheat_leaf_rust_Google_0103.jpg,Test,wheat leaf rust,recheck,adrija,done,,622,434,1296,972,6.5,4.8,,2026-11-09T17:01:19+00:00
+wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (3).jpg,Test,wheat bacterial leaf streak (black chaff),recheck,adrija,done,,1315,1140,3216,2136,5.5,6.1,,2026-11-09T17:01:25+00:00
+wheat_powdery_mildew_Baidu_0007.jpg,Test,wheat powdery mildew,recheck,adrija,done,,804,832,2000,1500,7.0,6.2,,2026-11-09T17:01:31+00:00
+wheat_leaf_rust_Google_0058.jpg,Test,wheat leaf rust,recheck,adrija,done,,414,216,862,485,4.5,4.7,,2026-11-09T17:01:36+00:00
+wheat_powdery_mildew_Baidu_0206.jpg,Test,wheat powdery mildew,recheck,adrija,done,,303,191,640,357,4.0,10.8,,2026-11-09T17:01:47+00:00
+wheat_stripe_rust_Baidu_0011.jpg,Test,wheat stripe rust,recheck,adrija,done,,719,499,1600,1200,3.0,5.7,,2026-11-09T17:01:53+00:00

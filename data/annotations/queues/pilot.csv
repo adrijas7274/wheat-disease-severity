@@ -1,0 +1,436 @@
+position,name,plant,disease,split
+1,wheat_stripe_rust_Baidu_0459.jpg,Wheat,wheat stripe rust,Training
+2,wheat_stripe_rust_Bing_0016.jpg,Wheat,wheat stripe rust,Training
+3,wheat_stripe_rust_Baidu_0468.jpg,Wheat,wheat stripe rust,Training
+4,wheat_stripe_rust_Google_0171.jpg,Wheat,wheat stripe rust,Training
+5,wheat_stripe_rust_Bing_0237.jpg,Wheat,wheat stripe rust,Training
+6,wheat_stripe_rust_Bing_0130.jpg,Wheat,wheat stripe rust,Training
+7,wheat_stripe_rust_Google_0212.jpg,Wheat,wheat stripe rust,Training
+8,wheat_stripe_rust_Baidu_0422.jpg,Wheat,wheat stripe rust,Training
+9,wheat_stripe_rust_Baidu_0203.jpg,Wheat,wheat stripe rust,Training
+10,wheat_stripe_rust_Baidu_0109.jpg,Wheat,wheat stripe rust,Training
+11,wheat_stripe_rust_Bing_0312.jpg,Wheat,wheat stripe rust,Training
+12,wheat_stripe_rust_Baidu_0012.jpg,Wheat,wheat stripe rust,Training
+13,wheat_stripe_rust_Baidu_0455.jpg,Wheat,wheat stripe rust,Training
+14,wheat_stripe_rust_Bing_0139.jpg,Wheat,wheat stripe rust,Training
+15,wheat_stripe_rust_Baidu_0466.jpg,Wheat,wheat stripe rust,Training
+16,wheat_stripe_rust_Baidu_0487.jpg,Wheat,wheat stripe rust,Training
+17,wheat_stripe_rust_Baidu_0065.jpg,Wheat,wheat stripe rust,Training
+18,wheat_stripe_rust_Bing_0020.jpg,Wheat,wheat stripe rust,Training
+19,wheat_stripe_rust_Bing_0081.jpg,Wheat,wheat stripe rust,Training
+20,wheat_stripe_rust_Baidu_0442.jpg,Wheat,wheat stripe rust,Training
+21,wheat_stripe_rust_Baidu_0064.jpg,Wheat,wheat stripe rust,Training
+22,wheat_stripe_rust_Baidu_0003.jpg,Wheat,wheat stripe rust,Training
+23,wheat_stripe_rust_Baidu_0297.jpg,Wheat,wheat stripe rust,Training
+24,wheat_stripe_rust_Baidu_0359.jpg,Wheat,wheat stripe rust,Training
+25,wheat_stripe_rust_Bing_0240.jpg,Wheat,wheat stripe rust,Training
+26,wheat_stripe_rust_Bing_0185.jpg,Wheat,wheat stripe rust,Training
+27,wheat_stripe_rust_Baidu_0329.jpg,Wheat,wheat stripe rust,Training
+28,wheat_stripe_rust_Baidu_0097.jpg,Wheat,wheat stripe rust,Training
+29,wheat_stripe_rust_Baidu_0364.jpg,Wheat,wheat stripe rust,Training
+30,wheat_stripe_rust_Bing_0028.jpg,Wheat,wheat stripe rust,Training
+31,wheat_stripe_rust_Baidu_0409.jpg,Wheat,wheat stripe rust,Training
+32,wheat_stripe_rust_Baidu_0441.jpg,Wheat,wheat stripe rust,Training
+33,wheat_stripe_rust_Baidu_0046.jpg,Wheat,wheat stripe rust,Training
+34,wheat_stripe_rust_Baidu_0264.jpg,Wheat,wheat stripe rust,Training
+35,wheat_stripe_rust_Baidu_0059.jpg,Wheat,wheat stripe rust,Training
+36,wheat_stripe_rust_Bing_0085.jpg,Wheat,wheat stripe rust,Training
+37,wheat_stripe_rust_Bing_0170.jpg,Wheat,wheat stripe rust,Training
+38,wheat_stripe_rust_Baidu_0407.jpg,Wheat,wheat stripe rust,Training
+39,wheat_stripe_rust_Bing_0162.jpg,Wheat,wheat stripe rust,Training
+40,wheat_stripe_rust_Bing_0055.jpg,Wheat,wheat stripe rust,Training
+41,wheat_stripe_rust_Baidu_0234.jpg,Wheat,wheat stripe rust,Training
+42,wheat_stripe_rust_Baidu_0353.jpg,Wheat,wheat stripe rust,Training
+43,wheat_stripe_rust_Google_0010.jpg,Wheat,wheat stripe rust,Training
+44,wheat_stripe_rust_Bing_0073.jpg,Wheat,wheat stripe rust,Training
+45,wheat_stripe_rust_Bing_0031.jpg,Wheat,wheat stripe rust,Training
+46,wheat_stripe_rust_Bing_0145.jpg,Wheat,wheat stripe rust,Training
+47,wheat_stripe_rust_Baidu_0449.jpg,Wheat,wheat stripe rust,Training
+48,wheat_stripe_rust_Baidu_0165.jpg,Wheat,wheat stripe rust,Training
+49,wheat_stripe_rust_Bing_0184.jpg,Wheat,wheat stripe rust,Training
+50,wheat_stripe_rust_Google_0021.jpg,Wheat,wheat stripe rust,Training
+51,wheat_stripe_rust_Baidu_0242.jpg,Wheat,wheat stripe rust,Training
+52,wheat_stripe_rust_Baidu_0129.jpg,Wheat,wheat stripe rust,Training
+53,wheat_stripe_rust_Bing_0048.jpg,Wheat,wheat stripe rust,Training
+54,wheat_stripe_rust_Baidu_0087.jpg,Wheat,wheat stripe rust,Training
+55,wheat_stripe_rust_Google_0034.jpg,Wheat,wheat stripe rust,Training
+56,wheat_stripe_rust_Baidu_0080.jpg,Wheat,wheat stripe rust,Training
+57,wheat_stripe_rust_Baidu_0451.jpg,Wheat,wheat stripe rust,Training
+58,wheat_stripe_rust_Baidu_0094.jpg,Wheat,wheat stripe rust,Training
+59,wheat_stripe_rust_Bing_0123.jpg,Wheat,wheat stripe rust,Training
+60,wheat_stripe_rust_Baidu_0322.jpg,Wheat,wheat stripe rust,Training
+61,wheat_stripe_rust_Google_0180.jpg,Wheat,wheat stripe rust,Training
+62,wheat_stripe_rust_Baidu_0092.jpg,Wheat,wheat stripe rust,Training
+63,wheat_stripe_rust_Baidu_0415.jpg,Wheat,wheat stripe rust,Training
+64,wheat_stripe_rust_Bing_0000.jpg,Wheat,wheat stripe rust,Training
+65,wheat_stripe_rust_Bing_0044.jpg,Wheat,wheat stripe rust,Training
+66,wheat_stripe_rust_Baidu_0433.jpg,Wheat,wheat stripe rust,Training
+67,wheat_stripe_rust_Baidu_0365.jpg,Wheat,wheat stripe rust,Training
+68,wheat_stripe_rust_Baidu_0007.jpg,Wheat,wheat stripe rust,Training
+69,wheat_stripe_rust_Bing_0058.jpg,Wheat,wheat stripe rust,Training
+70,wheat_stripe_rust_Bing_0203.jpg,Wheat,wheat stripe rust,Training
+71,wheat_stripe_rust_Bing_0096.jpg,Wheat,wheat stripe rust,Training
+72,wheat_stripe_rust_Google_0122.jpg,Wheat,wheat stripe rust,Training
+73,wheat_stripe_rust_Baidu_0048.jpg,Wheat,wheat stripe rust,Training
+74,wheat_stripe_rust_Google_0035.jpg,Wheat,wheat stripe rust,Training
+75,wheat_stripe_rust_Baidu_0186.jpg,Wheat,wheat stripe rust,Training
+76,wheat_stripe_rust_Baidu_0039.jpg,Wheat,wheat stripe rust,Training
+77,wheat_stripe_rust_Bing_0095.jpg,Wheat,wheat stripe rust,Training
+78,wheat_stripe_rust_Bing_0264.jpg,Wheat,wheat stripe rust,Training
+79,wheat_stripe_rust_Bing_0144.jpg,Wheat,wheat stripe rust,Training
+80,wheat_stripe_rust_Baidu_0002.jpg,Wheat,wheat stripe rust,Training
+81,wheat_stripe_rust_Google_0085.jpg,Wheat,wheat stripe rust,Training
+82,wheat_stripe_rust_Google_0027.jpg,Wheat,wheat stripe rust,Training
+83,wheat_stripe_rust_Google_0055.jpg,Wheat,wheat stripe rust,Training
+84,wheat_stripe_rust_Baidu_0307.jpg,Wheat,wheat stripe rust,Training
+85,wheat_stripe_rust_Baidu_0363.jpg,Wheat,wheat stripe rust,Training
+86,wheat_stripe_rust_Baidu_0149.jpg,Wheat,wheat stripe rust,Training
+87,wheat_stripe_rust_Google_0009.jpg,Wheat,wheat stripe rust,Training
+88,wheat_stripe_rust_Bing_0263.jpg,Wheat,wheat stripe rust,Training
+89,wheat_stripe_rust_Bing_0001.jpg,Wheat,wheat stripe rust,Training
+90,wheat_stripe_rust_Baidu_0000.jpg,Wheat,wheat stripe rust,Training
+91,wheat_stripe_rust_Baidu_0026.jpg,Wheat,wheat stripe rust,Training
+92,wheat_stripe_rust_Baidu_0008.jpg,Wheat,wheat stripe rust,Training
+93,wheat_stripe_rust_Bing_0006.jpg,Wheat,wheat stripe rust,Training
+94,wheat_stripe_rust_Bing_0243.jpg,Wheat,wheat stripe rust,Training
+95,wheat_stripe_rust_Baidu_0376.jpg,Wheat,wheat stripe rust,Training
+96,wheat_stripe_rust_Baidu_0142.jpg,Wheat,wheat stripe rust,Training
+97,wheat_stripe_rust_Baidu_0056.jpg,Wheat,wheat stripe rust,Training
+98,wheat_stripe_rust_Baidu_0213.jpg,Wheat,wheat stripe rust,Training
+99,wheat_stripe_rust_Baidu_0196.jpg,Wheat,wheat stripe rust,Training
+100,wheat_stripe_rust_Baidu_0187.jpg,Wheat,wheat stripe rust,Training
+101,wheat_stripe_rust_Baidu_0397.jpg,Wheat,wheat stripe rust,Training
+102,wheat_stripe_rust_Baidu_0154.jpg,Wheat,wheat stripe rust,Training
+103,wheat_stripe_rust_Google_0213.jpg,Wheat,wheat stripe rust,Training
+104,wheat_stripe_rust_Bing_0187.jpg,Wheat,wheat stripe rust,Training
+105,wheat_stripe_rust_Baidu_0311.jpg,Wheat,wheat stripe rust,Training
+106,wheat_stripe_rust_Google_0131.jpg,Wheat,wheat stripe rust,Training
+107,wheat_stripe_rust_Google_0335.jpg,Wheat,wheat stripe rust,Training
+108,wheat_stripe_rust_Baidu_0246.jpg,Wheat,wheat stripe rust,Training
+109,wheat_stripe_rust_Baidu_0215.jpg,Wheat,wheat stripe rust,Training
+110,wheat_stripe_rust_Google_0316.jpg,Wheat,wheat stripe rust,Training
+111,wheat_stripe_rust_Google_0311.jpg,Wheat,wheat stripe rust,Training
+112,wheat_stripe_rust_Baidu_0456.jpg,Wheat,wheat stripe rust,Training
+113,wheat_stripe_rust_Baidu_0423.jpg,Wheat,wheat stripe rust,Training
+114,wheat_stripe_rust_Google_0374.jpg,Wheat,wheat stripe rust,Training
+115,wheat_stripe_rust_Google_0147.jpg,Wheat,wheat stripe rust,Training
+116,wheat_stripe_rust_Baidu_0219.jpg,Wheat,wheat stripe rust,Training
+117,wheat_stripe_rust_Bing_0117.jpg,Wheat,wheat stripe rust,Training
+118,wheat_stripe_rust_Bing_0039.jpg,Wheat,wheat stripe rust,Training
+119,wheat_stripe_rust_Baidu_0054.jpg,Wheat,wheat stripe rust,Training
+120,wheat_stripe_rust_Baidu_0421.jpg,Wheat,wheat stripe rust,Training
+121,wheat_stripe_rust_Google_0123.jpg,Wheat,wheat stripe rust,Training
+122,wheat_stripe_rust_Bing_0258.jpg,Wheat,wheat stripe rust,Training
+123,wheat_stripe_rust_Baidu_0330.jpg,Wheat,wheat stripe rust,Training
+124,wheat_stripe_rust_Google_0026.jpg,Wheat,wheat stripe rust,Training
+125,wheat_stripe_rust_Bing_0068.jpg,Wheat,wheat stripe rust,Training
+126,wheat_stripe_rust_Bing_0075.jpg,Wheat,wheat stripe rust,Training
+127,wheat_stripe_rust_Baidu_0472.jpg,Wheat,wheat stripe rust,Training
+128,wheat_stripe_rust_Baidu_0404.jpg,Wheat,wheat stripe rust,Training
+129,wheat_stripe_rust_Google_0048.jpg,Wheat,wheat stripe rust,Training
+130,wheat_stripe_rust_Baidu_0202.jpg,Wheat,wheat stripe rust,Training
+131,wheat_stripe_rust_Baidu_0027.jpg,Wheat,wheat stripe rust,Training
+132,wheat_stripe_rust_Baidu_0071.jpg,Wheat,wheat stripe rust,Training
+133,wheat_stripe_rust_Baidu_0224.jpg,Wheat,wheat stripe rust,Training
+134,wheat_stripe_rust_Baidu_0269.jpg,Wheat,wheat stripe rust,Training
+135,wheat_stripe_rust_Bing_0122.jpg,Wheat,wheat stripe rust,Training
+136,wheat_stripe_rust_Baidu_0038.jpg,Wheat,wheat stripe rust,Training
+137,wheat_stripe_rust_Baidu_0133.jpg,Wheat,wheat stripe rust,Training
+138,wheat_stripe_rust_Baidu_0042.jpg,Wheat,wheat stripe rust,Training
+139,wheat_stripe_rust_Baidu_0408.jpg,Wheat,wheat stripe rust,Training
+140,wheat_stripe_rust_Baidu_0217.jpg,Wheat,wheat stripe rust,Training
+141,wheat_stripe_rust_Baidu_0375.jpg,Wheat,wheat stripe rust,Training
+142,wheat_stripe_rust_Google_0215.jpg,Wheat,wheat stripe rust,Training
+143,wheat_stripe_rust_Baidu_0256.jpg,Wheat,wheat stripe rust,Training
+144,wheat_stripe_rust_Baidu_0262.jpg,Wheat,wheat stripe rust,Training
+145,wheat_stripe_rust_Baidu_0245.jpg,Wheat,wheat stripe rust,Training
+146,wheat_stripe_rust_Bing_0088.jpg,Wheat,wheat stripe rust,Training
+147,wheat_stripe_rust_Bing_0029.jpg,Wheat,wheat stripe rust,Training
+148,wheat_stripe_rust_Baidu_0013.jpg,Wheat,wheat stripe rust,Training
+149,wheat_stripe_rust_Baidu_0368.jpg,Wheat,wheat stripe rust,Training
+150,wheat_stripe_rust_Baidu_0378.jpg,Wheat,wheat stripe rust,Training
+151,wheat_stripe_rust_Baidu_0108.jpg,Wheat,wheat stripe rust,Training
+152,wheat_stripe_rust_Baidu_0004.jpg,Wheat,wheat stripe rust,Training
+153,wheat_stripe_rust_Baidu_0216.jpg,Wheat,wheat stripe rust,Training
+154,wheat_stripe_rust_Bing_0079.jpg,Wheat,wheat stripe rust,Training
+155,wheat_stripe_rust_Baidu_0447.jpg,Wheat,wheat stripe rust,Training
+156,wheat_stripe_rust_Baidu_0086.jpg,Wheat,wheat stripe rust,Training
+157,wheat_stripe_rust_Bing_0003.jpg,Wheat,wheat stripe rust,Training
+158,wheat_stripe_rust_Bing_0163.jpg,Wheat,wheat stripe rust,Training
+160,wheat_leaf_rust_Google_0009.jpg,Wheat,wheat leaf rust,Training
+161,wheat_leaf_rust_Google_0266.jpg,Wheat,wheat leaf rust,Training
+162,wheat_leaf_rust_Google_0003.jpg,Wheat,wheat leaf rust,Training
+163,wheat_leaf_rust_Bing_0015.jpg,Wheat,wheat leaf rust,Training
+164,wheat_leaf_rust_Google_0382.jpg,Wheat,wheat leaf rust,Training
+165,wheat_leaf_rust_Google_0244.jpg,Wheat,wheat leaf rust,Training
+166,wheat_leaf_rust_Google_0355.jpg,Wheat,wheat leaf rust,Training
+167,wheat_leaf_rust_Bing_0044.jpg,Wheat,wheat leaf rust,Training
+168,wheat_leaf_rust_Bing_0051.jpg,Wheat,wheat leaf rust,Training
+169,wheat_leaf_rust_Bing_0011.jpg,Wheat,wheat leaf rust,Training
+170,wheat_leaf_rust_Google_0186.jpg,Wheat,wheat leaf rust,Training
+171,wheat_leaf_rust_Google_0066.jpg,Wheat,wheat leaf rust,Training
+172,wheat_leaf_rust_Bing_0028.jpg,Wheat,wheat leaf rust,Training
+173,wheat_leaf_rust_Google_0366.jpg,Wheat,wheat leaf rust,Training
+174,wheat_leaf_rust_Baidu_0216.jpg,Wheat,wheat leaf rust,Training
+175,wheat_leaf_rust_Baidu_0030.jpg,Wheat,wheat leaf rust,Training
+176,wheat_leaf_rust_Google_0235.jpg,Wheat,wheat leaf rust,Training
+177,wheat_leaf_rust_Baidu_0027.jpg,Wheat,wheat leaf rust,Training
+178,wheat_leaf_rust_Baidu_0009.jpg,Wheat,wheat leaf rust,Training
+179,wheat_leaf_rust_Baidu_0233.jpg,Wheat,wheat leaf rust,Training
+180,wheat_leaf_rust_Bing_0061.jpg,Wheat,wheat leaf rust,Training
+181,wheat_leaf_rust_Google_0038.jpg,Wheat,wheat leaf rust,Training
+182,wheat_leaf_rust_Baidu_0360.jpg,Wheat,wheat leaf rust,Training
+183,wheat_leaf_rust_Bing_0045.jpg,Wheat,wheat leaf rust,Training
+184,wheat_leaf_rust_Bing_0059.jpg,Wheat,wheat leaf rust,Training
+185,wheat_leaf_rust_Bing_0007.jpg,Wheat,wheat leaf rust,Training
+186,wheat_leaf_rust_Baidu_0207.jpg,Wheat,wheat leaf rust,Training
+187,wheat_leaf_rust_Google_0098.jpg,Wheat,wheat leaf rust,Training
+188,wheat_leaf_rust_Bing_0056.jpg,Wheat,wheat leaf rust,Training
+189,wheat_leaf_rust_Google_0227.jpg,Wheat,wheat leaf rust,Training
+190,wheat_leaf_rust_Bing_0058.jpg,Wheat,wheat leaf rust,Training
+191,wheat_leaf_rust_Google_0387.jpg,Wheat,wheat leaf rust,Training
+192,wheat_leaf_rust_Google_0044.jpg,Wheat,wheat leaf rust,Training
+193,wheat_leaf_rust_Google_0288.jpg,Wheat,wheat leaf rust,Training
+194,wheat_leaf_rust_Bing_0001.jpg,Wheat,wheat leaf rust,Training
+195,wheat_leaf_rust_Google_0263.jpg,Wheat,wheat leaf rust,Training
+196,wheat_leaf_rust_Baidu_0017.jpg,Wheat,wheat leaf rust,Training
+197,wheat_leaf_rust_Google_0367.jpg,Wheat,wheat leaf rust,Training
+199,wheat_powdery_mildew_Bing_0271.jpg,Wheat,wheat powdery mildew,Training
+200,wheat_powdery_mildew_Baidu_0058.jpg,Wheat,wheat powdery mildew,Training
+201,wheat_powdery_mildew_Baidu_0004.jpg,Wheat,wheat powdery mildew,Training
+202,wheat_powdery_mildew_Bing_0011.jpg,Wheat,wheat powdery mildew,Training
+203,wheat_powdery_mildew_Baidu_0192.jpg,Wheat,wheat powdery mildew,Training
+204,wheat_powdery_mildew_Baidu_0033.jpg,Wheat,wheat powdery mildew,Training
+205,wheat_powdery_mildew_Google_0163.jpg,Wheat,wheat powdery mildew,Training
+206,wheat_powdery_mildew_Bing_0066.jpg,Wheat,wheat powdery mildew,Training
+207,wheat_powdery_mildew_Baidu_0198.jpg,Wheat,wheat powdery mildew,Training
+208,wheat_powdery_mildew_Baidu_0178.jpg,Wheat,wheat powdery mildew,Training
+209,wheat_powdery_mildew_Baidu_0026.jpg,Wheat,wheat powdery mildew,Training
+210,wheat_powdery_mildew_Google_0062.jpg,Wheat,wheat powdery mildew,Training
+211,wheat_powdery_mildew_Baidu_0053.jpg,Wheat,wheat powdery mildew,Training
+212,wheat_powdery_mildew_Google_0345.jpg,Wheat,wheat powdery mildew,Training
+213,wheat_powdery_mildew_Baidu_0264.jpg,Wheat,wheat powdery mildew,Training
+214,wheat_powdery_mildew_Bing_0033.jpg,Wheat,wheat powdery mildew,Training
+215,wheat_powdery_mildew_Bing_0006.jpg,Wheat,wheat powdery mildew,Training
+216,wheat_powdery_mildew_Bing_0053.jpg,Wheat,wheat powdery mildew,Training
+217,wheat_powdery_mildew_Bing_0034.jpg,Wheat,wheat powdery mildew,Training
+218,wheat_powdery_mildew_Baidu_0195.jpg,Wheat,wheat powdery mildew,Training
+219,wheat_powdery_mildew_Baidu_0223.jpg,Wheat,wheat powdery mildew,Training
+220,wheat_powdery_mildew_Baidu_0067.jpg,Wheat,wheat powdery mildew,Training
+221,wheat_powdery_mildew_Baidu_0280.jpg,Wheat,wheat powdery mildew,Training
+222,wheat_powdery_mildew_Bing_0059.jpg,Wheat,wheat powdery mildew,Training
+223,wheat_powdery_mildew_Bing_0072.jpg,Wheat,wheat powdery mildew,Training
+224,wheat_powdery_mildew_Baidu_0027.jpg,Wheat,wheat powdery mildew,Training
+225,wheat_powdery_mildew_Bing_0078.jpg,Wheat,wheat powdery mildew,Training
+226,wheat_powdery_mildew_Google_0042.jpg,Wheat,wheat powdery mildew,Training
+227,wheat_powdery_mildew_Bing_0021.jpg,Wheat,wheat powdery mildew,Training
+228,wheat_powdery_mildew_Baidu_0284.jpg,Wheat,wheat powdery mildew,Training
+229,wheat_powdery_mildew_Baidu_0217.jpg,Wheat,wheat powdery mildew,Training
+230,wheat_powdery_mildew_Baidu_0094.jpg,Wheat,wheat powdery mildew,Training
+231,wheat_powdery_mildew_Baidu_0243.jpg,Wheat,wheat powdery mildew,Training
+232,wheat_powdery_mildew_Baidu_0010.jpg,Wheat,wheat powdery mildew,Training
+233,wheat_powdery_mildew_Google_0178.jpg,Wheat,wheat powdery mildew,Training
+234,wheat_powdery_mildew_Bing_0048.jpg,Wheat,wheat powdery mildew,Training
+235,wheat_powdery_mildew_Baidu_0118.jpg,Wheat,wheat powdery mildew,Training
+236,wheat_powdery_mildew_Google_0144.jpg,Wheat,wheat powdery mildew,Training
+237,wheat_powdery_mildew_Baidu_0282.jpg,Wheat,wheat powdery mildew,Training
+238,wheat_powdery_mildew_Google_0209.jpg,Wheat,wheat powdery mildew,Training
+239,wheat_powdery_mildew_Baidu_0126.jpg,Wheat,wheat powdery mildew,Training
+240,wheat_powdery_mildew_Bing_0127.jpg,Wheat,wheat powdery mildew,Training
+241,wheat_powdery_mildew_Baidu_0194.jpg,Wheat,wheat powdery mildew,Training
+242,wheat_powdery_mildew_Bing_0020.jpg,Wheat,wheat powdery mildew,Training
+243,wheat_powdery_mildew_Bing_0136.jpg,Wheat,wheat powdery mildew,Training
+244,wheat_powdery_mildew_Baidu_0050.jpg,Wheat,wheat powdery mildew,Training
+245,wheat_powdery_mildew_Google_0084.jpg,Wheat,wheat powdery mildew,Training
+246,wheat_powdery_mildew_Baidu_0294.jpg,Wheat,wheat powdery mildew,Training
+247,wheat_powdery_mildew_Baidu_0213.jpg,Wheat,wheat powdery mildew,Training
+248,wheat_powdery_mildew_Bing_0119.jpg,Wheat,wheat powdery mildew,Training
+249,wheat_powdery_mildew_Bing_0022.jpg,Wheat,wheat powdery mildew,Training
+250,wheat_powdery_mildew_Baidu_0233.jpg,Wheat,wheat powdery mildew,Training
+251,wheat_powdery_mildew_Baidu_0059.jpg,Wheat,wheat powdery mildew,Training
+252,wheat_powdery_mildew_Baidu_0002.jpg,Wheat,wheat powdery mildew,Training
+253,wheat_powdery_mildew_Baidu_0215.jpg,Wheat,wheat powdery mildew,Training
+254,wheat_powdery_mildew_Bing_0174.jpg,Wheat,wheat powdery mildew,Training
+255,wheat_powdery_mildew_Baidu_0238.jpg,Wheat,wheat powdery mildew,Training
+256,wheat_powdery_mildew_Baidu_0184.jpg,Wheat,wheat powdery mildew,Training
+257,wheat_powdery_mildew_Bing_0018.jpg,Wheat,wheat powdery mildew,Training
+258,wheat_powdery_mildew_Bing_0047.jpg,Wheat,wheat powdery mildew,Training
+259,wheat_powdery_mildew_Baidu_0092.jpg,Wheat,wheat powdery mildew,Training
+260,wheat_powdery_mildew_Baidu_0076.jpg,Wheat,wheat powdery mildew,Training
+261,wheat_powdery_mildew_Bing_0095.jpg,Wheat,wheat powdery mildew,Training
+262,wheat_powdery_mildew_Baidu_0008.jpg,Wheat,wheat powdery mildew,Training
+263,wheat_powdery_mildew_Baidu_0016.jpg,Wheat,wheat powdery mildew,Training
+264,wheat_powdery_mildew_Bing_0003.jpg,Wheat,wheat powdery mildew,Training
+265,wheat_powdery_mildew_Bing_0028.jpg,Wheat,wheat powdery mildew,Training
+266,wheat_powdery_mildew_Bing_0270.jpg,Wheat,wheat powdery mildew,Training
+267,wheat_powdery_mildew_Baidu_0269.jpg,Wheat,wheat powdery mildew,Training
+268,wheat_powdery_mildew_Bing_0106.jpg,Wheat,wheat powdery mildew,Training
+269,wheat_powdery_mildew_Bing_0098.jpg,Wheat,wheat powdery mildew,Training
+270,wheat_powdery_mildew_Baidu_0128.jpg,Wheat,wheat powdery mildew,Training
+271,wheat_powdery_mildew_Baidu_0216.jpg,Wheat,wheat powdery mildew,Training
+272,wheat_powdery_mildew_Google_0016.jpg,Wheat,wheat powdery mildew,Training
+273,wheat_powdery_mildew_Baidu_0039.jpg,Wheat,wheat powdery mildew,Training
+274,wheat_powdery_mildew_Google_0197.jpg,Wheat,wheat powdery mildew,Training
+275,wheat_powdery_mildew_Baidu_0030.jpg,Wheat,wheat powdery mildew,Training
+276,wheat_powdery_mildew_Bing_0111.jpg,Wheat,wheat powdery mildew,Training
+277,wheat_powdery_mildew_Bing_0090.jpg,Wheat,wheat powdery mildew,Training
+278,wheat_powdery_mildew_Bing_0013.jpg,Wheat,wheat powdery mildew,Training
+279,wheat_powdery_mildew_Baidu_0205.jpg,Wheat,wheat powdery mildew,Training
+280,wheat_powdery_mildew_Bing_0109.jpg,Wheat,wheat powdery mildew,Training
+281,wheat_powdery_mildew_Baidu_0005.jpg,Wheat,wheat powdery mildew,Training
+282,wheat_powdery_mildew_Bing_0083.jpg,Wheat,wheat powdery mildew,Training
+283,wheat_powdery_mildew_Google_0012.jpg,Wheat,wheat powdery mildew,Training
+284,wheat_powdery_mildew_Bing_0112.jpg,Wheat,wheat powdery mildew,Training
+285,wheat_powdery_mildew_Google_0143.jpg,Wheat,wheat powdery mildew,Training
+286,wheat_powdery_mildew_Baidu_0180.jpg,Wheat,wheat powdery mildew,Training
+287,wheat_powdery_mildew_Bing_0035.jpg,Wheat,wheat powdery mildew,Training
+288,wheat_powdery_mildew_Baidu_0191.jpg,Wheat,wheat powdery mildew,Training
+289,wheat_powdery_mildew_Baidu_0175.jpg,Wheat,wheat powdery mildew,Training
+290,wheat_powdery_mildew_Google_0390.jpg,Wheat,wheat powdery mildew,Training
+291,wheat_powdery_mildew_Google_0307.jpg,Wheat,wheat powdery mildew,Training
+292,wheat_powdery_mildew_Bing_0102.jpg,Wheat,wheat powdery mildew,Training
+293,wheat_powdery_mildew_Baidu_0046.jpg,Wheat,wheat powdery mildew,Training
+294,wheat_powdery_mildew_Bing_0084.jpg,Wheat,wheat powdery mildew,Training
+295,wheat_powdery_mildew_Baidu_0214.jpg,Wheat,wheat powdery mildew,Training
+297,wheat_septoria_blotch_google_septoria (6).jpg,Wheat,wheat septoria blotch,Training
+298,wheat_septoria_blotch_blotch (112).jpg,Wheat,wheat septoria blotch,Training
+299,wheat_septoria_blotch_Bing_0031.jpg,Wheat,wheat septoria blotch,Training
+300,wheat_septoria_blotch_blotch (72).jpg,Wheat,wheat septoria blotch,Training
+301,wheat_septoria_blotch_blotch (116).jpg,Wheat,wheat septoria blotch,Training
+302,wheat_septoria_blotch_blotch (52).jpg,Wheat,wheat septoria blotch,Training
+303,wheat_septoria_blotch_blotch (8).jpg,Wheat,wheat septoria blotch,Training
+304,wheat_septoria_blotch_blotch (66).jpg,Wheat,wheat septoria blotch,Training
+305,wheat_septoria_blotch_Baidu_0152.jpg,Wheat,wheat septoria blotch,Training
+306,wheat_septoria_blotch_Google_0391.jpg,Wheat,wheat septoria blotch,Training
+307,wheat_septoria_blotch_Google_0183.jpg,Wheat,wheat septoria blotch,Training
+308,wheat_septoria_blotch_Google_0031.jpg,Wheat,wheat septoria blotch,Training
+309,wheat_septoria_blotch_blotch (5).jpg,Wheat,wheat septoria blotch,Training
+310,wheat_septoria_blotch_google_septoria (26).jpg,Wheat,wheat septoria blotch,Training
+311,wheat_septoria_blotch_blotch (56).jpg,Wheat,wheat septoria blotch,Training
+312,wheat_septoria_blotch_google_septoria (21).jpg,Wheat,wheat septoria blotch,Training
+313,wheat_septoria_blotch_blotch (88).jpg,Wheat,wheat septoria blotch,Training
+314,wheat_septoria_blotch_Bing_0018.jpg,Wheat,wheat septoria blotch,Training
+315,wheat_septoria_blotch_blotch (127).jpg,Wheat,wheat septoria blotch,Training
+316,wheat_septoria_blotch_Google_0197.jpg,Wheat,wheat septoria blotch,Training
+317,wheat_septoria_blotch_Baidu_0035.jpg,Wheat,wheat septoria blotch,Training
+318,wheat_septoria_blotch_Google_0280.jpg,Wheat,wheat septoria blotch,Training
+319,wheat_septoria_blotch_blotch (93).jpg,Wheat,wheat septoria blotch,Training
+320,wheat_septoria_blotch_blotch (14).jpg,Wheat,wheat septoria blotch,Training
+321,wheat_septoria_blotch_blotch (96).jpg,Wheat,wheat septoria blotch,Training
+322,wheat_septoria_blotch_Bing_0010.jpg,Wheat,wheat septoria blotch,Training
+323,wheat_septoria_blotch_Baidu_0049.jpg,Wheat,wheat septoria blotch,Training
+324,wheat_septoria_blotch_Bing_0035.jpg,Wheat,wheat septoria blotch,Training
+325,wheat_septoria_blotch_Bing_0003.jpg,Wheat,wheat septoria blotch,Training
+326,wheat_septoria_blotch_Baidu_0075.jpg,Wheat,wheat septoria blotch,Training
+327,wheat_septoria_blotch_blotch (114).jpg,Wheat,wheat septoria blotch,Training
+328,wheat_septoria_blotch_blotch (122).jpg,Wheat,wheat septoria blotch,Training
+329,wheat_septoria_blotch_blotch (82).jpg,Wheat,wheat septoria blotch,Training
+330,wheat_septoria_blotch_blotch (9).jpg,Wheat,wheat septoria blotch,Training
+331,wheat_septoria_blotch_blotch (46).jpg,Wheat,wheat septoria blotch,Training
+332,wheat_septoria_blotch_Google_0150.jpg,Wheat,wheat septoria blotch,Training
+333,wheat_septoria_blotch_Google_0382.jpg,Wheat,wheat septoria blotch,Training
+334,wheat_septoria_blotch_blotch (65).jpg,Wheat,wheat septoria blotch,Training
+335,wheat_septoria_blotch_blotch (70).jpg,Wheat,wheat septoria blotch,Training
+336,wheat_septoria_blotch_blotch (38).jpg,Wheat,wheat septoria blotch,Training
+337,wheat_septoria_blotch_blotch (62).jpg,Wheat,wheat septoria blotch,Training
+338,wheat_septoria_blotch_blotch (32).jpg,Wheat,wheat septoria blotch,Training
+339,wheat_septoria_blotch_google_septoria (7).jpg,Wheat,wheat septoria blotch,Training
+340,wheat_septoria_blotch_blotch (11).jpg,Wheat,wheat septoria blotch,Training
+341,wheat_septoria_blotch_google_septoria (17).jpg,Wheat,wheat septoria blotch,Training
+342,wheat_septoria_blotch_blotch (84).jpg,Wheat,wheat septoria blotch,Training
+343,wheat_septoria_blotch_Google_0040.jpg,Wheat,wheat septoria blotch,Training
+344,wheat_septoria_blotch_blotch (118).jpg,Wheat,wheat septoria blotch,Training
+345,wheat_septoria_blotch_blotch (126).jpg,Wheat,wheat septoria blotch,Training
+346,wheat_septoria_blotch_blotch (7).jpg,Wheat,wheat septoria blotch,Training
+347,wheat_septoria_blotch_blotch (6).jpg,Wheat,wheat septoria blotch,Training
+348,wheat_septoria_blotch_blotch (89).jpg,Wheat,wheat septoria blotch,Training
+349,wheat_septoria_blotch_Google_0272.jpg,Wheat,wheat septoria blotch,Training
+350,wheat_septoria_blotch_blotch (53).jpg,Wheat,wheat septoria blotch,Training
+351,wheat_septoria_blotch_blotch (121).jpg,Wheat,wheat septoria blotch,Training
+352,wheat_septoria_blotch_Bing_0011.jpg,Wheat,wheat septoria blotch,Training
+353,wheat_septoria_blotch_blotch (41).jpg,Wheat,wheat septoria blotch,Training
+354,wheat_septoria_blotch_blotch (30).jpg,Wheat,wheat septoria blotch,Training
+355,wheat_septoria_blotch_blotch (42).jpg,Wheat,wheat septoria blotch,Training
+356,wheat_septoria_blotch_Google_0235.jpg,Wheat,wheat septoria blotch,Training
+357,wheat_septoria_blotch_Google_0034.jpg,Wheat,wheat septoria blotch,Training
+358,wheat_septoria_blotch_google_septoria (13).jpg,Wheat,wheat septoria blotch,Training
+359,wheat_septoria_blotch_blotch (100).jpg,Wheat,wheat septoria blotch,Training
+360,wheat_septoria_blotch_blotch (95).jpg,Wheat,wheat septoria blotch,Training
+361,wheat_septoria_blotch_blotch (78).jpg,Wheat,wheat septoria blotch,Training
+362,wheat_septoria_blotch_Baidu_0070.jpg,Wheat,wheat septoria blotch,Training
+363,wheat_septoria_blotch_blotch (23).jpg,Wheat,wheat septoria blotch,Training
+364,wheat_septoria_blotch_google_septoria (1).jpg,Wheat,wheat septoria blotch,Training
+365,wheat_septoria_blotch_blotch (73).jpg,Wheat,wheat septoria blotch,Training
+366,wheat_septoria_blotch_blotch (4).jpg,Wheat,wheat septoria blotch,Training
+367,wheat_septoria_blotch_blotch (49).jpg,Wheat,wheat septoria blotch,Training
+368,wheat_septoria_blotch_Google_0340.jpg,Wheat,wheat septoria blotch,Training
+369,wheat_septoria_blotch_Google_0005.jpg,Wheat,wheat septoria blotch,Training
+370,wheat_septoria_blotch_blotch (54).jpg,Wheat,wheat septoria blotch,Training
+371,wheat_septoria_blotch_blotch (25).jpg,Wheat,wheat septoria blotch,Training
+372,wheat_septoria_blotch_blotch (51).jpg,Wheat,wheat septoria blotch,Training
+373,wheat_septoria_blotch_google_septoria (10).jpg,Wheat,wheat septoria blotch,Training
+374,wheat_septoria_blotch_blotch (47).jpg,Wheat,wheat septoria blotch,Training
+375,wheat_septoria_blotch_blotch (68).jpg,Wheat,wheat septoria blotch,Training
+376,wheat_septoria_blotch_blotch (33).jpg,Wheat,wheat septoria blotch,Training
+377,wheat_septoria_blotch_Bing_0017.jpg,Wheat,wheat septoria blotch,Training
+378,wheat_septoria_blotch_Bing_0047.jpg,Wheat,wheat septoria blotch,Training
+379,wheat_septoria_blotch_Google_0336.jpg,Wheat,wheat septoria blotch,Training
+380,wheat_septoria_blotch_Google_0338.jpg,Wheat,wheat septoria blotch,Training
+381,wheat_septoria_blotch_blotch (40).jpg,Wheat,wheat septoria blotch,Training
+382,wheat_septoria_blotch_Bing_0043.jpg,Wheat,wheat septoria blotch,Training
+383,wheat_septoria_blotch_Baidu_0030.jpg,Wheat,wheat septoria blotch,Training
+384,wheat_septoria_blotch_blotch (36).jpg,Wheat,wheat septoria blotch,Training
+385,wheat_septoria_blotch_Baidu_0002.jpg,Wheat,wheat septoria blotch,Training
+386,wheat_septoria_blotch_blotch (107).jpg,Wheat,wheat septoria blotch,Training
+388,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0245.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+389,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (5).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+390,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0014.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+391,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (7).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+392,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (17).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+393,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0226.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+394,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (6).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+395,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (2).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+396,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (18).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+397,wheat_bacterial_leaf_streak_(black_chaff)_Google_0318.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+398,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (12).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+399,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (17).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+400,wheat_bacterial_leaf_streak_(black_chaff)_Google_0037.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+401,wheat_bacterial_leaf_streak_(black_chaff)_Google_0099.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+402,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0218.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+403,wheat_bacterial_leaf_streak_(black_chaff)_Google_0052.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+404,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0281.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+405,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (13).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+406,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (21).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+407,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (4).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+408,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0059.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+409,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0020.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+410,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0215.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+411,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0013.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+412,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (3).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+413,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0019.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+414,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (1).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+415,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0030.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+416,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (15).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+417,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (11).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+418,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (26).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+419,wheat_bacterial_leaf_streak_(black_chaff)_Google_0363.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+420,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0271.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+421,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0008.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+422,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0006.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+423,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0169.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+424,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (11).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+425,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0256.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+426,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0028.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+427,wheat_bacterial_leaf_streak_(black_chaff)_Google_0086.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+428,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0277.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+429,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0018.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+430,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0266.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+431,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0206.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+432,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (13).jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+433,wheat_bacterial_leaf_streak_(black_chaff)_Baidu_0002.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+434,wheat_bacterial_leaf_streak_(black_chaff)_Google_0378.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+435,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0003.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+436,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0010.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+437,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0001.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+438,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0031.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training
+439,wheat_bacterial_leaf_streak_(black_chaff)_Bing_0027.jpg,Wheat,wheat bacterial leaf streak (black chaff),Training

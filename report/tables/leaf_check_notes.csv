@@ -1,0 +1,21 @@
+sheet_number,name,note
+4,wheat_stripe_rust_Baidu_0243.jpg,"BORDERLINE wrong: outline joins the dark blade you clicked to a narrow blade above it; may be one leaf, I can't tell"
+9,wheat_leaf_rust_Google_0358.jpg,"EXCLUDED 2026-11-14 as collage (three panels), existing collage rule; in gold_exclude"
+12,wheat_powdery_mildew_Bing_0214.jpg,note: same photo as image 15; this one is kept (earlier in the gold queue)
+15,wheat_powdery_mildew_Google_0263.jpg,EXCLUDED 2026-11-14 as duplicate of image 12 (same photo; image 12 is earlier in the gold queue and is kept); in gold_exclude
+18,wheat_powdery_mildew_Bing_0023.jpg,"RE-APPLIED 2026-11-14 (three-quarters rule) -> wrong: the dark line down the middle is the midrib of one folded leaf (equal halves, same mildew); the outline covers under half of it"
+21,wheat_septoria_blotch_Google_0016.jpg,BORDERLINE correct: clicked object may be a leaf sheath around the stem rather than a blade; outline follows it
+22,wheat_stripe_rust_Baidu_0259.jpg,clear wrong: outline covers two leaves in a V
+24,wheat_leaf_rust_Google_0040.jpg,"RE-APPLIED 2026-11-14 (three-quarters rule) -> correct: the outline covers all of the clicked leaf that is visible, on both sides of the stem that crosses it"
+25,wheat_septoria_blotch_blotch (22).jpg,"RE-APPLIED 2026-11-14 (three-quarters rule) -> wrong: the outline stops at the bend; the drooping tip it misses is about a third of the visible leaf, so coverage is about two-thirds"
+29,wheat_powdery_mildew_Google_0115.jpg,"clear wrong: outline is one mildew pustule, not the leaf"
+31,wheat_powdery_mildew_Baidu_0012.jpg,BORDERLINE correct: click sits on the edge between the leaf and the stem; outline is the leaf
+32,wheat_leaf_rust_Google_0374.jpg,"BORDERLINE wrong: outline is a small patch of the clicked leaf plus scattered fragments, not the leaf"
+35,wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (5).jpg,clear not a leaf: spike (also a two-panel collage)
+36,wheat_leaf_rust_Google_0058.jpg,"RE-APPLIED 2026-11-14 (three-quarters rule) -> wrong: the outline covers the upper half only; the half beyond the shaded fold has the same pustules and width, so coverage is about half"
+38,wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (2).jpg,clear not a leaf: spike
+41,wheat_septoria_blotch_blotch (64).jpg,"clear wrong: outline is part of one lesion, not the leaf"
+48,wheat_leaf_rust_Google_0328.jpg,"clear wrong: outline is pustules and specks, not the leaf"
+49,wheat_leaf_rust_Bing_0042.jpg,"RE-APPLIED 2026-11-14 (three-quarters rule) -> wrong: the outline covers the pale side of a folded leaf; the larger yellowed side is left out, so coverage is under half"
+50,wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg,"EXCLUDED 2026-11-14 as collage (two panels), existing collage rule; in gold_exclude"
+52,wheat_stripe_rust_Baidu_0011.jpg,"BORDERLINE not a leaf: click is at the base of a spike and the outline is the spike; if you meant a leaf behind it, this is wrong leaf (excluded either way)"

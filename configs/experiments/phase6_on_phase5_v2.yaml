@@ -1,0 +1,52 @@
+# Phase 6 base scoring ON THE PHASE 5 v2 COLOUR STAGE (Adrija, 2026-11-18: accept Phase 5 v2, re-run the Phase 6 v2
+# policy on it). Identical to phase6_abstention.yaml except the colour stage; written before any result on it.
+# Phase 6: quality gate, uncertainty and abstention. Written and committed BEFORE any Phase 6 result.
+# Everything fitted (gate ranges, tiny classifiers, abstention thresholds, choice of the policy score) is
+# fitted on the VALIDATION split; the test split is only evaluated. Gold is not used anywhere in Phase 6.
+name: phase6_on_phase5_v2
+
+cache_dir: data/cache/conditions   # gitignored; built by src/corruptions/cache.py (shared with Phase 5)
+
+# Region model of the method that is evaluated. Fixed here, before the results: the Phase 2 SegFormer-B0
+# (the model of the frozen Phase 3 method). The corruption-augmented model is only a Phase 5 baseline.
+model: segformer
+models:
+  segformer: {architecture: segformer, checkpoint: experiments/20261114_100055_segformer/best_model.pt}
+
+# Colour stage = the variant SELECTED BY PHASE 5 (rule in phase5_colour_stage.yaml) with the thresholds
+# tuned for it on the 12 tuning images. The two values below are copied from the Phase 5 run's
+# metrics.json (`selection.selected`, `tuning[<variant>].thresholds`), not chosen here.
+# Copied 2026-11-16 from experiments/20261115_104906_phase5_colour_stage/metrics.json, before any Phase 6 result.
+colour_stage:
+  per_group:   # Phase 5 v2 (post hoc, tag phase5-v2): experiments/20261118_164312_phase5_v2/colour_stage_v2.json
+    rust: {variant: none, threshold: 10}
+    necrotic: {variant: none, threshold: 15}
+    mildew: {variant: none, threshold: 8}
+
+# The same step lists as phase5_colour_stage.yaml (only the selected one is used).
+variants:
+  none: []
+  gray_world: [gray_world]
+  shades_of_gray: [shades_of_gray]
+  exposure: [exposure]
+  denoise: [denoise]
+  gray_world+exposure: [gray_world, exposure]
+  shades_of_gray+exposure: [shades_of_gray, exposure]
+  denoise+gray_world: [denoise, gray_world]
+  denoise+shades_of_gray: [denoise, shades_of_gray]
+  denoise+exposure: [denoise, exposure]
+  denoise+gray_world+exposure: [denoise, gray_world, exposure]
+  denoise+shades_of_gray+exposure: [denoise, shades_of_gray, exposure]
+
+# An estimate is "unreliable" (the tiny classifiers' label, and the AUROC column) when it is more than
+# this many points from the same method's estimate on the clean photo. 3.64 = the rater's test-retest MAE.
+unreliable_shift: 3.64
+
+# Fixed coverages at which the error reduction is reported (the project plan Phase 6).
+coverages: [0.8, 0.9]
+
+# Gate ranges = this percentile on each bad side of the clean validation close-ups, so a clean photo is
+# sent back with a probability of a few percent by construction.
+gate_tail_pct: 2.5
+
+n_bootstrap: 1000   # cluster bootstrap (images resampled) for the 95% intervals

@@ -1,0 +1,77 @@
+# Data (raw datasets stay out of git). PlantSeg v7 is CC BY-NC 4.0, which
+# allows derivatives with attribution for non-commercial use (see report/figures/ATTRIBUTION.md).
+# Anchored to repo root: an unanchored "data/" also matches src/data/, silently
+# hiding every file in it from git (discovered 2026-10-01).
+/data/*
+
+# Our own small CSV annotation files (e.g. manual image tagging) are worth
+# versioning — unlike PlantSeg's raw/archived data itself, which must stay
+# excluded. Only *.csv surfaces; any images/zips placed in data/processed/
+# stay ignored.
+!/data/processed/
+/data/processed/*
+!/data/processed/*.csv
+
+# Phase 3 gold standard: the human ratings can't be regenerated, and the frozen
+# queues record which images were served and in what order (re-tagging changes
+# what build_queues would produce, so they can't be rebuilt either). Both hold
+# only file names and our own values, no PlantSeg images or masks.
+!/data/annotations/
+/data/annotations/*
+!/data/annotations/rating_log.csv
+!/data/annotations/leaf_rule_review_log.csv
+!/data/annotations/leaf_check_log.csv
+!/data/annotations/queues/
+/data/annotations/queues/*
+!/data/annotations/queues/*.csv
+
+# Experiment run outputs (checkpoints, large artifacts, one timestamped dir per run)
+# LOG.md stays tracked since it's the running summary, not a run's raw output.
+# *.log covers loose stdout/stderr redirects (e.g. from a detached training
+# process) that land directly in experiments/, not inside a timestamped dir.
+experiments/*/
+experiments/*.log
+!experiments/LOG.md
+
+# Model checkpoints / exports
+*.pt
+*.pth
+*.onnx
+*.tflite
+*.ckpt
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Android
+app/.gradle/
+app/build/
+app/local.properties
+app/*.iml
+app/.idea/
+
+# Secrets / env
+.env
+*.pem

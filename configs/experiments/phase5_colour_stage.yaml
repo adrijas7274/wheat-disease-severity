@@ -1,0 +1,54 @@
+# Phase 5, redirected (Adrija, 2026-11-14): make the colour stage robust, instead of only
+# corruption-augmented training of the region model. Written and committed BEFORE any Phase 5 result.
+# Gold is not used anywhere in Phase 5.
+name: phase5_colour_stage
+
+cache_dir: data/cache/conditions   # gitignored; built by src/corruptions/cache.py
+click_model: segformer
+
+models:
+  segformer: {architecture: segformer, checkpoint: experiments/20261114_100055_segformer/best_model.pt}
+  # The corruption-augmented baseline (--corruption-aug 0.5; early stop at epoch 52, best val IoU 0.615 at
+  # epoch 42). Added 2026-11-15 once trained; it is reported beside `segformer` and takes no part in the selection.
+  segformer_aug: {architecture: segformer, checkpoint: experiments/20261114_184149_segformer_corruption_aug/best_model.pt}
+
+# Preprocessing applied to the image ONLY for the colour rule (the region model and SAM 2 see the
+# photo as it is). Each variant is a list of steps, applied in this order.
+#   gray_world        each channel scaled so the three channel means are equal (linear light)
+#   shades_of_gray    the same with a Minkowski p-norm (p = 6) instead of the mean
+#   exposure          one gain in linear light so that the mean luminance is 0.18 (mid grey)
+#   denoise           Gaussian blur, sigma 1.5 px at a 1024 px long side (scaled with the image)
+variants:
+  none: []
+  gray_world: [gray_world]
+  shades_of_gray: [shades_of_gray]
+  exposure: [exposure]
+  denoise: [denoise]
+  gray_world+exposure: [gray_world, exposure]
+  shades_of_gray+exposure: [shades_of_gray, exposure]
+  denoise+gray_world: [denoise, gray_world]
+  denoise+shades_of_gray: [denoise, shades_of_gray]
+  denoise+exposure: [denoise, exposure]
+  denoise+gray_world+exposure: [denoise, gray_world, exposure]
+  denoise+shades_of_gray+exposure: [denoise, shades_of_gray, exposure]
+
+# Thresholds are re-tuned for every variant on the 12 tuning images (same grid and rules as
+# phase3-method-v1: tuned on input B, ties to the first value), because preprocessing moves the colours.
+c1_grid:
+  rust: [0, 5, 10, 15, 20]
+  necrotic: [-5, 0, 5, 10, 15]
+  mildew: [8, 12, 16, 20, 25]
+resolution_limit: 3.64
+
+# Selection rule (Adrija's criteria, written down before the results):
+#  1. A variant is admissible only if its tuning leave-one-out MAE is not more than 3.64 points worse
+#     than that of `none`.
+#  2. Among admissible variants, the one with the lowest mean severity shift on TEST (mean over the
+#     50 corruption x level cells, in points) is selected; the mean decision flip rate (corrected
+#     placeholder mapping) is reported beside it and breaks ties (then the variant listed first).
+#  3. The selected variant replaces `none` only if its mean severity shift is lower than that of `none`
+#     AND its mean flip rate is not higher.
+# Reported with every variant, to expose a rule that only looks stable because it answers zero:
+# the share of clean test images with an estimate of exactly 0, and the mean clean estimate.
+# Known weakness, stated in the report: the selection uses the test set, so the selected variant's
+# test numbers are optimistic. The validation split is reported beside it as a check.

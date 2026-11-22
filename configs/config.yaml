@@ -1,0 +1,136 @@
+# Project-wide configuration. All src/ code reads from this file — never hard-code
+# crop, paths, seeds or thresholds in scripts. Pass a different config (e.g. under
+# configs/experiments/) to override for a specific experiment.
+
+crop: "wheat" # chosen 2026-10-01; see report/dataset_versions.md and report/figures/crop_selection/
+
+# Leaf-disease classes only (PlantSeg's "wheat" taxonomy has 8; 3 are excluded
+# because they aren't leaf diseases, so lesion-area/leaf-area severity doesn't
+# apply to them: wheat head scab (head/spike disease), wheat loose smut (head/spike
+# disease), wheat stem rust (stem disease, not leaf).
+disease_classes:
+  - "wheat stripe rust"
+  - "wheat leaf rust"
+  - "wheat powdery mildew"
+  - "wheat septoria blotch"
+  - "wheat bacterial leaf streak (black chaff)"
+
+seed: 42
+
+data:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  leaf_masks_dir: "data/leaf_masks"
+  own_photos_dir: "data/own_photos"
+  plantseg_dir: "data/raw/plantseg_v7/plantseg" # PlantSeg v7 (Zenodo 17719108); zip extracts with an extra "plantseg/" nesting level. v6 is archived at data/archive/plantseg_v6 - never use it.
+  split_exclude_file: "configs/split_exclude.yaml" # duplicate photos removed from train and val (leakage fix 2026-11-14), with reasons; written by src/data/near_duplicates.py
+  plantvillage_dir: "data/raw/plantvillage" # only for lab->field motivation figure / explicit ablation, never trained on by default
+  plantdoc_dir: "data/raw/plantdoc" # held out field test set, never trained on
+
+image:
+  size: 512 # TODO Phase 2: revisit against model choice and phone memory budget
+
+# PLACEHOLDER — not validated against any agronomy source. Do not treat numbers
+# derived from these as real agricultural advice. See the limitations in README.md.
+# Mapping changed on 2026-11-14 (Adrija), after the gold evaluation and the first Phase 4 run:
+#   none = exactly 0% (no lesion found), low = above 0 and below 5%, medium = 5% to below 20%, high = 20% or more.
+# Before: none < 5%, low < 20%, medium < 100%, high = 100% (so "high" was never reached). The results
+# with the old mapping stay in experiments/LOG.md and report/tables/robustness_old_levels.md.
+severity_thresholds:
+  low_max: 0.05 # severity in (0, low_max) -> "low"; exactly 0 -> "none"
+  medium_max: 0.20 # [low_max, medium_max) -> "medium"; >= medium_max -> "high"
+
+# PLACEHOLDER decision mapping — severity level -> recommended action. Not validated.
+# "consult_expert" is no longer a severity decision: it comes only from Phase 6 abstention.
+decision_mapping:
+  none: "no_action"
+  low: "monitor"
+  medium: "treat"
+  high: "treat_urgently"
+
+# Phase 4: extra single-threshold flip rates (severity in %, crossing the threshold between the clean
+# and the corrupted image). Severity shift in points stays the primary, threshold-free metric.
+phase4:
+  flip_thresholds: [3, 5, 10, 20]
+
+experiments:
+  output_dir: "experiments"
+
+# Phase 3: SAM 2 for leaf masks and as an interactive tool in the annotation app.
+# Checkpoint is downloaded (not in git) - see experiments/LOG.md 2026-11-01 for
+# the source URL and SHA-256.
+sam2:
+  checkpoint: "data/checkpoints/sam2/sam2.1_hiera_tiny.pt"
+  model_cfg: "configs/sam2.1/sam2.1_hiera_t.yaml" # resolved inside the sam2 package, not this repo
+  device: "auto" # "auto" -> cuda if available, else cpu
+  # FROZEN 2026-11-11, before any gold image was processed (experiments/LOG.md): leaf mask = this
+  # model (tiny) + this rule. Chosen by the leaf rule review on the tuning set. Do not change.
+  leaf_rule: "min_area" # highest-scoring of the 3 candidates covering >= leaf_min_area_share of the image; largest if none does
+  leaf_min_area_share: 0.02
+  # Phase 3 step 1: leaf-rule comparison on the tuning set (src/severity/leaf_rule_review.py).
+  # The winning model + rule is frozen into this section before any gold image is processed.
+  leaf_rule_review:
+    models: # label -> checkpoint and model_cfg, same meaning as above. SHA-256 of each checkpoint: experiments/LOG.md
+      tiny: {checkpoint: "data/checkpoints/sam2/sam2.1_hiera_tiny.pt", model_cfg: "configs/sam2.1/sam2.1_hiera_t.yaml"}
+      base_plus: {checkpoint: "data/checkpoints/sam2/sam2.1_hiera_base_plus.pt", model_cfg: "configs/sam2.1/sam2.1_hiera_b+.yaml"}
+    rules: ["best_score", "min_area"]
+    min_area_share: 0.02 # set 2026-11-11 from the tuning images, before the review; reason in experiments/LOG.md
+    dir: "leaf_rule_review" # inside annotation.out_dir; overlays and the hidden key (gitignored)
+    log: "leaf_rule_review_log.csv" # inside annotation.out_dir; tracked in git
+
+# FROZEN 2026-11-14 (tag phase3-method-v1), before any gold image was scored. Do not change:
+# gold is evaluated once with exactly this method (docs/phase3_plan.md section 5).
+# Chosen on the 12 tuning images only: report/tables/refinement_tuning.md, run
+# experiments/20261114_102158_refinement_tuning, grids in configs/experiments/phase3_refinement.yaml.
+severity_method:
+  frozen: true
+  refinement: "C1" # C1 beat C0 on tuning MAE by 12.13 points (more than the 3.64 resolution limit), so the fallback to C0 does not apply
+  c1_thresholds: # one per disease group (src/severity/refinement.py)
+    rust: 10 # keep Lab a* >= 10
+    necrotic: 15 # keep Lab a* >= 15 (the largest value in the grid)
+    mildew: 8 # keep Lab chroma <= 8 and L* >= 35 (the smallest value in the grid)
+  model: "segformer" # method B: SegFormer-B0 retrained after the leakage fix
+  checkpoint: "experiments/20261114_100055_segformer/best_model.pt" # not in git
+  checkpoint_sha256: "092e5c2b5938c9d869e883be70147a02e0a32fa58426d8f330f99bd3bdc649a3"
+  resolution_limit: 3.64 # rater test-retest MAE in points, reported beside every gold result
+
+# Phase 3 gold standard = visual severity rating (src/severity/rating_tool.py),
+# since 2026-11-02. The pixel-mask tool (annotation_tool.py) is retired.
+annotation:
+  out_dir: "data/annotations" # rating_log.csv and queues/*.csv are tracked in git; the rest is gitignored
+  rating_log: "rating_log.csv" # inside out_dir; the retired mask tool's log is annotation_log.csv
+  training_report: "report/tables/rater_training.md" # rater training mode output (synthetic leaves only)
+  ui: # rating tool conveniences (no effect on what is logged)
+    default_set: "tuning" # preselected Set; tuning auto-switches to gold when finished
+    default_rater: "adrija" # prefilled Rater name (same spelling as the pilot 3 rows)
+    break_every: 20 # gentle break reminder every N images (saves + skips) per session
+  gold_locked: true # since 2026-11-04 (tag gold-v1): the tool refuses gold saves and skips; only the logged recheck is open
+  gold_sha256: "26f977c4049d2601dd761a5e78594e9211f706e6e4fcff81dfc8a9bd9ca2783f" # rating_core.gold_digest of the gold rows; checked by a test
+  tuning_exclude: # tuning images not to be used for tuning; their ratings stay in the log. Reasons: experiments/LOG.md 2026-11-04
+    - "wheat_leaf_rust_Bing_0046.jpg" # 68%, likely overestimate
+    - "wheat_stripe_rust_Bing_0054.jpg" # spike, not a leaf (2026-11-11, same rule as the gold exclusion)
+    - "wheat_bacterial_leaf_streak_(black_chaff)_google_black_chaff (6).jpg" # spike, not a leaf (2026-11-11)
+  gold_exclude: # gold images left out of every evaluation metric; their ratings stay unchanged in the locked log. Reasons: experiments/LOG.md 2026-11-11
+    - "wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (3).jpg" # detached spikes, not a leaf (main-leaf rule); decided before any method existed
+    # added 2026-11-14 (Adrija), after the wrong-leaf check and before any severity was computed on gold:
+    - "wheat_leaf_rust_Google_0358.jpg" # collage (three panels); existing collage rule
+    - "wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg" # collage (two panels); existing collage rule
+    - "wheat_powdery_mildew_Google_0263.jpg" # duplicate of wheat_powdery_mildew_Bing_0214.jpg, which is earlier in the gold queue and is kept
+  gold_exclude_reasons: # reason per image for the exclusions made after the wrong-leaf check (used in the counts and the sheet)
+    "wheat_leaf_rust_Google_0358.jpg": "collage"
+    "wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg": "collage"
+    "wheat_powdery_mildew_Google_0263.jpg": "duplicate"
+  # Adrija, 2026-11-14, before any gold image was scored: black_chaff (25) is the same photo as a training image
+  # labelled stripe rust (report/tables/near_duplicates.md). It keeps its PlantSeg label (bacterial leaf streak,
+  # so the necrotic threshold) and stays in the main results; the gold report also gives the results without it.
+  gold_sensitivity_without:
+    names: ["wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (25).jpg"]
+    reason: "This image has a conflicting disease label in PlantSeg: a copy of the same photo in the training split is labelled stripe rust. It is evaluated with its own PlantSeg label (bacterial leaf streak) in the main results above; here it is left out."
+  leaf_check_locked: true # since 2026-11-14 (tag leaf-check-v1): the check tool refuses new verdicts
+  leaf_check_sha256: "8095e2703c0f6f5cccaed574ee886546a0c12c21133457823f716ce3482aa058" # leaf_check_tool.verdict_digest of data/annotations/leaf_check_log.csv; checked by a test
+  lesion_time_cap_min: 10 # retired mask tool only
+  sets: # images per disease, by set. Sampling is seeded with the top-level seed.
+    pilot: {split: "Training", per_disease: 1}
+    tuning: {split: "Validation", per_disease: 3}
+    gold: {split: "Test", per_disease: 11} # leaf rust has only 10 eligible -> takes all 10
+  recheck_n: 15 # blind self-consistency re-rating, drawn at random (seeded) from finished gold

@@ -1,0 +1,266 @@
+# Written by `python -m src.data.near_duplicates --write-exclusions`. Do not edit by hand.
+# Leakage fix decided by Adrija on 2026-11-14 (experiments/LOG.md): duplicate photos removed from
+# train and val. `exclude` is applied by WheatSeverityDataset; test is never changed.
+# `test_with_train_copy` only lists the Phase 2 test images that had a copy in the old training set.
+exclude:
+- name: wheat_bacterial_leaf_streak_(black_chaff)_Bing_0006.jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (22).jpg (Test)
+- name: wheat_bacterial_leaf_streak_(black_chaff)_Google_0363.jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0174.jpg (Test)
+- name: wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (26).jpg
+  split: Training
+  reason: copy of wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (1).jpg (Training), which is kept
+- name: wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (6).jpg
+  split: Training
+  reason: copy of wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (27).jpg (Validation)
+- name: wheat_leaf_rust_Baidu_0081.jpg
+  split: Training
+  reason: copy of wheat_leaf_rust_Baidu_0233.jpg (Training), which is kept
+- name: wheat_leaf_rust_Baidu_0112.jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (126).jpg (Training), which is kept
+- name: wheat_leaf_rust_Bing_0001.jpg
+  split: Training
+  reason: copy of wheat_leaf_rust_Google_0000.jpg (Validation)
+- name: wheat_leaf_rust_Bing_0009.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0028.jpg (Training), which is kept
+- name: wheat_leaf_rust_Bing_0015.jpg
+  split: Training
+  reason: copy of wheat_leaf_rust_Google_0040.jpg (Test)
+- name: wheat_leaf_rust_Google_0044.jpg
+  split: Training
+  reason: copy of wheat_leaf_rust_Bing_0058.jpg (Training), which is kept
+- name: wheat_leaf_rust_Google_0263.jpg
+  split: Training
+  reason: copy of wheat_leaf_rust_Bing_0051.jpg (Training), which is kept
+- name: wheat_leaf_rust_Google_0355.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0247.jpg (Validation)
+- name: wheat_powdery_mildew_Baidu_0178.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Baidu_0022.jpg (Validation)
+- name: wheat_powdery_mildew_Baidu_0194.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Baidu_0049.jpg (Test)
+- name: wheat_powdery_mildew_Bing_0021.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0096.jpg (Validation)
+- name: wheat_powdery_mildew_Bing_0059.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0163.jpg (Test)
+- name: wheat_powdery_mildew_Bing_0083.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0011.jpg (Training), which is kept
+- name: wheat_powdery_mildew_Bing_0106.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Google_0101.jpg (Test)
+- name: wheat_powdery_mildew_Bing_0127.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0023.jpg (Test)
+- name: wheat_powdery_mildew_Bing_0136.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0172.jpg (Validation)
+- name: wheat_powdery_mildew_Google_0012.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0066.jpg (Training), which is kept
+- name: wheat_powdery_mildew_Google_0016.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0023.jpg (Test)
+- name: wheat_powdery_mildew_Google_0163.jpg
+  split: Training
+  reason: copy of wheat_powdery_mildew_Bing_0090.jpg (Training), which is kept
+- name: wheat_septoria_blotch_Bing_0031.jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (20).jpg (Validation)
+- name: wheat_septoria_blotch_Bing_0043.jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_google_septoria (5).jpg (Validation)
+- name: wheat_septoria_blotch_Google_0338.jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_google_septoria (25).jpg (Validation)
+- name: wheat_septoria_blotch_blotch (100).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (22).jpg (Test)
+- name: wheat_septoria_blotch_blotch (114).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0005.jpg (Training), which is kept
+- name: wheat_septoria_blotch_blotch (14).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (69).jpg (Test)
+- name: wheat_septoria_blotch_blotch (23).jpg
+  split: Training
+  reason: copy of wheat_bacterial_leaf_streak_(black_chaff)_Bing_0002.jpg (Validation)
+- name: wheat_septoria_blotch_blotch (33).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (79).jpg (Test)
+- name: wheat_septoria_blotch_blotch (41).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (18).jpg (Validation)
+- name: wheat_septoria_blotch_blotch (42).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_google_septoria (5).jpg (Validation)
+- name: wheat_septoria_blotch_blotch (56).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0309.jpg (Test)
+- name: wheat_septoria_blotch_blotch (6).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0272.jpg (Training), which is kept
+- name: wheat_septoria_blotch_blotch (66).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (16).jpg (Validation)
+- name: wheat_septoria_blotch_blotch (68).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (32).jpg (Training), which is kept
+- name: wheat_septoria_blotch_blotch (70).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Bing_0017.jpg (Training), which is kept
+- name: wheat_septoria_blotch_blotch (73).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (55).jpg (Validation)
+- name: wheat_septoria_blotch_blotch (77).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Bing_0047.jpg (Training), which is kept
+- name: wheat_septoria_blotch_blotch (8).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (62).jpg (Training), which is kept
+- name: wheat_septoria_blotch_blotch (82).jpg
+  split: Training
+  reason: copy of wheat_bacterial_leaf_streak_(black_chaff)_Bing_0004.jpg (Test)
+- name: wheat_septoria_blotch_blotch (96).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_blotch (30).jpg (Training), which is kept
+- name: wheat_septoria_blotch_google_septoria (1).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0005.jpg (Training), which is kept
+- name: wheat_septoria_blotch_google_septoria (10).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0058.jpg (Test)
+- name: wheat_septoria_blotch_google_septoria (13).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0206.jpg (Test)
+- name: wheat_septoria_blotch_google_septoria (21).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0309.jpg (Test)
+- name: wheat_septoria_blotch_google_septoria (6).jpg
+  split: Training
+  reason: copy of wheat_septoria_blotch_Google_0016.jpg (Test)
+- name: wheat_stripe_rust_Baidu_0027.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Baidu_0484.jpg (Test)
+- name: wheat_stripe_rust_Baidu_0196.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Baidu_0106.jpg (Test)
+- name: wheat_stripe_rust_Baidu_0359.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Baidu_0317.jpg (Test)
+- name: wheat_stripe_rust_Baidu_0456.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Baidu_0120.jpg (Test)
+- name: wheat_stripe_rust_Baidu_0466.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Baidu_0484.jpg (Test)
+- name: wheat_stripe_rust_Baidu_0487.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Baidu_0468.jpg (Training), which is kept
+- name: wheat_stripe_rust_Bing_0001.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0082.jpg (Validation)
+- name: wheat_stripe_rust_Bing_0006.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Google_0029.jpg (Test)
+- name: wheat_stripe_rust_Bing_0031.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0173.jpg (Test)
+- name: wheat_stripe_rust_Bing_0055.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0137.jpg (Test)
+- name: wheat_stripe_rust_Bing_0081.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0029.jpg (Training), which is kept
+- name: wheat_stripe_rust_Bing_0095.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0037.jpg (Validation)
+- name: wheat_stripe_rust_Bing_0096.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0039.jpg (Training), which is kept
+- name: wheat_stripe_rust_Bing_0122.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0048.jpg (Training), which is kept
+- name: wheat_stripe_rust_Bing_0130.jpg
+  split: Training
+  reason: copy of wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (25).jpg (Test)
+- name: wheat_stripe_rust_Bing_0240.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0063.jpg (Validation)
+- name: wheat_stripe_rust_Bing_0263.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Google_0223.jpg (Test)
+- name: wheat_stripe_rust_Google_0009.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0145.jpg (Training), which is kept
+- name: wheat_stripe_rust_Google_0010.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0094.jpg (Validation)
+- name: wheat_stripe_rust_Google_0123.jpg
+  split: Training
+  reason: copy of wheat_leaf_rust_Google_0374.jpg (Test)
+- name: wheat_stripe_rust_Google_0147.jpg
+  split: Training
+  reason: copy of wheat_leaf_rust_Google_0066.jpg (Training), which is kept
+- name: wheat_stripe_rust_Google_0311.jpg
+  split: Training
+  reason: copy of wheat_stripe_rust_Bing_0079.jpg (Training), which is kept
+- name: wheat_septoria_blotch_Google_0212.jpg
+  split: Validation
+  reason: copy of wheat_bacterial_leaf_streak_(black_chaff)_Google_0141.jpg (Test)
+- name: wheat_septoria_blotch_blotch (105).jpg
+  split: Validation
+  reason: copy of wheat_septoria_blotch_Bing_0045.jpg (Test)
+test_with_train_copy:
+- name: wheat_bacterial_leaf_streak_(black_chaff)_Bing_0004.jpg
+  train_copy: wheat_septoria_blotch_blotch (82).jpg
+- name: wheat_bacterial_leaf_streak_(black_chaff)_black_chaff (25).jpg
+  train_copy: wheat_stripe_rust_Bing_0130.jpg
+- name: wheat_leaf_rust_Google_0040.jpg
+  train_copy: wheat_leaf_rust_Bing_0015.jpg
+- name: wheat_leaf_rust_Google_0374.jpg
+  train_copy: wheat_stripe_rust_Google_0123.jpg
+- name: wheat_powdery_mildew_Bing_0023.jpg
+  train_copy: wheat_powdery_mildew_Bing_0127.jpg
+- name: wheat_powdery_mildew_Google_0101.jpg
+  train_copy: wheat_powdery_mildew_Bing_0106.jpg
+- name: wheat_septoria_blotch_Google_0016.jpg
+  train_copy: wheat_septoria_blotch_google_septoria (6).jpg
+- name: wheat_septoria_blotch_Google_0058.jpg
+  train_copy: wheat_septoria_blotch_google_septoria (10).jpg
+- name: wheat_septoria_blotch_Google_0174.jpg
+  train_copy: wheat_bacterial_leaf_streak_(black_chaff)_Google_0363.jpg
+- name: wheat_septoria_blotch_Google_0206.jpg
+  train_copy: wheat_septoria_blotch_google_septoria (13).jpg
+- name: wheat_septoria_blotch_Google_0309.jpg
+  train_copy: wheat_septoria_blotch_blotch (56).jpg
+- name: wheat_septoria_blotch_blotch (22).jpg
+  train_copy: wheat_bacterial_leaf_streak_(black_chaff)_Bing_0006.jpg
+- name: wheat_septoria_blotch_blotch (69).jpg
+  train_copy: wheat_septoria_blotch_blotch (14).jpg
+- name: wheat_septoria_blotch_blotch (79).jpg
+  train_copy: wheat_septoria_blotch_blotch (33).jpg
+- name: wheat_stripe_rust_Baidu_0106.jpg
+  train_copy: wheat_stripe_rust_Baidu_0196.jpg
+- name: wheat_stripe_rust_Baidu_0120.jpg
+  train_copy: wheat_stripe_rust_Baidu_0456.jpg
+- name: wheat_stripe_rust_Baidu_0317.jpg
+  train_copy: wheat_stripe_rust_Baidu_0359.jpg
+- name: wheat_stripe_rust_Baidu_0484.jpg
+  train_copy: wheat_stripe_rust_Baidu_0027.jpg
+- name: wheat_stripe_rust_Bing_0137.jpg
+  train_copy: wheat_stripe_rust_Bing_0055.jpg
+- name: wheat_stripe_rust_Bing_0173.jpg
+  train_copy: wheat_stripe_rust_Bing_0031.jpg
+- name: wheat_stripe_rust_Google_0029.jpg
+  train_copy: wheat_stripe_rust_Bing_0006.jpg
+- name: wheat_stripe_rust_Google_0223.jpg
+  train_copy: wheat_stripe_rust_Bing_0263.jpg

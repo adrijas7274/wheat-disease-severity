@@ -1,0 +1,51 @@
+# Phase 5 v2: POST HOC per-group colour stage (Adrija, 2026-11-18). Decided after the Phase 7 finding that the
+# Phase 5 v1 stage suppresses the necrotic rule. v1 (phase5_colour_stage.yaml, run
+# experiments/20261115_104906_phase5_colour_stage) and the Phase 7 finding stay in the drafts unchanged.
+# These rules and the code are committed and tagged phase5-v2-prereg BEFORE any v2 result.
+# Selection uses ONLY the tuning images, the PlantSeg validation split and the healthy guard set.
+# Test is evaluated once after the selection; gold is not used; the JIC set is not downloaded until
+# Phase 5 v2 and the re-fitted Phase 6 policy are tagged.
+name: phase5_v2
+
+phase5_v1_run: experiments/20261115_104906_phase5_colour_stage   # per-variant severities (val, test) and tuning.json
+phase5_v1_experiment: configs/experiments/phase5_colour_stage.yaml # variants, grid, models
+model: segformer
+baseline: none            # the frozen Phase 3 colour stage (phase3-method-v1)
+
+# One preprocessing variant per refinement group (rust, necrotic, mildew), chosen from the 12 Phase 5 variants
+# (including `none`). A group's variant applies to every disease of that group, with the threshold re-tuned for
+# that variant on the tuning images (tuning.json of the v1 run, same grid and rules as Phase 5 v1).
+
+guards:
+  # G1 tuning: per group, the leave-one-out MAE on that group's tuning images must not be more than this many
+  # points worse than `none`'s (tuning images per group: rust 4, necrotic 5, mildew 3).
+  tuning_loo_limit: 3.64
+  # G2 detection: per disease of the group, the share of CLEAN validation estimates that are exactly 0% must not
+  # be higher than with `none`.
+  detection: val_zero_rate_not_above_baseline
+  # G3 healthy false alarms: on the healthy guard set, per group (the group's rule run on every healthy leaf),
+  # the median false severity AND the share above 5% must not be higher than with `none`.
+  healthy: median_and_share_above_5_not_above_baseline
+  healthy_share_above: 5.0
+
+# Healthy guard set (Adrija, 2026-11-18): Bangladesh wheat field set, Mendeley 5gc7hwydwg v1 (CC BY 4.0),
+# ORIGINAL healthy leaf photos only (never the augmented copies). Used for G3 only, never for training.
+# PlantSeg has no healthy images, and the Mendeley Wheat Leaf (Ethiopia) set is excluded because the problem
+# was found there.
+healthy_set:
+  dir: data/raw/bangladesh_wheat/extracted
+  path_must_contain: [original, healthy]   # lower-case substrings of the photo's folder path
+  max_long_side: 2048                      # same cap as Phase 7
+  click: automatic                         # Phase 4 rule, as in Phase 7
+
+# Selection among the variants passing G1-G3, per group, on the VALIDATION split (val images of that group's
+# diseases, the 50 corruption x level cells of the Phase 4 benchmark, SegFormer-B0 regions):
+#   lowest mean severity shift (points); ties broken by the lower mean decision flip rate, then by list order.
+#   The selected variant replaces `none` only if its val shift is lower AND its val flip rate is not higher.
+# (`none` always passes the guards against itself.)
+
+# Evaluation, once, after the selection: TEST split, pooled and PER DISEASE (clean zero rate, mean shift,
+# mean flip rate, single-threshold flips), v2 against v1 (`denoise+shades_of_gray+exposure` for all groups) and
+# `none`. Then the Mendeley Wheat Leaf set (labelled NOT INDEPENDENT: the problem was found there), the Phase 6 v2
+# policy re-fitted on top of Phase 5 v2 (same frozen Phase 6 v2 rules), and the JIC set (Zenodo 7573133).
+n_bootstrap: 1000
