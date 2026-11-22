@@ -100,10 +100,10 @@ def build_app(pipeline: Pipeline) -> gr.Blocks:
         original = gr.State(None)
         with gr.Row():
             with gr.Column():
-                photo = gr.Image(type="numpy", label="Your photo: tap the main leaf", sources=["upload", "clipboard"])
+                photo = gr.Image(type="numpy", label="Your photo: tap the main leaf", sources=["upload", "clipboard"], height=420)
                 disease = gr.Dropdown(DISEASES, value=DISEASES[0], label="Disease you suspect")
             with gr.Column():
-                result_image = gr.Image(type="numpy", label="Leaf outline and lesions", interactive=False)
+                result_image = gr.Image(type="numpy", label="Leaf outline and lesions", interactive=False, height=420)
                 result_text = gr.Markdown("Upload a photo to start.")
         examples = sorted(EXAMPLES_DIR.glob("*.jpg"))
         if examples:
@@ -125,4 +125,6 @@ def _disease_of(filename: str) -> str:
 
 if __name__ == "__main__":
     ensure_checkpoints()
-    build_app(Pipeline(device="cpu")).launch(server_name=os.environ.get("GRADIO_SERVER_NAME", "127.0.0.1"))
+    # GRADIO_SHARE=1 gives a temporary public *.gradio.live link (used by the Colab notebook)
+    build_app(Pipeline(device="cpu")).launch(server_name=os.environ.get("GRADIO_SERVER_NAME", "127.0.0.1"),
+                                             share=os.environ.get("GRADIO_SHARE") == "1")

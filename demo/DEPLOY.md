@@ -1,6 +1,27 @@
 # Deploying the demo to Hugging Face Spaces
 
-The Space runs on the free CPU hardware (2 vCPU, 16 GB RAM). The first start takes several minutes: it installs
+> **Status (2026-11-22): not deployed.** Hugging Face now requires a PRO subscription to host Gradio or Docker
+> Spaces, including on the free `cpu-basic` hardware (the upload returned `402 Payment Required`). The live demo is
+> the Colab notebook instead (`notebooks/demo_colab.ipynb`). A private Space `AdrijaS722744/wheat-disease-severity`
+> was created but holds no files. The prepared Space folder is kept (`python -m src.demo.build_space`).
+>
+> **Free hosting on ZeroGPU** may become possible once the Hugging Face account is 30 days old. Check then:
+> 1. That the account can actually create or switch a Gradio Space to ZeroGPU hardware without PRO (Hugging Face's
+>    rules change; read the current Spaces pricing and ZeroGPU pages first).
+> 2. ZeroGPU runs on GPU only inside functions decorated with `@spaces.GPU` and needs the `spaces` package; the
+>    pipeline here runs on CPU (`Pipeline(device="cpu")`), so decide whether to add the decorator around
+>    `Pipeline.analyse` and pass `device="cuda"`, and re-check that the results match the CPU run (within 0.001 points
+>    on the three examples).
+> 3. ZeroGPU supports specific torch versions only; check that `torch==2.5.1` is one of them, or change it and
+>    re-run the tests.
+> 4. `sam2` is a source package: the Space build must install torch first and then
+>    `SAM2_BUILD_CUDA=0 pip install --no-build-isolation sam2==1.1.0` (see `demo/requirements.txt`); a plain
+>    `requirements.txt` line may build it in an isolated environment that downloads a second torch, or fail.
+> 5. Free-tier quotas (GPU minutes per day for visitors) and cold-start time; say so on the Space page.
+> 6. Then follow the steps below, choosing ZeroGPU instead of CPU basic, and replace the Colab badge in the README
+>    with the Space link (or keep both).
+
+The steps below were written for the free CPU hardware (2 vCPU, 16 GB RAM). The first start takes several minutes: it installs
 packages, and the app downloads SAM 2.1 tiny (156 MB, checksum verified) and the SegFormer-B0 base weights.
 
 ## 1. Build the Space folder (on your PC, in the repository)
@@ -47,7 +68,7 @@ If the build fails on `sam2` (it compiles an optional CUDA extension), add a Spa
 
 - Try each example: choose the disease, tap the middle of the main leaf; expect an answer in a few seconds.
 - Read the disclaimer, limitations and credits on the page.
-- Then Settings -> **Change visibility** -> Public, and put the link in the README (`TODO_DEMO_LINK`).
+- Then Settings -> **Change visibility** -> Public, and add the link to the top of the README.
 
 ## Updating
 

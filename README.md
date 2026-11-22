@@ -9,7 +9,22 @@ noisy, badly exposed and colour-shifted. This project measures how those faults 
 flip the treatment decision, which accuracy numbers hide. It then adds a photo-quality gate and an uncertainty
 check, so the system can say **"retake the photo"** or **"consult an expert"** instead of guessing.
 
-**Demo:** TODO_DEMO_LINK (Hugging Face Space, CPU). Upload a photo, choose the disease, tap the leaf.
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adrijas7274/wheat-disease-severity/blob/main/notebooks/demo_colab.ipynb)
+**Live demo on Colab** (CPU, about 5 minutes to start, temporary public link), or [run it yourself](#run-it-yourself).
+
+![Demo: pick a photo, tap the leaf, get severity and a recommendation](report/figures/demo/demo.gif)
+
+*Stripe rust photo (JIC, CC BY 4.0): tap the leaf; the leaf is outlined in yellow and lesion pixels in red;
+severity 9.2%, level "medium", photo check passed, uncertainty 1.9 below the 3.0 limit, so the demo answers.*
+
+<details>
+<summary>The "retake the photo" case</summary>
+
+![A blurred photo is sent back for a retake](report/figures/demo/retake.png)
+
+*The same kind of leaf-rust photo with blur added: the photo check fails on sharpness, so no recommendation is
+given.*
+</details>
 
 > **Decision support, not expert advice.** The severity levels (0%, 5%, 20%) and the recommendations are
 > **placeholders**, not validated against an agronomy source.
@@ -188,6 +203,20 @@ SegFormer-B0 exported to ONNX (fixed 512 × 512 input) and quantised with onnxru
   and needs a phone-sized replacement. No Android app was built.
 - One region model and one training seed. External sets have image-level labels only.
 
+## Run it yourself
+
+Python 3.10–3.12, CPU only. In a fresh virtual environment:
+
+```bash
+git clone https://github.com/adrijas7274/wheat-disease-severity.git && cd wheat-disease-severity
+pip install -r demo/requirements.txt && SAM2_BUILD_CUDA=0 pip install --no-build-isolation sam2==1.1.0
+python demo/app.py                                    # then open http://127.0.0.1:7860
+```
+
+On Windows PowerShell, set the variable first: `$env:SAM2_BUILD_CUDA="0"`. The first start downloads SAM 2.1 tiny
+(156 MB) from Meta and checks its SHA-256; the region model (`checkpoints/segformer_b0.pt`) is in the repository.
+Each photo takes about 2 s on a laptop CPU.
+
 ## Reproducing the results
 
 ```bash
@@ -209,7 +238,7 @@ tiny checkpoint (URL and SHA-256 in `experiments/LOG.md`, 2026-11-01); external 
 | abstention (final) | `python -m src.uncertainty.phase6 --experiment configs/experiments/phase6_on_phase5_v2.yaml`, then `python -m src.uncertainty.phase6_v2 --experiment configs/experiments/phase6_v2_on_phase5_v2.yaml` | `report/tables/abstention_final.md` |
 | external sets | `python -m src.external.phase7 --part mendeley --experiment configs/experiments/phase7_{mendeley_final,jic}.yaml` | `report/tables/phase7_*.md` |
 | export | `python -m src.export` | `report/tables/export.md` |
-| demo | `python -m src.demo.export_policy` then `python demo/app.py` | http://127.0.0.1:7860 |
+| demo | `python demo/app.py` (`python -m src.demo.export_policy` rebuilds `demo/final_policy.json` from your own runs) | http://127.0.0.1:7860 |
 
 Every run writes `experiments/<timestamp>_<name>/` with its config, git commit and metrics. `experiments/LOG.md`
 records every decision and when each rule was frozen (`gold-v1`, `phase3-method-v1`, `phase6-v2-prereg`,
@@ -222,7 +251,9 @@ full usage line.
 ```
 configs/   config.yaml (crop, paths, seeds, placeholder thresholds) and one YAML per experiment
 src/       data, models, corruptions, severity, uncertainty, external, demo, export (all core code)
-demo/      Gradio app, frozen policy values, example photos, Hugging Face deployment guide
+demo/      Gradio app, frozen policy values, example photos, demo requirements, Hugging Face deployment notes
+checkpoints/segformer_b0.pt   the final region model (CC BY-NC 4.0)
+notebooks/demo_colab.ipynb    the Colab demo
 tests/     pytest
 report/    tables, figures and draft sections; dataset_versions.md records every dataset and licence
 experiments/LOG.md   running decision and results log (run folders are gitignored)
@@ -248,8 +279,8 @@ experiments/LOG.md   running decision and results log (run folders are gitignore
 | what | licence |
 |---|---|
 | source code | **MIT** (`LICENSE`) |
-| trained weights (SegFormer-B0 region model, in the demo) | **CC BY-NC 4.0**: trained on PlantSeg, non-commercial |
+| trained weights (`checkpoints/segformer_b0.pt`, the SegFormer-B0 region model) | **CC BY-NC 4.0**: trained on PlantSeg, non-commercial |
 | derived data: gold ratings and clicks, tags, leaf-check logs, tables and figures derived from PlantSeg | **CC BY-NC 4.0**, with the PlantSeg attribution above |
-| photos and overlays from the Mendeley and JIC sets (`report/figures/phase7*`, `demo/examples/`) | **CC BY 4.0** (their authors' licences) |
+| photos and overlays from the Mendeley and JIC sets (`report/figures/phase7*`, `report/figures/demo/`, `demo/examples/`) | **CC BY 4.0** (their authors' licences) |
 
 Figure-by-figure attribution: `report/figures/ATTRIBUTION.md`.

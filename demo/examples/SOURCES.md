@@ -7,3 +7,5 @@ Zenodo 7573133, https://doi.org/10.5281/zenodo.7573133, licensed **CC BY 4.0**
 - `wheat_stripe_rust_1.jpg`: `YellowRust3034.png`
 - `wheat_leaf_rust_1.jpg`: `BrownRust2453.png`
 - `wheat_septoria_blotch_1.jpg`: `Septoria6642.png`
+- `wheat_leaf_rust_blurred.jpg`: `BrownRust2453.png` with a Gaussian blur (sigma 3 px) added by this project, to show
+  the "retake the photo" case. Same CC BY 4.0 licence and attribution.

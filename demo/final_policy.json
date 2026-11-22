@@ -3,7 +3,8 @@
  "source_run": "experiments/20261118_182200_phase6_v2",
  "model": {
   "architecture": "segformer",
-  "checkpoint": "experiments/20261114_100055_segformer/best_model.pt"
+  "checkpoint": "checkpoints/segformer_b0.pt",
+  "trained_in": "experiments/20261114_100055_segformer (private run folder)"
  },
  "max_long_side": 2048,
  "colour_steps": {

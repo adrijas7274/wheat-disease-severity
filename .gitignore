@@ -36,6 +36,8 @@ experiments/*.log
 # Model checkpoints / exports
 *.pt
 *.pth
+# The final region model ships with the repository for the demo (CC BY-NC 4.0, trained on PlantSeg).
+!/checkpoints/segformer_b0.pt
 *.onnx
 *.tflite
 *.ckpt

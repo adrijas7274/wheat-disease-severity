@@ -38,6 +38,8 @@ Added 2026-11-21 (release check), same PlantSeg attribution and licence, listed 
 
 - `phase7/overlays/` and `phase7_final/overlays/`: photos from the **Mendeley Wheat Leaf Dataset**, Getachew, H.
   (2021), <https://doi.org/10.17632/wgd66f8n6h.1>, CC BY 4.0.
+- `demo/` (`demo.gif`, `retake.png`): screenshots of the demo showing JIC photos (`YellowRust3034.png`, and
+  `BrownRust2453.png` with added blur), same JIC attribution and licence as below.
 - `phase7_jic/overlays/`: photos from the **JIC wheat disease images**, Long, M. C., Hartley, M., Morris, R. J. &
   Brown, J. K. M. (2023), Zenodo, <https://doi.org/10.5281/zenodo.7573133>, CC BY 4.0.
 
