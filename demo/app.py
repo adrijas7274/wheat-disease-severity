@@ -54,6 +54,7 @@ CREDITS = """
 - External test sets: Mendeley Wheat Leaf Dataset (Getachew, 2021, CC BY 4.0), JIC (above); healthy guard
   set: Radowan & Ayon (2025), Mendeley 5gc7hwydwg, CC BY 4.0.
 """
+BLURRED_PREFIX = "z_blurred_"  # sorts last; shown in its own example block
 ACTION_LABEL = {"answer": "Answer given", "retake": "Please retake the photo", "consult": "Consult an expert"}
 
 
@@ -106,9 +107,14 @@ def build_app(pipeline: Pipeline) -> gr.Blocks:
                 result_image = gr.Image(type="numpy", label="Leaf outline and lesions", interactive=False, height=420)
                 result_text = gr.Markdown("Upload a photo to start.")
         examples = sorted(EXAMPLES_DIR.glob("*.jpg"))
-        if examples:
-            gr.Examples([[str(p), _disease_of(p.name)] for p in examples], inputs=[photo, disease],
+        normal = [p for p in examples if not p.name.startswith(BLURRED_PREFIX)]
+        blurred = [p for p in examples if p.name.startswith(BLURRED_PREFIX)]
+        if normal:
+            gr.Examples([[str(p), _disease_of(p.name)] for p in normal], inputs=[photo, disease],
                         label="Example photos (then tap the leaf)")
+        if blurred:
+            gr.Examples([[str(p), _disease_of(p.name)] for p in blurred], inputs=[photo, disease],
+                        label="Blurred photo (shows retake)")
         photo.upload(on_upload, photo, [original, result_image, result_text])
         photo.change(lambda im: im, photo, original)
         photo.select(on_tap, [original, disease], [result_image, result_text])
@@ -118,8 +124,8 @@ def build_app(pipeline: Pipeline) -> gr.Blocks:
 
 
 def _disease_of(filename: str) -> str:
-    """Example files are named <disease key>_<n>.jpg."""
-    key = filename.rsplit("_", 1)[0].replace("_", " ")
+    """Example files are named <disease key>_<n>.jpg, or z_blurred_<disease key>_<n>.jpg for the retake example."""
+    key = filename.removeprefix(BLURRED_PREFIX).rsplit("_", 1)[0].replace("_", " ")
     return next((d for d in DISEASES if d.startswith(key)), DISEASES[0])
 
 

@@ -37,6 +37,7 @@ def test_overlay_and_example_names():
     assert out.shape == image.shape and out[17, 17, 0] > 0
     assert _disease_of("wheat_septoria_blotch_1.jpg") == "wheat septoria blotch"
     assert all(_disease_of(p.name) in DISEASES for p in Path("demo/examples").glob("*.jpg"))
+    assert _disease_of("z_blurred_wheat_leaf_rust_1.jpg") == _disease_of("wheat_leaf_rust_1.jpg") != DISEASES[0]
 
 
 def test_frozen_policy_file_matches_final_pipeline():
