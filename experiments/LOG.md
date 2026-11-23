@@ -1899,7 +1899,6 @@ Run `experiments/20261121_225538_phase7_mendeley` (config `phase7_jic.yaml`), `r
 - **Browser test** (`app/parity/ui_test.py`, Chromium, Pixel 5 size, laptop CPU): isolated = true, 4 threads,
   stripe-rust example -> treat, 10.5% (centre tap, not the demo's tap); compute 3.1 s (encoder 2.5 s); offline
   reload works; Hindi, Urdu (RTL) and Santali render. Screenshots: `report/figures/app/`.
-  reload works; Hindi, Urdu (RTL) and Santali render. Screenshots: `report/figures/app/`.
 - Re-check after the two-stage refactor: the JavaScript side was re-run on all 121 images; action, severity,
   level, decision, uncertainty and failed checks are identical on 121/121.
 - APK: GitHub Actions run 45142731297 on the public repo, debug APK 29.1 MB, sha256 fee24a53…4109.
