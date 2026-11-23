@@ -1,0 +1,7 @@
+{
+  "appId": "io.github.adrijas7274.wheatcheck",
+  "appName": "Wheat leaf check",
+  "webDir": "www",
+  "android": { "allowMixedContent": false, "webContentsDebuggingEnabled": true },
+  "server": { "androidScheme": "https" }
+}

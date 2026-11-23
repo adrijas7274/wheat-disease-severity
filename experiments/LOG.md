@@ -1780,3 +1780,122 @@ Run `experiments/20261121_225538_phase7_mendeley` (config `phase7_jic.yaml`), `r
   draft's level-5 flip-rate table is stale (older levels) and should not be quoted.
 - Release check (kept outside the repository); ATTRIBUTION.md extended (Mendeley and JIC overlays, three
   PlantSeg figure sets). Nothing made public.
+
+## 2026-11-22/23 — Public release (Adrija)
+
+- Public repository `adrijas7274/wheat-disease-severity`: a single fresh commit made from this repository's files,
+  minus private planning files and the release checklist. Author: Adrija Sarkar (GitHub
+  no-reply address), with no co-author lines. MIT licence for the code; weights and PlantSeg-derived material are
+  CC BY-NC 4.0. The private working repository and its history are unchanged.
+- Hugging Face now needs PRO to host Gradio Spaces (402 on upload), so the live demo is a Colab notebook instead.
+  Also added: a GIF and a retake screenshot, a run-it-yourself section, and the region checkpoint shipped in the
+  public repository.
+- The public repository was made public on 2026-11-23, at Adrija's request.
+
+## 2026-11-23 — Phase 8 step 1: phone-sized leaf finders (tuning images only, no gold)
+
+- Adrija approved three candidates and their downloads. Both repos are Apache 2.0 and were fetched at pinned
+  commits to `data/third_party/` (gitignored):
+  - MobileSAM `f706ad9c` (mobile_sam.pt SHA-256 6dbb9052...);
+  - EfficientSAM-Ti `d525f622` (the authors' ONNX encoder 84ed466f... and decoder a62f8fa5...);
+  - tap + box GrabCut (no model).
+- Exports (`src/mobile/export_leaf_models.py`, written to `data/mobile_models/`, gitignored):
+  - MobileSAM: encoder (1024 input) plus a decoder that returns SAM's 4 low-resolution masks; the upsampling is
+    done outside the model, so the decoder does not depend on the photo size.
+  - INT8: dynamic MatMul/Gemm only, the same reason as for SegFormer.
+- Rule: every SAM-style finder uses the FROZEN `min_area` rule on its 3 multimask candidates (MobileSAM masks 1-3).
+  So only the model changes, not the rule.
+- Comparison (`src/mobile/compare_leaf_finders.py`):
+  - images: the 12 rated tuning images with Adrija's clicks, plus the rest of the tuning queue with the automatic
+    click; the script refuses any gold name;
+  - reference: the SAM 2 tiny leaf (final-v1), not ground truth;
+  - severity uses the same region and colour rule, so only the leaf changes.
+- GrabCut fix (before the full run): the first version marked everything outside the automatic box as definite
+  background. On long leaves that put the leaf's own colour into the background model, and GrabCut returned only
+  the tap disc (found with a synthetic test). Now outside the box is probable background and only a thin image
+  border is definite background.
+- Results (run `experiments/20261123_125054_leaf_finders`, `report/tables/leaf_finders.md`, sheets in
+  `report/figures/leaf_finders/`):
+  - all 78 tuning images, median leaf IoU with SAM 2 / same placeholder level: MobileSAM INT8 0.97 / 88%,
+    EfficientSAM-Ti INT8 0.96 / 94%, GrabCut 0.54 / 74%;
+  - rated 12, worst severity change: MobileSAM INT8 37.7 points, EfficientSAM INT8 11.5, GrabCut 44.9;
+  - size: MobileSAM INT8 26.9 MB, EfficientSAM INT8 17.8 MB;
+  - laptop speed at 4 threads (encoder + decoder): MobileSAM INT8 366 + 29 ms, EfficientSAM INT8 822 + 30 ms,
+    SAM 2 tiny 1085 + 48 ms.
+- The run stopped for the GrabCut fix (`experiments/20261123_125027_leaf_finders`, config only) was deleted.
+- Checkpoint: waiting for Adrija's choice of leaf finder.
+
+## 2026-11-23 — Phase 8 decision: leaf finder for the mobile version (Adrija)
+
+- **Chosen: EfficientSAM-Ti INT8** (dynamic MatMul/Gemm; 17.8 MB), with the frozen `min_area` rule on its 3
+  candidates. Reason: the comparison table `report/tables/leaf_finders.md` and the contact sheets
+  `report/figures/leaf_finders/rated.png` and `queue_worst.png` (run `experiments/20261123_125054_leaf_finders`).
+  It agrees best with the frozen SAM 2 leaf: same placeholder level on 94% of the 78 tuning images and 12/12 rated.
+  Its worst severity change on the rated set is 11.5 points (MobileSAM INT8: 37.7). It is also the smallest file.
+  Cost: an encoder about twice as slow as MobileSAM's on the laptop CPU.
+- **Fallback rule, fixed now, before any phone measurement:** if the full app takes more than 10 s per photo on
+  the test phone (or a low-RAM emulator if there is no phone), switch to MobileSAM INT8 and log it.
+  GrabCut is not used.
+
+## 2026-11-23 — Phase 8: browser pipeline and parity test
+
+- **Region model:** SegFormer-B0 INT8 *dynamic* (7.8 MB), not static (4.5 MB). Its region agreement with FP32 is
+  0.978, against 0.911 for static (`report/tables/export.md`), so the mobile version stays closer to final-v1.
+  WebAssembly speed is about the same (1 thread: 1.6 s vs 1.9 s).
+- **Port:** `app/web/js/pipeline.js` is a pure module that runs in the browser and in Node.
+  - Every frozen value comes from `app/web/policy.json` (`python -m src.mobile.export_web_policy`).
+  - cv2 is reproduced where it matters: INTER_AREA tables, the fixed-point RGB2GRAY and RGB2HSV, and the 11-bit
+    INTER_LINEAR.
+  - Python reference: `src/mobile/pipeline_ref.py` (final-v1 code with the two phone models).
+- **Parity test** (`src/mobile/parity.py` + `app/parity/run_parity.mjs`), clean test split, 121 images, with the
+  final-v1 automatic click as the tap. Adrija asked for it on the test images. Nothing is tuned on them.
+- **WebAssembly speed** (Node, onnxruntime-web 1.20.1, laptop CPU, best of 2 runs):
+  - 1 thread: SegFormer INT8 1.6 s; EfficientSAM-Ti encoder INT8 6.0 s, FP32 23 s; MobileSAM encoder INT8 2.5 s;
+  - 4 threads: SegFormer INT8 0.20 s; EfficientSAM encoder INT8 2.1 s; MobileSAM encoder INT8 0.84 s;
+  - full pipeline, 1 thread: about 6.5 s per photo (encoder 5.8 s);
+  - a first run measured 20 s while another process loaded the CPU; the re-run gave 6.5 s.
+- **Definition for the 10 s fallback rule**, fixed before any phone measurement: compute time per photo measured
+  inside the app = gate + region + leaf encoder + leaf decoder + colour rule and uncertainty. User time (choosing
+  the disease, tapping) is not counted, and nor is model loading on first start (reported separately).
+- **Speed plan:** WebAssembly threads need cross-origin isolation. The app's service worker adds COOP/COEP headers
+  (GitHub Pages cannot set headers), and the leaf encoder starts as soon as the photo is chosen.
+
+## 2026-11-23 — Phase 8: parity result (the "mobile version" numbers)
+
+- Table: `report/tables/mobile_parity.md`; clean test split, 121 images, final-v1 automatic click as the tap.
+- **Mobile version (browser) vs final-v1:** severity difference mean 2.23 / median 0.11 / 95th pct 9.3 / max
+  35.8 points; within 1 point on 74%; same placeholder level 88%; same decision 88%; same gate result 100%;
+  same action (answer / consult / retake) 93%. Answer / consult / retake rates 70 / 22 / 7% (final-v1 70 / 22 / 7%).
+- Almost all of the gap comes from the phone models, not the port: mobile (Python) vs final-v1 is 2.16 / 0.09 /
+  9.2 / 35.7 points, 88% same level. Leaf masks EfficientSAM vs SAM 2: median IoU 0.94, 54 images below 0.9,
+  lowest 0.016 (a different leaf picked).
+- **Porting error** (browser vs Python mobile): mean 0.15, max 3.1 points; 100% same level, decision and gate;
+  99% same action. Region IoU median 0.992, leaf IoU median 0.996. Largest gate-feature difference: noise, 1%.
+- Speed in Node, 1 thread, laptop: median 6.6 s per photo (encoder 5.8 s).
+
+## 2026-11-23 — Phase 8: app (PWA + Android), routine decisions
+
+- **Two stages:** `analysePhoto` (gate, region, leaf encoder) runs as soon as the photo is chosen; `finishAnalysis`
+  (decoder, colour rule, uncertainty) runs on the tap. `analyse` chains both, so the parity runner tests the same
+  code. `computeMs` = stage 1 + stage 2, without the farmer's choosing time (the 10 s rule definition above).
+- **Gate failure** stops after stage 1 and shows "retake" without asking for the disease or tap (faster, same
+  outcome as final-v1, which returns retake before looking at the leaf).
+- **Pipeline in a Web Worker** so the screen stays responsive; one model run at a time.
+- **Model files are checked** against the sha256 in `policy.json` when loaded.
+- **Service worker:** precaches the app (37.2 MB: models 25.5 MB, WebAssembly runtime 11 MB) with a progress bar on
+  first visit, then reloads once with COOP/COEP so threads work. Threads = min(4, cores - 1).
+- **Fonts:** Noto, self-hosted from pinned @fontsource 5.3.0 (OFL), weights 400 + 700, one script subset each.
+  Only Latin is precached; a script font is downloaded when its language is chosen (1.04 MB for all 13 scripts).
+  The language picker loads all of them so each name shows in its own script.
+- **Speech:** Web Speech API in browsers; in the APK the @capacitor-community/text-to-speech 4.1.1 plugin, called
+  through the Capacitor bridge (no bundler). When no voice exists the card says so ("no_voice").
+- **APK:** Capacitor 6.2.3 built by GitHub Actions (debug-signed, for sideloading). `MainActivity` routes service
+  worker requests to Capacitor's local server; without this, service workers (and so threads) do not work in the
+  APK. Not yet verified on a phone.
+- **Translations:** `app/web/strings.json`, 37 phrases x 22 languages + English, all non-English marked
+  `machine_draft` with a draft-confidence hint (lowest: Santali, Manipuri, Bodo). Review sheet:
+  `report/tables/translation_review.csv` (`python -m src.mobile.review_sheet`). CSV, not XLSX, to avoid a new
+  dependency (opens in Excel and Google Sheets).
+- **Browser test** (`app/parity/ui_test.py`, Chromium, Pixel 5 size, laptop CPU): isolated = true, 4 threads,
+  stripe-rust example -> treat, 10.5% (centre tap, not the demo's tap); compute 3.1 s (encoder 2.5 s); offline
+  reload works; Hindi, Urdu (RTL) and Santali render. Screenshots: `report/figures/app/`.

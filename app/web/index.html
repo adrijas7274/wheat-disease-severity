@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1b5e20">
+<meta name="description" content="Checks how much of a wheat leaf is diseased, on the phone, without internet. Decision support only.">
+<title>Wheat leaf check</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="fonts/latin.css">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="bar">
+  <span class="brand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22V9M12 9c-3-1-4-4-4-7 3 1 4 4 4 7Zm0 0c3-1 4-4 4-7-3 1-4 4-4 7Zm0 5c-3-1-5-3-5-6 3 0 5 3 5 6Zm0 0c3-1 5-3 5-6-3 0-5 3-5 6Z"/></svg></span>
+  <h1 data-t="app_title">Wheat leaf check</h1>
+  <button id="langBtn" class="pill" type="button" aria-haspopup="dialog">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
+    <span id="langName">English</span>
+  </button>
+</header>
+<p id="unverified" class="unverified" hidden><span data-t="unverified"></span> <span class="en">(translation not yet checked)</span></p>
+
+<main>
+  <!-- 1. photo -->
+  <section id="s-home" class="screen">
+    <div id="loading" class="loading" hidden>
+      <p data-t="loading"></p>
+      <div class="meter"><div id="meterFill"></div></div>
+    </div>
+    <label class="big primary" for="camera">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg>
+      <span data-t="take_photo"></span>
+    </label>
+    <input id="camera" type="file" accept="image/*" capture="environment" hidden>
+    <label class="big" for="gallery">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 17 5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.6"/></svg>
+      <span data-t="choose_photo"></span>
+    </label>
+    <input id="gallery" type="file" accept="image/*" hidden>
+    <p class="disclaimer" data-t="disclaimer"></p>
+    <button id="aboutBtn" class="link" type="button" data-t="credits"></button>
+  </section>
+
+  <!-- 2. disease -->
+  <section id="s-disease" class="screen" hidden>
+    <img id="thumb" class="thumb" alt="">
+    <h2 data-t="choose_disease"></h2>
+    <div id="diseases" class="choices"></div>
+  </section>
+
+  <!-- 3. tap -->
+  <section id="s-tap" class="screen" hidden>
+    <h2 class="tapHint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5a2 2 0 0 1 4 0v5l4 1a2 2 0 0 1 1.5 2.3L17.6 19a3 3 0 0 1-3 2H11a3 3 0 0 1-2.4-1.2L5 15a1.8 1.8 0 0 1 2.7-2.3L9 14"/></svg><span data-t="tap_leaf"></span></h2>
+    <div class="stage"><canvas id="photo"></canvas><div id="tapDot" class="tapDot" hidden></div></div>
+    <div id="working" class="working" hidden><span class="spinner"></span><span data-t="working"></span></div>
+  </section>
+
+  <!-- 4. result -->
+  <section id="s-result" class="screen" hidden>
+    <div id="card" class="card">
+      <div class="cardHead"><span id="cardIcon" class="cardIcon" aria-hidden="true"></span><p id="cardMsg" class="cardMsg"></p></div>
+      <p id="cardSev" class="cardSev" hidden></p>
+      <p id="cardReason" class="cardReason" hidden></p>
+      <button id="speak" class="big speak" type="button">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>
+        <span data-t="listen"></span>
+      </button>
+      <p id="noVoice" class="note" hidden data-t="no_voice"></p>
+    </div>
+    <div class="stage"><canvas id="overlay"></canvas></div>
+    <p class="note" data-t="placeholder"></p>
+    <button id="again" class="big primary" type="button">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg>
+      <span data-t="new_photo"></span>
+    </button>
+    <p class="disclaimer" data-t="disclaimer"></p>
+  </section>
+
+  <!-- about -->
+  <section id="s-about" class="screen" hidden>
+    <h2 data-t="credits"></h2>
+    <p class="disclaimer" data-t="disclaimer"></p>
+    <div class="about" lang="en" dir="ltr">
+      <p><b>Decision support only.</b> This app does not replace an agriculture expert. The severity levels and the
+        advice are <b>placeholders</b> that have not yet been checked against an agronomy source.</p>
+      <p>Everything runs on this phone. Photos are not uploaded.</p>
+      <h3>Credits and licences</h3>
+      <ul>
+        <li>Training data: PlantSeg (Wei et al., 2024, arXiv:2409.04038), CC BY-NC 4.0. Because of this, the model
+          and this app are for non-commercial use only.</li>
+        <li>Disease region model: SegFormer-B0 (Xie et al., 2021), fine-tuned for this project, INT8.</li>
+        <li>Leaf finder: EfficientSAM-Ti (Xiong et al., 2024), Apache License 2.0, INT8 export.</li>
+        <li>Runtime: ONNX Runtime Web, MIT licence. Fonts: Noto, SIL Open Font License 1.1.</li>
+        <li>Code: MIT licence. Source: <a href="https://github.com/adrijas7274/wheat-disease-severity">github.com/adrijas7274/wheat-disease-severity</a></li>
+        <li>Translations other than English are machine drafts until a native speaker checks them.</li>
+      </ul>
+      <h3>This phone</h3>
+      <pre id="diag">…</pre>
+      <button id="voiceCheck" class="pill" type="button">Check voices for all languages</button>
+      <pre id="voices" hidden></pre>
+    </div>
+    <button id="aboutBack" class="big" type="button" data-t="ok"></button>
+  </section>
+</main>
+
+<dialog id="langDlg" aria-labelledby="langTitle">
+  <h2 id="langTitle" data-t="language"></h2>
+  <div id="langList" class="langList"></div>
+</dialog>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -77,3 +77,9 @@ app/.idea/
 # Secrets / env
 .env
 *.pem
+
+# Phase 8 app
+app/node_modules/
+app/www/
+app/android/
+!/app/web/models/*.onnx

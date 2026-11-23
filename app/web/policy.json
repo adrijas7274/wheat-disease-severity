@@ -1,0 +1,134 @@
+{
+ "tag": "final-v1-mobile",
+ "based_on": "final-v1",
+ "note": "final-v1 with SegFormer-B0 INT8 (dynamic) and EfficientSAM-Ti INT8 for the leaf. Levels and decisions are PLACEHOLDERS.",
+ "models": {
+  "region": {
+   "file": "models/segformer_b0_int8.onnx",
+   "sha256": "2e855fd05204591c5515d1343f319159f6d1359f12c09cceb73688caa3875d93"
+  },
+  "leaf_encoder": {
+   "file": "models/efficient_sam_vitt_encoder_int8.onnx",
+   "sha256": "1d6725805aca6dea2d41df6791c569a5a1aeea543587d9177ca811c2bf0137ec"
+  },
+  "leaf_decoder": {
+   "file": "models/efficient_sam_vitt_decoder_int8.onnx",
+   "sha256": "b3c91c6c37a30d85fdb20595766a0c7e9d205391a49f5d223d79620eb1905810"
+  }
+ },
+ "max_long_side": 2048,
+ "image_size": 512,
+ "imagenet_mean": [
+  0.485,
+  0.456,
+  0.406
+ ],
+ "imagenet_std": [
+  0.229,
+  0.224,
+  0.225
+ ],
+ "leaf_max_side": 1024,
+ "leaf_rule": "min_area",
+ "leaf_min_area_share": 0.02,
+ "disease_groups": {
+  "wheat stripe rust": "rust",
+  "wheat leaf rust": "rust",
+  "wheat septoria blotch": "necrotic",
+  "wheat bacterial leaf streak (black chaff)": "necrotic",
+  "wheat powdery mildew": "mildew"
+ },
+ "colour_thresholds": {
+  "rust": 10,
+  "necrotic": 15,
+  "mildew": 8
+ },
+ "green_hsv": [
+  [
+   25,
+   40,
+   40
+  ],
+  [
+   90,
+   255,
+   255
+  ]
+ ],
+ "yellow_hsv": [
+  [
+   15,
+   40,
+   40
+  ],
+  [
+   24,
+   255,
+   255
+  ]
+ ],
+ "mildew_min_lightness": 35.0,
+ "gate_ranges": {
+  "sharpness": [
+   36.08456802368164,
+   null
+  ],
+  "noise": [
+   null,
+   5.268788012603212
+  ],
+  "luma": [
+   0.24747399722828584,
+   0.6375352448108149
+  ],
+  "clip_high": [
+   null,
+   0.21356225296442688
+  ],
+  "clip_low": [
+   null,
+   0.056314878892733566
+  ],
+  "blockiness": [
+   null,
+   3.0477989793293205
+  ],
+  "min_side": [
+   169.0,
+   null
+  ]
+ },
+ "gate_long_side": 512,
+ "gate_gamma": 2.2,
+ "jpeg_block": 8,
+ "photometric_views": [
+  [
+   "gain",
+   1.15
+  ],
+  [
+   "gain",
+   0.87
+  ],
+  [
+   "warm",
+   0.06
+  ],
+  [
+   "cool",
+   0.06
+  ]
+ ],
+ "photometric_gamma": 2.2,
+ "uncertainty_threshold": 3.043230517090573,
+ "severity_thresholds": {
+  "low_max": 0.05,
+  "medium_max": 0.2
+ },
+ "decision_mapping": {
+  "none": "no_action",
+  "low": "monitor",
+  "medium": "treat",
+  "high": "treat_urgently"
+ }
+}

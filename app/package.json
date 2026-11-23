@@ -1,0 +1,36 @@
+{
+  "name": "wheat-severity-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Wheat leaf disease severity, mobile version (final-v1-mobile): offline PWA and Android app",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "parity": "node parity/run_parity.mjs ../data/mobile_parity",
+    "serve": "node scripts/serve.mjs"
+  },
+  "dependencies": {
+    "@capacitor-community/text-to-speech": "4.1.1",
+    "@capacitor/android": "6.2.3",
+    "@capacitor/core": "6.2.3",
+    "onnxruntime-web": "1.20.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "6.2.3",
+    "@fontsource/noto-naskh-arabic": "5.3.0",
+    "@fontsource/noto-nastaliq-urdu": "5.3.0",
+    "@fontsource/noto-sans": "5.3.0",
+    "@fontsource/noto-sans-bengali": "5.3.0",
+    "@fontsource/noto-sans-devanagari": "5.3.0",
+    "@fontsource/noto-sans-gujarati": "5.3.0",
+    "@fontsource/noto-sans-gurmukhi": "5.3.0",
+    "@fontsource/noto-sans-kannada": "5.3.0",
+    "@fontsource/noto-sans-malayalam": "5.3.0",
+    "@fontsource/noto-sans-meetei-mayek": "5.3.0",
+    "@fontsource/noto-sans-ol-chiki": "5.3.0",
+    "@fontsource/noto-sans-oriya": "5.3.0",
+    "@fontsource/noto-sans-tamil": "5.3.0",
+    "@fontsource/noto-sans-telugu": "5.3.0"
+  }
+}
