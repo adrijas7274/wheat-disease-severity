@@ -2,6 +2,7 @@
 // (gate, region model, leaf encoder) starts as soon as the photo is chosen, stage 2 (decoder, colour rule) on the tap.
 import * as i18n from "./i18n.js";
 import * as speech from "./speech.js";
+import { adviceFor, outcomeFor } from "./advice.js";
 
 const $ = (id) => document.getElementById(id);
 const SCREENS = ["s-home", "s-disease", "s-tap", "s-result", "s-about"];
@@ -215,20 +216,19 @@ function showTap() {
 
 // ------------------------------------------------------------------------------------------------ result
 
-function outcomeOf(r) {
-  if (r.action === "retake" || r.action === "retake_no_leaf") return "retake";
-  if (r.action === "consult") return "consult";
-  return r.decision;
-}
-
 function renderResult() {
   const r = app.result;
-  const o = outcomeOf(r);
+  const adv = adviceFor(r, app.disease, app.advice);
+  const o = outcomeFor(r, adv);
   const card = $("card");
   card.style.setProperty("--oc", `var(--o-${o})`);
   $("cardIcon").innerHTML = ICONS[o];
-  const msg = i18n.t(o === "retake" ? "out_retake" : o === "consult" ? "out_consult" : `out_${o}`);
+  const msg = adv.action === "ask_expert" ? i18n.t("act_no_registered")
+    : i18n.t(o === "retake" ? "out_retake" : o === "consult" ? "out_consult" : `out_${o}`);
   $("cardMsg").textContent = msg;
+  const level = adv.level ? i18n.t(`lvl_${adv.level}`) : "";
+  $("cardLevel").textContent = level;
+  $("cardLevel").hidden = !level;
   let sev = "";
   if (r.action === "answer") sev = i18n.t("severity", { pct: i18n.num(r.severity, 1) });
   $("cardSev").textContent = sev;
@@ -240,7 +240,36 @@ function renderResult() {
   $("cardReason").textContent = reasons.join(" ");
   $("cardReason").hidden = !reasons.length;
   $("noVoice").hidden = true;
-  app.speakText = [msg, sev, ...reasons].filter(Boolean).join(". ");
+  const said = [level, msg, sev, ...reasons];
+  // treatment details: only when adviceFor() returned a product (answered photo, spraying level, registered product)
+  const box = $("advice");
+  box.hidden = !adv.product;
+  if (adv.product) {
+    const p = adv.product;
+    const rows = [["adv_product", p.name], ["adv_dose_litre", p.dosePerLitre], ["adv_dose_ha", p.formulationPerHa],
+                  ["adv_water_ha", p.waterPerHa ? `${p.waterPerHa} L` : null]].filter(([, v]) => v);
+    const dl = $("advList");
+    dl.textContent = "";
+    for (const [k, v] of rows) {
+      const dt = document.createElement("dt"); dt.textContent = i18n.t(k);
+      const dd = document.createElement("dd"); dd.textContent = v; dd.className = "ltr";
+      dl.append(dt, dd);
+    }
+    if (p.waitingDays) {
+      const dd = document.createElement("dd");
+      dd.style.gridColumn = "1 / -1";
+      dd.textContent = i18n.t("adv_waiting", { days: p.waitingDays });
+      dl.append(dd);
+    }
+    $("advWarn").hidden = !adv.warning;
+    $("advSource").textContent = `${i18n.t("adv_source")}: ${p.sourceShort}`;
+    said.push(i18n.t("adv_title"), ...rows.map(([k, v]) => `${i18n.t(k)}: ${v}`));
+    if (p.waitingDays) said.push(i18n.t("adv_waiting", { days: p.waitingDays }));
+    said.push(i18n.t("adv_label"));
+    if (adv.warning) said.push(i18n.t("adv_unverified"));
+  }
+  said.push(i18n.t("kcc"));
+  app.speakText = said.filter(Boolean).join(". ");
   drawOverlay(r);
 }
 
@@ -347,6 +376,7 @@ async function registerServiceWorker() {
 
 async function main() {
   app.strings = await i18n.loadStrings();
+  app.advice = await (await fetch("advice.json")).json();
   i18n.setLanguage(i18n.pickLanguage());
   buildDiseases();
   buildLanguages();

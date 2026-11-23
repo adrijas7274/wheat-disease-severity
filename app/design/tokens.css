@@ -1,0 +1,25 @@
+/* Wheat leaf check: design tokens (earthy modern: wheat-green, golden wheat, cream).
+   Contrast (WCAG 2.1, checked with the formula in app/design/README.md): every text colour below is >= 4.5:1 on
+   both --cream and --card; outcome colours carry white text at >= 6:1. Gold-400 is a fill only (ink on it 8.3:1). */
+:root {
+  /* brand */
+  --green-900: #1F3D1A; --green-700: #2F6B2F; --green-100: #E3EFD9;
+  --gold-600: #8A6500;  --gold-400: #E0B23C;  --gold-100: #F6E7B8;
+  --cream: #FBF7EC; --card: #FFFFFF; --ink: #1B2118; --muted: #4F5A4C; --line: #E2DCC8;
+  /* outcomes: colour + icon + words, never colour alone; separable for common colour-vision deficiencies
+     by lightness and by icon shape */
+  --o-no_action: #0B6E4F; --o-monitor: #0B5FA5; --o-treat: #A34700; --o-treat_urgently: #B3261E;
+  --o-retake: #4A5560; --o-consult: #6E3C8C;
+  /* type: body never below 18px; line-height larger for scripts with tall stacks */
+  --fs-small: 16px; --fs-body: 18px; --fs-lead: 20px; --fs-h2: 24px; --fs-h1: 30px; --fs-display: 44px;
+  --lh: 1.45; --lh-tall: 1.8; --lh-nastaliq: 2.1;
+  /* spacing (4-pt grid), radii, shadows, motion */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px;
+  --r-sm: 12px; --r-md: 20px; --r-lg: 28px; --r-pill: 999px;
+  --shadow-1: 0 1px 2px rgba(31, 61, 26, .08), 0 2px 8px rgba(31, 61, 26, .06);
+  --shadow-2: 0 4px 12px rgba(31, 61, 26, .10), 0 12px 28px rgba(31, 61, 26, .08);
+  --ease: cubic-bezier(.2, .8, .2, 1); --t-fast: 120ms; --t-med: 240ms;
+  /* touch */
+  --touch: 56px; /* >= 48px everywhere; primary actions 64-76px */
+}
+@media (prefers-reduced-motion: reduce) { :root { --t-fast: 0ms; --t-med: 0ms; } }

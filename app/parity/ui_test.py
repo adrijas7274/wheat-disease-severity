@@ -48,6 +48,8 @@ def main() -> None:
         page.wait_for_timeout(300)
         page.screenshot(path=OUT / "4_result_en.png", full_page=True)
         report["result_en"] = page.inner_text("#card")
+        report["advice_en"] = page.inner_text("#advice") if page.is_visible("#advice") else None
+        report["call_button"] = page.get_attribute("#callKcc", "href")
 
         # same result card in other languages (the card re-renders on a language change), incl. RTL Urdu
         for code, name in [("hi", "5_result_hi.png"), ("ur", "6_result_ur.png"), ("sat", "7_result_sat.png")]:

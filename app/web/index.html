@@ -62,6 +62,7 @@
   <section id="s-result" class="screen" hidden>
     <div id="card" class="card">
       <div class="cardHead"><span id="cardIcon" class="cardIcon" aria-hidden="true"></span><p id="cardMsg" class="cardMsg"></p></div>
+      <p id="cardLevel" class="cardLevel" hidden></p>
       <p id="cardSev" class="cardSev" hidden></p>
       <p id="cardReason" class="cardReason" hidden></p>
       <button id="speak" class="big speak" type="button">
@@ -70,6 +71,17 @@
       </button>
       <p id="noVoice" class="note" hidden data-t="no_voice"></p>
     </div>
+    <div id="advice" class="advice" hidden>
+      <h3 data-t="adv_title"></h3>
+      <p id="advWarn" class="advWarn" hidden><span aria-hidden="true">⚠</span> <span data-t="adv_unverified"></span></p>
+      <dl id="advList"></dl>
+      <p class="note" data-t="adv_label"></p>
+      <p id="advSource" class="note src"></p>
+    </div>
+    <a id="callKcc" class="big call" href="tel:18001801551">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
+      <span><span data-t="call_kcc"></span><br><small>1800-180-1551</small></span>
+    </a>
     <div class="stage"><canvas id="overlay"></canvas></div>
     <p class="note" data-t="placeholder"></p>
     <button id="again" class="big primary" type="button">

@@ -197,6 +197,15 @@ SegFormer-B0 exported to ONNX (fixed 512 × 512 input) and quantised with onnxru
   model of a specific camera.
 - **Post-hoc rounds.** Phase 5 v2 and Phase 6 v2 were designed after seeing earlier results. Both were fitted on
   validation data and evaluated once, and both are labelled post hoc. JIC is the only fully held-out check.
+- **Treatment advice in the app is unverified.** Products and doses are copied as printed from the official CIBRC
+  "Major Uses of Pesticides" list (as on 30.09.2026), with sources beside each row
+  (`report/tables/advice_sources.md`). No agriculture expert has checked them, so every dose is shown with a
+  warning and the Kisan Call Centre number (1800-180-1551). The list gives doses per hectare only, so the app shows
+  no per-acre dose, timing or repeat interval. No fungicide is registered on wheat for septoria or bacterial leaf
+  streak, so the app recommends asking an expert for those. The dose never depends on the severity percentage.
+- **Mobile version and translations.** The phone version uses smaller models and agrees with final-v1 on the
+  placeholder level for 88% of test images. All 22 Indian-language translations are machine drafts that no native
+  speaker has checked.
 - **The user picks the disease.** There is no disease classifier, and the healthy-leaf result depends on which
   colour rule is run.
 - **Not on a phone yet.** Only the region model is exported. SAM 2 tiny (156 MB) is too big for a 2–3 GB phone

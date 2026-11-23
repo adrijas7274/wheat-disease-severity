@@ -1903,3 +1903,33 @@ Run `experiments/20261121_225538_phase7_mendeley` (config `phase7_jic.yaml`), `r
   level, decision, uncertainty and failed checks are identical on 121/121.
 - APK: GitHub Actions run 45142731297 on the public repo, debug APK 29.1 MB, sha256 fee24a53…4109.
   Pages run 45142731857 failed only because Pages is not yet enabled (Settings step for Adrija).
+
+## 2026-11-23 — Treatment advice (unverified) and design directions
+
+- **Sources (official only):**
+  - CIBRC "Major Uses of Pesticides – Fungicides", as on 30.09.2026. Every wheat row was read from the rendered
+    PDF pages (the text layer misaligns rows) and transcribed with its page number.
+  - CIBRC banned/restricted list, 31.10.2026: mancozeb is restricted (S.O. 4294(E)), so it is excluded.
+  - PPQS yellow-rust advisory, 2022: use fungicides only as per the CIBRC label claim.
+  - Not reachable: the IIWBR site (DNS failure) and the PPQS wheat-rust leaflet (404). The per-acre figures quoted in
+    news reports of IIWBR advisories are therefore not used.
+- **Table:** `app/web/advice.json`, built by `src/mobile/build_advice.py`.
+  - Contents: 40 product rows; stripe rust 18, leaf rust 11, powdery mildew 11.
+  - Septoria and bacterial leaf streak: no registered wheat entry, so medium or high gives "ask an expert".
+  - Values are kept as printed. Per-acre dose, timing and repeat interval are not in the source, so they are null
+    (no conversion, no estimate). Status: unverified.
+- **Product the app shows:** Azoxystrobin 18.2% + Difenoconazole 11.4% w/w SC for all three fungal diseases. It is
+  the only wheat row that prints a dose per litre ("1 ml / Litre water"; 500 L/ha; 35-day waiting period). The
+  choice is for the expert to confirm.
+- **Gating:** `app/web/js/advice.js` and its tests.
+  - A dose is shown only for answered photos (gate and consult passed) at the medium or high level of a disease
+    with a registered product.
+  - The dose is identical at every severity.
+  - Every result shows the Kisan Call Centre number and a call button.
+- **Translations:** 16 new phrases × 22 languages (machine drafts). Review sheet: 53 phrases.
+- **Expert review sheet:** `report/tables/advice_review.csv`, with a source and page beside each row.
+- **Design:**
+  - Tokens in `app/design/tokens.css`. All text colours are ≥ 4.5:1 on cream and on white. Outcome colours carry
+    white text at ≥ 6:1 and are always paired with an icon.
+  - Three directions (A harvest card, B colour band, C quiet field) rendered to `report/figures/app/mockups/`.
+  - Checkpoint: waiting for Adrija's choice before the full redesign.

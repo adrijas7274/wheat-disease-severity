@@ -27,6 +27,12 @@ NOTES = {
     "no_voice": "Shown when the phone has no text-to-speech voice for this language.",
     "listen": "Button that reads the result aloud.",
     "credits": "Button that opens the about / credits page.",
+    "adv_waiting": "Pre-harvest interval. {days} is replaced by a number of days. Keep {days} exactly as written.",
+    "adv_unverified": "Keep the phone number and 'KVK' (Krishi Vigyan Kendra) as written.",
+    "kcc": "Keep the phone number exactly as written.",
+    "lvl_none": "Severity level label, shown large on the result.",
+    "act_no_registered": "Shown when no fungicide is registered for this disease.",
+    "adv_product": "Label before the product name (product names stay in English, as on the pack).",
 }
 
 
