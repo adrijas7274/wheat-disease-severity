@@ -63,6 +63,10 @@ Gold (37 images; resolution limit 3.64 points beside every row):
 | C(A) | 14.41 (10.05-19.27) | +1.28 | 24% | 24% | 3.64 |
 | C(B) | 14.35 (9.97-19.23) | +1.22 | 24% | 24% | 3.64 |
 
+The level columns are as written by the gold run, with the old level mapping. With the current
+**placeholder** mapping (none = 0%, then 5% and 20%; decided 2026-11-14 after Phase 4), the same saved
+severities give 22% (8 of 37) for all four methods (`report/tables/gold_levels_v2.md`). MAE is unchanged.
+
 C(B) by rating band:
 
 | band | n | MAE (95% CI) | resolution limit |
@@ -72,14 +76,15 @@ C(B) by rating band:
 | high (>= 20%) | 6 | 27.05 (22.69-31.25) | 3.64 |
 
 Without the one image whose disease label conflicts with a training copy
-(36 images): C(B) 14.56 (10.03-19.97), same level 22%.
+(36 images): C(B) 14.56 (10.03-19.97), same level 22% (old mapping; 19% with the current one).
 
 - The raw regions are unusable as severity (59 to 66 points): they cover most
   of the leaf.
 - The refinement removes most of that error, and the result no longer depends
   on which region it starts from (C(A) and C(B) are not distinguishable).
 - The refined estimate is still about four times the rating noise, and its
-  level agrees with the rating's level on 24% of images.
+  level agrees with the rating's level on 22% of images (current placeholder levels; 24% with the old
+  mapping).
 
 ## Limitations
 

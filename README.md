@@ -9,8 +9,13 @@ noisy, badly exposed and colour-shifted. This project measures how those faults 
 flip the treatment decision, which accuracy numbers hide. It then adds a photo-quality gate and an uncertainty
 check, so the system can say **"retake the photo"** or **"consult an expert"** instead of guessing.
 
+**Try the app:** **https://adrijas7274.github.io/wheat-disease-severity/** — the offline phone app in the
+browser (23 languages; about 37 MB on first load, then works without internet). Take or pick a photo, choose the
+disease, tap the leaf.
+
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/adrijas7274/wheat-disease-severity/blob/main/notebooks/demo_colab.ipynb)
-**Live demo on Colab** (CPU, about 5 minutes to start, temporary public link), or [run it yourself](#run-it-yourself).
+The full Python pipeline (`final-v1`, with SAM 2) as a Gradio demo on Colab (CPU, about 5 minutes to start, temporary
+public link), or [run it yourself](#run-it-yourself).
 
 ![Demo: pick a photo, tap the leaf, get severity and a recommendation](report/figures/demo/demo.gif)
 
@@ -70,10 +75,13 @@ All numbers come from `report/tables/`. CIs are 95% bootstrap intervals. Flip ra
 
 ### 1. Severity against the gold standard (37 test images, one rater)
 
-| method | MAE, points (95% CI) | same level as the rating |
+| method | MAE, points (95% CI) | same level as the rating\* |
 |---|---|---:|
 | predicted region clipped to the leaf | 59.0 (49.0–67.4) | 22% |
 | **region + colour rule (the method)** | **14.4 (10.0–19.2)** | 22% |
+
+\* Current placeholder levels (`report/tables/gold_levels_v2.md`, re-binned from the single gold run). Always
+answering "medium" would agree on 62% of these images.
 
 The rater's own test–retest difference is **3.64 points**, which is the resolution limit for every comparison.
 The method is unbiased on average (mean signed error +1.2) but about four times the rating noise. High-severity
@@ -163,9 +171,9 @@ SegFormer-B0 exported to ONNX (fixed 512 × 512 input) and quantised with onnxru
 - INT8 static meets the < 15 MB target with no IoU loss. It changes about 9% of the predicted region, and how that
   moves severity was not measured. It is not faster on a laptop CPU; phone latency is unmeasured.
 - **TFLite was not produced**: it needs a separate TensorFlow toolchain (onnx2tf) and was left as future work.
-- The leaf model is the blocker: **SAM 2.1 tiny (156 MB) does not fit a 2–3 GB phone** and needs a phone-sized
-  promptable segmenter (MobileSAM / EfficientSAM class), not evaluated here. The whole demo pipeline takes about
-  2 s per photo on a laptop CPU.
+- **SAM 2.1 tiny (156 MB) does not fit a 2–3 GB phone.** The phone app swaps it for EfficientSAM-Ti INT8 (17.8 MB)
+  and uses the dynamic INT8 region model (see the next section). The full final-v1 demo pipeline takes about 2 s
+  per photo on a laptop CPU.
 
 ## The phone app (offline, 23 languages)
 
@@ -268,8 +276,8 @@ on the phone, with no internet after the first load. Source: `app/`; design toke
   speaker has checked.
 - **The user picks the disease.** There is no disease classifier, and the healthy-leaf result depends on which
   colour rule is run.
-- **Not on a phone yet.** Only the region model is exported. SAM 2 tiny (156 MB) is too big for a 2–3 GB phone
-  and needs a phone-sized replacement. No Android app was built.
+- **Not measured on a real phone yet.** The mobile version runs in a phone browser and builds as an APK, but its
+  speed and memory on a low-end phone are unmeasured. The APK is debug-signed, for testing only.
 - One region model and one training seed. External sets have image-level labels only.
 
 ## Run it yourself
@@ -304,16 +312,21 @@ tiny checkpoint (URL and SHA-256 in `experiments/LOG.md`, 2026-11-01); external 
 | gold evaluation | `python -m src.severity.evaluate_gold --gold` (run once at `phase3-method-v1`; do not re-run for tuning) | `report/tables/gold_evaluation.md` |
 | robustness benchmark | `python -m src.corruptions.benchmark --experiment configs/experiments/phase4_benchmark.yaml` | `report/tables/robustness.md` |
 | colour stage v1 / v2 | `python -m src.severity.phase5_colour_stage`, `python -m src.severity.phase5_v2` | `report/tables/phase5_*.md` |
-| abstention (final) | `python -m src.uncertainty.phase6 --experiment configs/experiments/phase6_on_phase5_v2.yaml`, then `python -m src.uncertainty.phase6_v2 --experiment configs/experiments/phase6_v2_on_phase5_v2.yaml` | `report/tables/abstention_final.md` |
+| gold levels, current mapping | `python -m src.severity.rereport_gold_levels --run experiments/20261114_174642_gold_evaluation` (re-bins the saved gold run; scores nothing) | `report/tables/gold_levels_v2.md` |
+| abstention (final) | `python -m src.uncertainty.phase6 --experiment configs/experiments/phase6_on_phase5_v2.yaml`, then `python -m src.uncertainty.phase6_v2 --experiment configs/experiments/phase6_v2_on_phase5_v2.yaml --table report/tables/abstention_final.md --fig-dir report/figures/phase6_final` (on a fresh run, first point `v1_run` in that YAML at the new phase6 run) | `report/tables/abstention_final.md` |
 | external sets | `python -m src.external.phase7 --part mendeley --experiment configs/experiments/phase7_{mendeley_final,jic}.yaml` | `report/tables/phase7_*.md` |
 | export | `python -m src.export` | `report/tables/export.md` |
 | demo | `python demo/app.py` (`python -m src.demo.export_policy` rebuilds `demo/final_policy.json` from your own runs) | http://127.0.0.1:7860 |
+| phone leaf finders | `python -m src.mobile.export_leaf_models`, then `python -m src.mobile.compare_leaf_finders` | `report/tables/leaf_finders.md` |
+| mobile parity | `python -m src.mobile.export_web_policy`; `python -m src.mobile.parity prepare`; `node app/parity/run_parity.mjs data/mobile_parity`; `python -m src.mobile.parity compare` | `report/tables/mobile_parity.md` |
+| advice and review sheets | `python -m src.mobile.build_advice`, `python -m src.mobile.review_sheet` | `report/tables/advice_*.{md,csv}`, `translation_review.csv` |
+| app | `cd app && npm ci && npm run build && npm run serve`; APK: `app/ci/android.yml`; screenshots: `python app/parity/ui_test.py` | `app/www/`, `report/figures/app/` |
 
 Every run writes `experiments/<timestamp>_<name>/` with its config, git commit and metrics. `experiments/LOG.md`
 records every decision and when each rule was frozen (`gold-v1`, `phase3-method-v1`, `phase6-v2-prereg`,
 `phase5-v2-prereg`, `final-v1`). These names are tags and commit hashes in the private development history;
 this public repository is a single snapshot of `final-v1` plus documentation. Each script's docstring has its
-full usage line.
+full usage line. `report/README.md` lists every table and figure with the command that made it.
 
 ## Repository layout
 

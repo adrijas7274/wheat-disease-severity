@@ -1999,3 +1999,45 @@ Run `experiments/20261121_225538_phase7_mendeley` (config `phase7_jic.yaml`), `r
   - `test_registered_but_incomplete_disease_asks_an_expert`.
 - **README:** limitations now say the camera messages are hints only (uncalibrated; the gate decides), and list the
   products that are never shown.
+
+## 2026-11-24 — Phase 9: report material (index, methods summary, timeline, README consistency)
+
+- **New:**
+  - `report/README.md`: every table and figure, with its phase, what it shows, the command that made it, and
+    its status (frozen / post hoc / superseded / hand).
+  - `report/draft/methods_summary.md`: the whole study on two pages.
+  - `report/draft/experiment_timeline.md`: the LOG condensed to one table of decisions and tags.
+- **Inconsistency found and fixed (re-quoting only, nothing re-scored):**
+  - The README's gold "same level" column (19% / 24%) used the old level mapping, while every other README
+    number uses the current placeholder mapping. It now shows 22% / 22% from `report/tables/gold_levels_v2.md`.
+  - `report/draft/phase3_severity.md` keeps the gold run's table as written and adds the current-mapping
+    figure beside it.
+  - `report/limitations.md`: 22% (24% old mapping); the majority baseline is now "always medium", 62%, which
+    is 23 of 37 from the logged confusion counts.
+- **README stale statements fixed:** the "not on a phone yet / no Android app" limitation and the "leaf model
+  not evaluated" export bullet predate Phase 8.
+- **README reproduce table:**
+  - The final abstention command lacked `--table`/`--fig-dir` (without them it would have overwritten
+    `abstention_v2.md`). A fresh run also needs `v1_run` updated in the YAML.
+  - Added rows: gold re-binning (with its required `--run`), phone leaf finders, mobile parity, advice and
+    review sheets, app build.
+- **Gap recorded:** the code that made `report/figures/crop_selection/` is not in the repo (TODO in the index).
+- Tests: 372 passed.
+
+## 2026-11-24 — Phase 9 decisions (Adrija): licence, demo link, public sync, release builds
+
+- **Licence:** same as the public repository: MIT for the code (`LICENSE` added here), CC BY-NC 4.0 for the weights
+  and PlantSeg-derived material. README licence table added; release checklist items 6 and 10 marked done.
+- **Demo:** the GitHub Pages app (https://adrijas7274.github.io/wheat-disease-severity/) is the main demo, at the
+  top of the README, with the Colab badge for the Python pipeline. Check before the edit: the page returned HTTP 200
+  ("Wheat leaf check"); `policy.json`, `advice.json` and the JS files load; the live `advice.json` is identical to
+  the repository's.
+- **Crop-selection figures:** left as a known gap, labelled "exploratory, script not included".
+- **Dose safety fix:** already done in `ad72529`, re-checked rather than redone.
+  - `app/web/advice.json` shows only zineb 75% WP and azoxystrobin + difenoconazole for the rusts, and only
+    azoxystrobin + difenoconazole for powdery mildew.
+  - Septoria and bacterial leaf streak show no product and "ask an expert" at medium and high.
+  - Kresoxim-methyl, sulphur, propiconazole 25% EC, tebuconazole and triadimefon are never options.
+  - `test_every_option_shown_has_an_explicit_dose_unit` passes, along with the other 12 app tests.
+- **Public repository:** the Phase 9 material was copied, and the same README fixes were applied to its own
+  README. No co-author lines.

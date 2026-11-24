@@ -335,8 +335,9 @@ Results: `report/tables/gold_evaluation.md` (37 images, one run, frozen method).
 
 - **The method is not accurate enough to give a severity level.** Pooled MAE is
   14.35 points (95% CI 9.97 to 19.23) against a rating noise of 3.64 points.
-  Level and decision agreement with the rating is 24% (PLACEHOLDER thresholds),
-  below the 62% that always answering "low" would reach on these 37 images.
+  Level and decision agreement with the rating is 22% with the current PLACEHOLDER
+  levels (24% with the old mapping), below the 62% that always answering "medium"
+  would reach on these 37 images (62% for always "low" under the old mapping).
 - **Errors go both ways.** The mean signed error is +1.2 points, so the average
   hides large over- and underestimates: 13 of the 25 images rated below 10% are
   scored "none", and the 6 images rated 20% or more are off by 27 points on
