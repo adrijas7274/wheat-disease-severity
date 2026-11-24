@@ -21,9 +21,12 @@ export function adviceFor(result, disease, advice) {
   if (!d || !result.level) return out;
   out.level = result.level;
   out.action = d.levels[result.level] || null;
+  // "no registered spray" only when nothing is registered; registered products without a clear dose unit are
+  // never shown (expert sheet only), and then the app just says "ask an expert"
+  out.noRegistered = d.products.length === 0;
   out.products = [];
   if (out.action === "spray_recommended" && d.options && d.options.length) {
-    // up to 3 registered options, unranked, in the order of the official list; dose independent of severity
+    // up to 3 registered options with an explicit dose unit, unranked, in the order of the official list; dose independent of severity
     out.products = d.options.map((i) => {
       const p = d.products[i];
       const src = advice.sources[p.source];

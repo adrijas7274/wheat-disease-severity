@@ -247,16 +247,27 @@ def conversions(p):
 N_OPTIONS = 3
 
 
+def has_explicit_unit(p):
+    """True when the official dose prints a clear unit: a dose per litre or a per-hectare formulation dose with a
+    unit (g, kg, ml, L), and no unit flagged for the expert to confirm. Safety rule (Adrija, 2026-11-24): only such
+    products are shown in the app; the rest (e.g. kresoxim-methyl "500", sulphur "2500", propiconazole "500gm" for a
+    liquid) stay in the expert review sheet only."""
+    if "to be confirmed" in (p.get("note") or ""):
+        return False
+    return parse_amount(p["dose_per_litre"]) is not None or parse_amount(p["formulation_per_ha"]) is not None
+
+
 def _completeness(p):
     c = conversions(p)
-    doubtful = 1 if "to be confirmed" in (p.get("note") or "") else 0  # e.g. propiconazole '500gm' for a liquid
-    return (doubtful, 0 if c["per_acre"] else 1, 0 if c["per_tank"] else 1, 0 if p["waiting_period_days"] else 1,
+    return (0 if c["per_acre"] else 1, 0 if c["per_tank"] else 1, 0 if p["waiting_period_days"] else 1,
             0 if "+" not in p["product"] else 1)
 
 
 def pick_options(products):
-    """Indices of the (up to) 3 products the app shows, in official-list order."""
-    order = sorted(range(len(products)), key=lambda i: (*_completeness(products[i]), products[i]["page"], i))
+    """Indices of the (up to) 3 products the app shows, in official-list order; only products whose dose has an
+    explicit unit are eligible, so a disease may get none."""
+    ok = [i for i in range(len(products)) if has_explicit_unit(products[i])]
+    order = sorted(ok, key=lambda i: (*_completeness(products[i]), products[i]["page"], i))
     return sorted(order[:N_OPTIONS], key=lambda i: (products[i]["page"], i))
 
 
@@ -264,10 +275,11 @@ def build() -> dict:
     """The advice table."""
     diseases = {}
     for name, d in DISEASES.items():
-        levels = LEVEL_ACTION if d["products"] else LEVEL_ACTION_NO_PRODUCT
         products = [{**p, "converted": conversions(p)} for p in d["products"]]
-        diseases[name] = {**d, "products": products, "levels": levels,
-                          "options": pick_options(d["products"]) if products else []}
+        options = pick_options(d["products"]) if products else []
+        # no complete option (none registered, or none with an explicit unit): medium/high say "ask an expert"
+        levels = LEVEL_ACTION if options else LEVEL_ACTION_NO_PRODUCT
+        diseases[name] = {**d, "products": products, "levels": levels, "options": options}
     return {
         "status": "unverified",
         "verified_by": None,

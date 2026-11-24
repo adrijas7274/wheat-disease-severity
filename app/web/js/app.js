@@ -415,7 +415,7 @@ function renderResult() {
   const o = outcomeFor(r, adv);
   $("card").style.setProperty("--oc", `var(--o-${o})`);
   $("cardIcon").innerHTML = ICONS[o];
-  const msg = adv.action === "ask_expert" ? i18n.t("act_no_registered")
+  const msg = adv.action === "ask_expert" ? i18n.t(adv.noRegistered ? "act_no_registered" : "out_consult")
     : i18n.t(o === "retake" ? "out_retake" : o === "consult" ? "out_consult" : `out_${o}`);
   $("cardMsg").textContent = msg;
   const level = adv.level ? i18n.t(`lvl_${adv.level}`) : "";

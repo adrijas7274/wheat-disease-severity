@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 import shutil
 import subprocess
 from pathlib import Path
@@ -227,3 +228,54 @@ def test_history_list():
     """)
     assert out["n"] == out["max"] and out["first"] == out["max"] + 4  # newest first, capped
     assert out["trend"] == sorted(out["trend"]) and len(out["trend"]) == 4  # oldest first, answered only
+
+
+UNIT = re.compile(r"\d\s*(g|gm|kg|ml|l|lit|lt|ltr)(?![a-z])", re.I)
+
+
+def test_every_option_shown_has_an_explicit_dose_unit(advice):
+    """Safety rule: the app shows only products whose official dose prints a clear unit."""
+    from src.mobile import build_advice as b
+    hidden = set()
+    for name, d in advice["diseases"].items():
+        for i in d["options"]:
+            p = d["products"][i]
+            dose = p["dose_per_litre"] or p["formulation_per_ha"]
+            assert dose and UNIT.search(dose), (name, p["product"], dose)
+            assert "to be confirmed" not in (p["note"] or "")
+        hidden |= {p["product"] for i, p in enumerate(d["products"]) if i not in d["options"]}
+        # no complete option -> no spray level; medium and high say "ask an expert"
+        if not d["options"]:
+            assert set(d["levels"].values()) <= {"no_spray", "watch", "ask_expert"}
+            assert d["levels"]["medium"] == d["levels"]["high"] == "ask_expert"
+    for product in ("Kresoxim-methyl 44.3% SC", "Sulphur 80% WG", "Propiconazole 25% EC"):
+        assert product in hidden  # kept for the expert sheet, never shown
+    # a registered product with no unit alone gives no option, so the disease falls back to "ask an expert"
+    unitless = {**b.SULPH}
+    assert b.pick_options([unitless]) == []
+    rows = b.review_rows(advice)
+    assert any("Kresoxim-methyl" in r[3] for r in rows) and any("Sulphur" in r[3] for r in rows)
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
+def test_registered_but_incomplete_disease_asks_an_expert(advice):
+    """A disease whose registered products all lack a clear unit: no dose, 'ask an expert', not 'none registered'."""
+    from src.mobile import build_advice as b
+    fake = json.loads(json.dumps(advice))
+    d = fake["diseases"]["wheat powdery mildew"]
+    d["options"] = []
+    d["levels"] = dict(b.LEVEL_ACTION_NO_PRODUCT)
+    script = """
+    import fs from 'node:fs';
+    import { adviceFor, outcomeFor } from './app/web/js/advice.js';
+    const advice = JSON.parse(fs.readFileSync(0, 'utf8'));
+    const r = { action: 'answer', severity: 60, level: 'high', decision: 'treat_urgently' };
+    const a = adviceFor(r, 'wheat powdery mildew', advice);
+    console.log(JSON.stringify([a, outcomeFor(r, a)]));
+    """
+    res = subprocess.run(["node", "--input-type=module", "-e", script], input=json.dumps(fake), cwd=ROOT,
+                         capture_output=True, text=True, encoding="utf-8", timeout=60)
+    assert res.returncode == 0, res.stderr
+    a, outcome = json.loads(res.stdout)
+    assert a["action"] == "ask_expert" and a["products"] == [] and a["noRegistered"] is False
+    assert outcome == "consult" and a["kcc"] == "1800-180-1551"

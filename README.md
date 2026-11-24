@@ -198,7 +198,9 @@ on the phone, with no internet after the first load. Source: `app/`; design toke
   - Scan history, kept on the phone only, with a trend chart per disease.
 - **Spray advice:**
   - Shown only when the photo passed the quality gate and the uncertainty check, and the level is medium or high.
-  - Up to 3 CIBRC-registered products per disease, in no particular order.
+  - Up to 3 CIBRC-registered products per disease, in no particular order, and only products whose official
+    dose prints a clear unit. Products with a missing or unclear unit stay in the expert review sheet only.
+    If a disease has no such product, the app says to ask an expert.
   - Official per-hectare figures are shown as printed. Per-acre and per-15-litre-tank amounts appear under a
     "converted from the official figure" label.
   - Every dose carries the "not yet checked by an agriculture expert" warning. Doses never depend on the severity
@@ -255,6 +257,12 @@ on the phone, with no internet after the first load. Source: `app/`; design toke
   per-15-litre-tank amounts are arithmetic conversions, labelled as converted, and are not given when the official
   cell prints no unit. Timing and repeat interval are left out until an official advisory gives them. No fungicide is registered on wheat for septoria or bacterial leaf
   streak, so the app recommends asking an expert for those. The dose never depends on the severity percentage.
+- **Camera hints only.** The live-camera messages ("too dark", "too blurry", "hold steady") are hints only.
+  Their thresholds are hand-set and have not been calibrated on real phones. They do not decide anything: every
+  photo still goes through the quality gate.
+- **Some registered products are never shown.** Kresoxim-methyl ("500"), sulphur ("2500"), tebuconazole ("600")
+  and propiconazole 25% EC ("500gm" printed for a liquid) have no clear dose unit in the official list, so the app
+  shows only zineb and azoxystrobin + difenoconazole. All products remain in the expert review sheet.
 - **Mobile version and translations.** The phone version uses smaller models and agrees with final-v1 on the
   placeholder level for 88% of test images. All 22 Indian-language translations are machine drafts that no native
   speaker has checked.

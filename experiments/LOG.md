@@ -1979,3 +1979,23 @@ Run `experiments/20261121_225538_phase7_mendeley` (config `phase7_jic.yaml`), `r
   - 3.45 s compute (4 threads, laptop).
 - **Size:** 37.4 MB precached (was 37.3). Interface code is about 80 KB; phrases 178 KB; advice 39 KB.
 - **Parity re-check after the redesign:** the browser pipeline on the 121 parity images gives identical outputs to its previous run (121/121; timings excluded).
+
+## 2026-11-24 — Safety fix: only doses with an explicit unit are shown
+
+- **Adrija's rule:** a product is shown in the app only when its official dose prints a clear unit, either a dose per
+  litre or a per-hectare formulation dose in g, kg, ml or L. A unit flagged for the expert to confirm also excludes
+  the product.
+  - Hidden, but kept in the expert sheet: kresoxim-methyl ("500"), sulphur ("2500"), tebuconazole ("600"),
+    triadimefon ("0.260-0.520") and propiconazole 25% EC ("500gm" for a liquid).
+- **Options now shown:**
+  - stripe and leaf rust: zineb 75% WP and azoxystrobin + difenoconazole;
+  - powdery mildew: azoxystrobin + difenoconazole only;
+  - septoria and bacterial leaf streak: none (nothing registered).
+- **Fallback:** a disease with no complete option gets "ask an expert" at medium and high.
+  - The message is "No registered spray…" only when nothing is registered; otherwise it is "Please ask an
+    agriculture expert." (an existing, translated phrase).
+- **Tests:**
+  - `test_every_option_shown_has_an_explicit_dose_unit`;
+  - `test_registered_but_incomplete_disease_asks_an_expert`.
+- **README:** limitations now say the camera messages are hints only (uncalibrated; the gate decides), and list the
+  products that are never shown.
