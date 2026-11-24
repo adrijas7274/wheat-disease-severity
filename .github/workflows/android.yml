@@ -36,6 +36,8 @@ jobs:
           cp android-overrides/MainActivity.java android/app/src/main/java/io/github/adrijas7274/wheatcheck/MainActivity.java
           # Android 11+: the text-to-speech plugin must declare that it looks for a TTS engine
           sed -i 's#</manifest>#    <queries><intent><action android:name="android.intent.action.TTS_SERVICE" /></intent></queries>\n</manifest>#' android/app/src/main/AndroidManifest.xml
+          # live camera screen (getUserMedia inside the WebView): Capacitor asks for this permission at run time
+          sed -i 's#</manifest>#    <uses-permission android:name="android.permission.CAMERA" />\n</manifest>#' android/app/src/main/AndroidManifest.xml
           npx cap sync android
       - name: Build APK
         working-directory: app/android

@@ -30,7 +30,7 @@ def test_all_22_scheduled_languages_plus_english(strings):
 
 def test_every_language_has_every_phrase(strings):
     keys = set(strings["languages"]["en"]["strings"])
-    assert 30 <= len(keys) <= 60
+    assert 30 <= len(keys) <= 100
     for code, lang in strings["languages"].items():
         assert set(lang["strings"]) == keys, code
         assert all(v.strip() for v in lang["strings"].values()), code
@@ -117,7 +117,7 @@ def test_advice_table_is_unverified_and_sourced(advice):
             assert p["timing"] is None and p["repeat_interval"] is None
             assert "mancozeb" not in p["product"].lower()  # restricted in use: excluded
     for name in ("wheat septoria blotch", "wheat bacterial leaf streak (black chaff)"):
-        assert advice["diseases"][name]["products"] == [] and advice["diseases"][name]["app_product"] is None
+        assert advice["diseases"][name]["products"] == [] and advice["diseases"][name]["options"] == []
         assert "spray_recommended" not in advice["diseases"][name]["levels"].values()
 
 
@@ -162,5 +162,68 @@ def test_dose_only_for_answered_spray_results(advice):
     assert out[5][0]["product"] is not None and out[6][0]["product"] is not None
     assert out[7][0]["product"] is None and out[8][0]["product"] is None  # nothing registered
     # never scaled by severity: medium (8%) and high (60%) give the identical dose
-    assert out[5][0]["product"] == out[6][0]["product"]
-    assert out[5][0]["product"]["dosePerLitre"] == "1 ml / Litre water"
+    assert out[5][0]["products"] == out[6][0]["products"] and 1 <= len(out[6][0]["products"]) <= 3
+    assert all(len(a.get("products", [])) == 0 for a, _ in out[:5] + out[7:])
+
+
+def test_conversions_are_exact():
+    from src.mobile import build_advice as b
+    assert b.HA_PER_ACRE == 0.40468564224
+    for d in b.build()["diseases"].values():
+        assert len(d["options"]) <= 3 and d["options"] == sorted(d["options"], key=lambda i: d["products"][i]["page"])
+        for p in d["products"]:
+            c = p["converted"]
+            dose = b.parse_amount(p["formulation_per_ha"])
+            per_l = b.parse_amount(p["dose_per_litre"])
+            water = b.parse_water(p["water_l_per_ha"])
+            if dose:
+                assert c["per_acre"]["lo"] == dose[0] * b.HA_PER_ACRE and c["per_acre"]["hi"] == dose[1] * b.HA_PER_ACRE
+            if per_l:
+                assert c["per_tank"]["lo"] == per_l[0] * 15 and c["per_tank"]["unit"] == per_l[2]
+            if water:
+                assert c["water_per_acre"]["lo"] == water[0] * b.HA_PER_ACRE
+            if not dose and not per_l:
+                assert c["per_acre"] is None and c["per_tank"] is None  # no unit printed: never converted
+    az = b.conversions(b.AZ_DIF)
+    assert az["per_tank"]["text"] == "15 ml" and az["per_acre"]["lo"] == 500 * 0.40468564224
+
+
+def _node(script: str) -> object:
+    res = subprocess.run(["node", "--input-type=module", "-e", script], cwd=ROOT, capture_output=True, text=True,
+                         timeout=60)
+    assert res.returncode == 0, res.stderr
+    return json.loads(res.stdout)
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
+def test_camera_hints():
+    out = _node("""
+    import { frameStats, hintFor } from './app/web/js/camera.js';
+    const w = 40, h = 30, n = w * h;
+    const flat = (v) => new Uint8Array(n).fill(v);
+    const stripes = (a, b) => Uint8Array.from({ length: n }, (_, i) => ((i % w) % 2 ? a : b));
+    console.log(JSON.stringify({
+      dark: hintFor(frameStats(stripes(10, 60), w, h)),
+      bright: hintFor(frameStats(flat(255), w, h)),
+      flat: hintFor(frameStats(flat(120), w, h)),
+      sharp: hintFor(frameStats(stripes(60, 180), w, h, stripes(60, 180))),
+      moving: hintFor(frameStats(stripes(60, 180), w, h, stripes(180, 60))),
+      stats: frameStats(flat(120), w, h),
+    }));
+    """)
+    assert out["dark"] == "cam_dark" and out["bright"] == "cam_bright"
+    assert out["flat"] == "cam_blur"  # no detail at all: blurry
+    assert out["sharp"] == "cam_ok" and out["moving"] == "cam_steady"
+    assert out["stats"]["mean"] == 120 and out["stats"]["sharp"] == 0 and out["stats"]["motion"] is None
+
+
+@pytest.mark.skipif(shutil.which("node") is None, reason="node not installed")
+def test_history_list():
+    out = _node("""
+    import { withEntry, trend, MAX } from './app/web/js/history.js';
+    let l = [];
+    for (let i = 0; i < MAX + 5; i++) l = withEntry(l, { t: i, disease: i % 2 ? 'a' : 'b', severity: i % 3 ? i : null });
+    console.log(JSON.stringify({ n: l.length, max: MAX, first: l[0].t, trend: trend(l, 'a', 4).map((e) => e.t) }));
+    """)
+    assert out["n"] == out["max"] and out["first"] == out["max"] + 4  # newest first, capped
+    assert out["trend"] == sorted(out["trend"]) and len(out["trend"]) == 4  # oldest first, answered only

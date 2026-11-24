@@ -13,7 +13,7 @@ from playwright.sync_api import sync_playwright
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "report/figures/app/mockups"
-TOKENS = (ROOT / "app/design/tokens.css").read_text(encoding="utf-8")
+TOKENS = (ROOT / "app/web/css/tokens.css").read_text(encoding="utf-8")
 PHOTO = "data:image/jpeg;base64," + base64.b64encode((ROOT / "demo/examples/wheat_stripe_rust_1.jpg").read_bytes()).decode()
 
 WHEAT = """<svg viewBox="0 0 120 120" aria-hidden="true" style="width:100%;height:100%"><g fill="none" stroke-linecap="round">

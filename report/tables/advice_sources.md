@@ -15,10 +15,18 @@ Not reachable or not used:
 - PPQS wheat rust leaflet: https://ppqs.gov.in/sites/default/files/wheat_rust-english.pdf (HTTP 404)
 - ICAR rust task-force pages: https://icar.org.in/en/node/4151 (site under maintenance)
 
-| disease | chemical control | product the app shows | dose per litre | formulation per ha | water L per ha | waiting period (days) | other registered rows |
+Options shown in the app (unranked, in the order of the official list). Official: per ha, water, waiting period. Converted from the official figure: per acre, per 15-L tank.
+
+| disease | product | per ha (official) | water L/ha (official) | waiting days (official) | per acre (converted) | per 15-L tank (converted) | page |
 |---|---|---|---|---|---|---|---:|
-| wheat stripe rust | registered | Azoxystrobin 18.2% + Difenoconazole 11.4% w/w SC | 1 ml / Litre water | 0.1% or 1 ml / Litre water | 500 | 35 | 17 |
-| wheat leaf rust | registered | Azoxystrobin 18.2% + Difenoconazole 11.4% w/w SC | 1 ml / Litre water | 0.1% or 1 ml / Litre water | 500 | 35 | 10 |
-| wheat powdery mildew | registered | Azoxystrobin 18.2% + Difenoconazole 11.4% w/w SC | 1 ml / Litre water | 0.1% or 1 ml / Litre water | 500 | 35 | 10 |
-| wheat septoria blotch | none registered | - | - | - | - | - | 0 |
-| wheat bacterial leaf streak (black chaff) | none registered | - | - | - | - | - | 0 |
+| wheat stripe rust | Kresoxim-methyl 44.3% SC | 500 | 500 | 34 | not converted | not converted | 17 |
+| wheat stripe rust | Zineb 75% WP | 1.5-2KG | 750-1000 Lt | not printed | 0.61-0.81 kg | not converted | 42 |
+| wheat stripe rust | Azoxystrobin 18.2% + Difenoconazole 11.4% w/w SC | 0.1% or 1 ml / Litre water | 500 | 35 | 202.3 ml | 15 ml | 47 |
+| wheat leaf rust | Kresoxim-methyl 44.3% SC | 500 | 500 | 34 | not converted | not converted | 17 |
+| wheat leaf rust | Zineb 75% WP | 1.5-2KG | 750-1000 Lt | not printed | 0.61-0.81 kg | not converted | 42 |
+| wheat leaf rust | Azoxystrobin 18.2% + Difenoconazole 11.4% w/w SC | 0.1% or 1 ml / Litre water | 500 | 35 | 202.3 ml | 15 ml | 47 |
+| wheat powdery mildew | Sulphur 80% WG | 2500 | 500 | 24 | not converted | not converted | 36 |
+| wheat powdery mildew | Tebuconazole 38.39% w/w SC | 600 | 375-500 (20 L via drone application) | 5 | not converted | not converted | 38 |
+| wheat powdery mildew | Azoxystrobin 18.2% + Difenoconazole 11.4% w/w SC | 0.1% or 1 ml / Litre water | 500 | 35 | 202.3 ml | 15 ml | 47 |
+| wheat septoria blotch | none registered | - | - | - | - | - | - |
+| wheat bacterial leaf streak (black chaff) | none registered | - | - | - | - | - | - |

@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import csv
 import json
+import re
 from pathlib import Path
 
 OUT_JSON = Path("app/web/advice.json")
@@ -159,21 +160,125 @@ DISEASES = {
 LEVEL_ACTION = {"none": "no_spray", "low": "watch", "medium": "spray_recommended", "high": "spray_recommended"}
 LEVEL_ACTION_NO_PRODUCT = {"none": "no_spray", "low": "watch", "medium": "ask_expert", "high": "ask_expert"}
 
+# --------------------------------------------------------------------------------------------- conversions
+# Adrija's decision (2026-11-23): show per hectare (official) plus per acre and per 15-litre tank, the last two
+# labelled "converted from the official figure". Conversions are plain arithmetic on the printed numbers:
+#   per acre = per hectare x 0.40468564224 (1 acre = 0.40468564224 ha exactly, international acre)
+#   per tank = printed dose per litre x 15, else (formulation per ha / water L per ha) x 15
+# Nothing is converted when the official cell prints no unit (the list's column heading "(g/ml)" does not hold
+# for every row: e.g. triadimefon "0.260-0.520" can only be kg), or, for the tank, when both dose and water are
+# ranges (which dose goes with which water volume is not stated).
+HA_PER_ACRE = 0.40468564224
+TANK_L = 15
+
+UNITS = {"gm": "g", "g": "g", "kg": "kg", "ml": "ml", "l": "L", "lit": "L", "lt": "L", "ltr": "L"}
+_AMOUNT = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*(?:(?:-|to|–)\s*(\d+(?:\.\d+)?))?\s*([A-Za-z]+)\b")
+_WATER = re.compile(r"^\s*(\d+(?:\.\d+)?)\s*(?:(?:-|to|–)\s*(\d+(?:\.\d+)?))?")
+
+
+def parse_amount(text):
+    """'500gm' -> (500, 500, 'g'); '1.5-2KG' -> (1.5, 2, 'kg'); '1 ml / Litre water' -> (1, 1, 'ml').
+    None when the cell has no plain number or range followed by a printed unit."""
+    if not text:
+        return None
+    m = _AMOUNT.match(str(text))
+    if not m or m.group(3).lower() not in UNITS:
+        return None
+    lo = float(m.group(1))
+    return lo, float(m.group(2)) if m.group(2) else lo, UNITS[m.group(3).lower()]
+
+
+def parse_water(text):
+    """Water L/ha: the first number or range ('500', '750-1000 Lt', '375-500 (20 L via drone)') -> (lo, hi)."""
+    if not text:
+        return None
+    m = _WATER.match(str(text))
+    if not m:
+        return None
+    lo = float(m.group(1))
+    return lo, float(m.group(2)) if m.group(2) else lo
+
+
+def fmt(lo, hi, unit, digits):
+    """Display text, rounded ('202.3 g', '0.61-0.81 kg'); the exact numbers are stored beside it."""
+    def r(x):
+        return f"{round(x, digits):.{digits}f}".rstrip("0").rstrip(".")
+    return f"{r(lo)} {unit}" if lo == hi else f"{r(lo)}-{r(hi)} {unit}"
+
+
+def _digits(unit):
+    return 2 if unit in ("kg", "L") else 1
+
+
+def conversions(p):
+    """Per acre (dose and water) and per 15-litre tank, with the reason when something is not converted."""
+    out = {"per_acre": None, "water_per_acre": None, "per_tank": None, "not_converted": []}
+    water = parse_water(p["water_l_per_ha"])
+    per_litre = parse_amount(p["dose_per_litre"])
+    dose = parse_amount(p["formulation_per_ha"])
+    if dose is None and per_litre is not None and water is not None and water[0] == water[1]:
+        dose = (per_litre[0] * water[0], per_litre[1] * water[0], per_litre[2])
+        out["per_ha_from"] = "dose per litre x water per hectare (both official)"
+    if dose is not None:
+        lo, hi = dose[0] * HA_PER_ACRE, dose[1] * HA_PER_ACRE
+        out["per_acre"] = {"lo": lo, "hi": hi, "unit": dose[2], "text": fmt(lo, hi, dose[2], _digits(dose[2]))}
+    else:
+        out["not_converted"].append("dose: no unit printed in the official cell")
+    if water is not None:
+        lo, hi = water[0] * HA_PER_ACRE, water[1] * HA_PER_ACRE
+        out["water_per_acre"] = {"lo": lo, "hi": hi, "unit": "L", "text": fmt(lo, hi, "L", 0)}
+    if per_litre is not None:
+        lo, hi = per_litre[0] * TANK_L, per_litre[1] * TANK_L
+        out["per_tank"] = {"lo": lo, "hi": hi, "unit": per_litre[2], "text": fmt(lo, hi, per_litre[2], 1)}
+    elif dose is not None and water is not None:
+        if dose[0] != dose[1] and water[0] != water[1]:
+            out["not_converted"].append("tank: both dose and water are ranges")
+        else:
+            lo, hi = sorted([dose[0] / water[1] * TANK_L, dose[1] / water[0] * TANK_L])
+            out["per_tank"] = {"lo": lo, "hi": hi, "unit": dose[2], "text": fmt(lo, hi, dose[2], _digits(dose[2]) + 1)}
+    return out
+
+
+# ---------------------------------------------------------------------------------------- options shown
+# Adrija's decision: no single default; show up to 3 registered options per disease, unranked. Which 3 is a
+# completeness rule, not a ranking: rows whose dose has a printed unit (so every conversion exists) first, then
+# rows with a printed waiting period, then single-ingredient products, then the order of the official list.
+# They are displayed in the order of the official list. The expert marks a default in the review sheet.
+N_OPTIONS = 3
+
+
+def _completeness(p):
+    c = conversions(p)
+    doubtful = 1 if "to be confirmed" in (p.get("note") or "") else 0  # e.g. propiconazole '500gm' for a liquid
+    return (doubtful, 0 if c["per_acre"] else 1, 0 if c["per_tank"] else 1, 0 if p["waiting_period_days"] else 1,
+            0 if "+" not in p["product"] else 1)
+
+
+def pick_options(products):
+    """Indices of the (up to) 3 products the app shows, in official-list order."""
+    order = sorted(range(len(products)), key=lambda i: (*_completeness(products[i]), products[i]["page"], i))
+    return sorted(order[:N_OPTIONS], key=lambda i: (products[i]["page"], i))
+
 
 def build() -> dict:
     """The advice table."""
     diseases = {}
     for name, d in DISEASES.items():
         levels = LEVEL_ACTION if d["products"] else LEVEL_ACTION_NO_PRODUCT
-        diseases[name] = {**d, "levels": levels, "app_product": 0 if d["products"] else None}
+        products = [{**p, "converted": conversions(p)} for p in d["products"]]
+        diseases[name] = {**d, "products": products, "levels": levels,
+                          "options": pick_options(d["products"]) if products else []}
     return {
         "status": "unverified",
         "verified_by": None,
-        "about": "Treatment advice per disease and placeholder severity level. Values are copied as printed in the "
-                 "sources; nothing is converted or estimated, and the dose never depends on the severity percentage. "
-                 "UNVERIFIED: no agriculture expert has checked this table. app_product is the row the app shows; "
-                 "it is the only wheat row that prints a dose per litre, and is a choice for the expert to confirm.",
+        "about": "Treatment advice per disease and placeholder severity level. Official values are copied as printed; "
+                 "per-acre and per-15-litre-tank values are arithmetic conversions of them, labelled as converted. "
+                 "Nothing is estimated, and the dose never depends on the severity percentage. 'options' are up to 3 "
+                 "registered products shown in the app, unranked (selection rule in src/mobile/build_advice.py). "
+                 "Timing and repeat interval are left out until an official advisory gives them. "
+                 "UNVERIFIED: no agriculture expert has checked this table.",
         "kisan_call_centre": "1800-180-1551",
+        "conversion": {"ha_per_acre": HA_PER_ACRE, "tank_litres": TANK_L},
         "sources": SOURCES,
         "sources_not_reached": [{"name": n, "url": u, "why": w} for n, u, w in NOT_REACHED],
         "excluded": [{"product": "Mancozeb 75% WP", "why": "restricted in use (CIBRC list, 31.10.2026)",
@@ -184,43 +289,57 @@ def build() -> dict:
 
 def review_rows(advice: dict) -> list[list[str]]:
     """One row per disease x product (or one row for a disease with none), sources beside each row."""
-    header = ["disease", "chemical control", "app shows this row", "product (as printed)", "disease on label",
-              "a.i. per ha", "formulation per ha", "water L per ha", "waiting period (days)", "dose per litre",
-              "dose per acre", "timing", "repeat interval", "source", "page", "URL", "source note",
-              "EXPERT: correct? (yes/no)", "EXPERT: corrections", "EXPERT: name / date"]
+    header = ["disease", "chemical control", "shown in app (unranked)", "product (as printed)", "disease on label",
+              "a.i. per ha", "formulation per ha (official)", "water L per ha (official)", "waiting period (days)",
+              "dose per litre (official)", "per acre (converted)", "water per acre (converted)",
+              "per 15-L tank (converted)", "not converted because", "timing", "repeat interval", "source", "page",
+              "URL", "source note", "EXPERT: correct? (yes/no)", "EXPERT: corrections",
+              "EXPERT: default for this disease (mark one)", "EXPERT: name / date"]
     out = [header]
     for name, d in advice["diseases"].items():
-        prods = d["products"] or [None]
-        for i, p in enumerate(prods):
-            if p is None:
-                out.append([name, d["chemical_control"], "", "", "", "", "", "", "", "", "", "", "", "cibrc_mup", "",
-                            SOURCES["cibrc_mup"]["url"], d.get("note", ""), "", "", ""])
-                continue
-            v = lambda k: "" if p[k] is None else str(p[k])  # noqa: E731
-            out.append([name, d["chemical_control"], "yes" if i == d["app_product"] else "", p["product"],
+        if not d["products"]:
+            out.append([name, d["chemical_control"]] + [""] * 14
+                       + ["cibrc_mup", "", SOURCES["cibrc_mup"]["url"], d.get("note", ""), "", "", "", ""])
+            continue
+        for i, p in enumerate(d["products"]):
+            def v(k):
+                return "" if p[k] is None else str(p[k])
+            c = p["converted"]
+
+            def t(k):
+                return c[k]["text"] if c[k] else ""
+            out.append([name, d["chemical_control"], "yes" if i in d["options"] else "", p["product"],
                         v("label_disease"), v("ai_per_ha"), v("formulation_per_ha"), v("water_l_per_ha"),
-                        v("waiting_period_days"), v("dose_per_litre"), "not in source", "not in source",
-                        "not in source", p["source"], str(p["page"]), SOURCES[p["source"]]["url"], v("note"), "", "", ""])
+                        v("waiting_period_days"), v("dose_per_litre"), t("per_acre"), t("water_per_acre"),
+                        t("per_tank"), "; ".join(c["not_converted"]), "not in a reached official source",
+                        "not in a reached official source", p["source"], str(p["page"]),
+                        SOURCES[p["source"]]["url"], v("note"), "", "", "", ""])
     return out
 
 
 def sources_md(advice: dict) -> str:
-    """Markdown list of sources, for the report and for review."""
+    """Markdown list of sources and the options the app shows, for review."""
     lines = ["# Treatment advice: sources (UNVERIFIED until an agriculture expert checks it)", ""]
     for key, s in advice["sources"].items():
         lines += [f"- **{key}**: {s['title']}. {s['issuer']}. As on {s['as_on']}, accessed {s['accessed']}.",
                   f"  {s['url']}", f"  {s['note']}"]
     lines += ["", "Not reachable or not used:"]
     lines += [f"- {s['name']}: {s['url']} ({s['why']})" for s in advice["sources_not_reached"]]
-    lines += ["", "| disease | chemical control | product the app shows | dose per litre | formulation per ha | "
-              "water L per ha | waiting period (days) | other registered rows |", "|---|---|---|---|---|---|---|---:|"]
+    lines += ["", "Options shown in the app (unranked, in the order of the official list). Official: per ha, water, "
+              "waiting period. Converted from the official figure: per acre, per 15-L tank.", "",
+              "| disease | product | per ha (official) | water L/ha (official) | waiting days (official) | "
+              "per acre (converted) | per 15-L tank (converted) | page |", "|---|---|---|---|---|---|---|---:|"]
     for name, d in advice["diseases"].items():
-        if d["products"]:
-            p = d["products"][d["app_product"]]
-            lines.append(f"| {name} | registered | {p['product']} | {p['dose_per_litre']} | {p['formulation_per_ha']} | "
-                         f"{p['water_l_per_ha']} | {p['waiting_period_days']} | {len(d['products']) - 1} |")
-        else:
-            lines.append(f"| {name} | none registered | - | - | - | - | - | 0 |")
+        if not d["products"]:
+            lines.append(f"| {name} | none registered | - | - | - | - | - | - |")
+            continue
+        for i in d["options"]:
+            p = d["products"][i]
+            c = p["converted"]
+            lines.append(f"| {name} | {p['product']} | {p['formulation_per_ha']} | {p['water_l_per_ha']} | "
+                         f"{p['waiting_period_days'] or 'not printed'} | "
+                         f"{c['per_acre']['text'] if c['per_acre'] else 'not converted'} | "
+                         f"{c['per_tank']['text'] if c['per_tank'] else 'not converted'} | {p['page']} |")
     return "\n".join(lines) + "\n"
 
 

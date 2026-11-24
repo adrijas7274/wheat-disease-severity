@@ -1,5 +1,5 @@
 /* Wheat leaf check: design tokens (earthy modern: wheat-green, golden wheat, cream).
-   Contrast (WCAG 2.1, checked with the formula in app/design/README.md): every text colour below is >= 4.5:1 on
+   Contrast (WCAG 2.1, checked with the WCAG relative-luminance formula, see experiments/LOG.md 2026-11-23): every text colour below is >= 4.5:1 on
    both --cream and --card; outcome colours carry white text at >= 6:1. Gold-400 is a fill only (ink on it 8.3:1). */
 :root {
   /* brand */

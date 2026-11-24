@@ -1933,3 +1933,49 @@ Run `experiments/20261121_225538_phase7_mendeley` (config `phase7_jic.yaml`), `r
     white text at ≥ 6:1 and are always paired with an icon.
   - Three directions (A harvest card, B colour band, C quiet field) rendered to `report/figures/app/mockups/`.
   - Checkpoint: waiting for Adrija's choice before the full redesign.
+
+## 2026-11-24 — Advice decisions applied; app redesign (layout C + A's warmth)
+
+- **Adrija's decisions (2026-11-23):**
+  - Design: layout C ("quiet field") with A's illustration and colours.
+  - Doses: per hectare (official) plus per acre and per 15-litre tank, labelled "converted from the official figure".
+  - Up to 3 unranked registered options per disease; no default.
+  - IIWBR: used only if Adrija supplies the advisory in `data/raw/advisories/`. It is not there yet, so timing and
+    repeat interval stay out.
+- **Conversions** (`src/mobile/build_advice.py`):
+  - Per acre = per ha × 0.40468564224 (exact). Per tank = printed dose per litre × 15, else formulation per ha ÷
+    water per ha × 15.
+  - Not converted when the official cell prints no unit (e.g. kresoxim-methyl "500", sulphur "2500"), or for the tank
+    when both dose and water are ranges (zineb).
+  - Exact numbers are stored beside the rounded display text. `test_conversions_are_exact` checks every row.
+- **Which 3 options** (a completeness rule, not a ranking): conversions available, then waiting period printed,
+  then single-ingredient products, then list order. Rows with a unit the expert must confirm come last.
+  - So propiconazole 25% EC ("500gm" printed for a liquid) is not shown. It stays in the review sheet.
+  - Shown: rusts — kresoxim-methyl, zineb, azoxystrobin + difenoconazole. Powdery mildew — sulphur, tebuconazole,
+    azoxystrobin + difenoconazole.
+  - The review sheet has an "EXPERT: default for this disease" column.
+- **Redesign** (`app/web`): screens are the language picker (tiles in each script, each with a read-out button),
+  3-step how-to, home, live camera, disease, tap with scanning and leaf highlight, result, history and about.
+  - Routine decisions:
+    - Light theme only, for sunlight.
+    - Inline SVG drawings and icons, no image files or frameworks.
+    - The how-to uses original drawings, not photos.
+    - Language choice is saved only when the user picks one (so the first start shows the picker).
+    - History lives in localStorage: at most 60 scans, 96-px thumbnails, retakes not saved.
+  - Live-camera hints: hand-set, uncalibrated heuristics on a 160-px grey frame.
+    - Thresholds: mean < 60 too dark; mean > 200 or > 30% clipped too bright; frame change > 10 hold steady;
+      Laplacian variance < 40 too blurry.
+    - They only guide framing. The frozen Phase 6 gate still decides retake.
+  - The APK manifest gets the CAMERA permission.
+  - New phrases: 31 × 22 languages, machine drafts; the review sheet now has 84 phrases.
+  - Bugs found by the browser walk-through and fixed:
+    - Component `display` rules overrode `hidden` (back button on home, English banner). Fixed with a global
+      `[hidden]` rule.
+    - Result and history were not re-rendered after a language change made from the picker.
+- **Browser walk-through** (`app/parity/ui_test.py`, Pixel 5 emulation, fake camera):
+  - All screens reached; 23 language tiles; 3 options shown for stripe rust (medium, 10.5%); call button
+    `tel:18001801551`.
+  - Urdu right to left; history saved; offline restart works; no console errors.
+  - 3.45 s compute (4 threads, laptop).
+- **Size:** 37.4 MB precached (was 37.3). Interface code is about 80 KB; phrases 178 KB; advice 39 KB.
+- **Parity re-check after the redesign:** the browser pipeline on the 121 parity images gives identical outputs to its previous run (121/121; timings excluded).

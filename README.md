@@ -167,6 +167,57 @@ SegFormer-B0 exported to ONNX (fixed 512 × 512 input) and quantised with onnxru
   promptable segmenter (MobileSAM / EfficientSAM class), not evaluated here. The whole demo pipeline takes about
   2 s per photo on a laptop CPU.
 
+## The phone app (offline, 23 languages)
+
+A web app that also builds as an Android APK. It runs `final-v1-mobile` (SegFormer-B0 INT8 + EfficientSAM-Ti INT8)
+on the phone, with no internet after the first load. Source: `app/`; design tokens: `app/web/css/tokens.css`.
+
+<table><tr>
+<td><img src="report/figures/app/01_language.png" width="190" alt="Language picker"></td>
+<td><img src="report/figures/app/02_howto.png" width="190" alt="How to take a good photo"></td>
+<td><img src="report/figures/app/03_home.png" width="190" alt="Home"></td>
+<td><img src="report/figures/app/04_camera.png" width="190" alt="Camera with leaf guide"></td>
+</tr><tr>
+<td><img src="report/figures/app/07_scanning.png" width="190" alt="Scanning"></td>
+<td><img src="report/figures/app/09_result_en.png" width="190" alt="Result with advice"></td>
+<td><img src="report/figures/app/12_result_ur.png" width="190" alt="Result in Urdu (right to left)"></td>
+<td><img src="report/figures/app/14_history.png" width="190" alt="Scan history"></td>
+</tr></table>
+
+- **Flow:**
+  - Pick a language; each tile is shown in its own script and can be read aloud.
+  - A 3-step how-to with good and bad example drawings.
+  - Take the photo with a live camera. A leaf-shaped guide and hints ("too dark", "too blurry", "hold steady")
+    help the farmer frame it. These hints are not the quality gate: every photo still goes through it.
+  - Choose the disease, tap the leaf, and watch a short scanning animation.
+  - **Result:**
+    - a circular severity gauge with ticks at the placeholder 5% and 20% thresholds;
+    - the level shown on a None/Low/Medium/High scale, marked by an arrow, an outline and an icon as well as colour;
+    - a before/after view of the marked disease;
+    - read-out aloud, and a one-tap call to the Kisan Call Centre (1800-180-1551).
+  - Scan history, kept on the phone only, with a trend chart per disease.
+- **Spray advice:**
+  - Shown only when the photo passed the quality gate and the uncertainty check, and the level is medium or high.
+  - Up to 3 CIBRC-registered products per disease, in no particular order.
+  - Official per-hectare figures are shown as printed. Per-acre and per-15-litre-tank amounts appear under a
+    "converted from the official figure" label.
+  - Every dose carries the "not yet checked by an agriculture expert" warning. Doses never depend on the severity
+    percentage.
+  - Sources: `report/tables/advice_sources.md`; expert review sheet: `report/tables/advice_review.csv`.
+- **Accessibility:**
+  - Text contrast meets WCAG AA on cream and white.
+  - Body text is at least 18 px, and touch targets are at least 48 px.
+  - Outcomes always have an icon as well as a colour.
+  - The layout works right to left (Urdu, Kashmiri, Sindhi).
+- **Size:**
+  - 37.4 MB downloaded once and stored for offline use, almost all of it models. The interface code is about
+    80 KB, the 23-language phrases 178 KB and the advice table 39 KB, all uncompressed.
+  - Script fonts load on demand (1.04 MB in all).
+- **Speed and agreement:**
+  - About 3.5 s compute per photo in a laptop browser with 4 threads; the target is under 10 s on a low-end phone,
+    not yet measured.
+  - Agrees with final-v1 on the placeholder level for 88% of 121 test images (`report/tables/mobile_parity.md`).
+
 ## Data-quality findings (PlantSeg wheat)
 
 - **Masks are coarse:** 55–74% of the masked area is healthy-looking tissue (unvalidated HSV heuristic).
@@ -200,8 +251,9 @@ SegFormer-B0 exported to ONNX (fixed 512 × 512 input) and quantised with onnxru
 - **Treatment advice in the app is unverified.** Products and doses are copied as printed from the official CIBRC
   "Major Uses of Pesticides" list (as on 30.09.2026), with sources beside each row
   (`report/tables/advice_sources.md`). No agriculture expert has checked them, so every dose is shown with a
-  warning and the Kisan Call Centre number (1800-180-1551). The list gives doses per hectare only, so the app shows
-  no per-acre dose, timing or repeat interval. No fungicide is registered on wheat for septoria or bacterial leaf
+  warning and the Kisan Call Centre number (1800-180-1551). The list gives doses per hectare only; per-acre and
+  per-15-litre-tank amounts are arithmetic conversions, labelled as converted, and are not given when the official
+  cell prints no unit. Timing and repeat interval are left out until an official advisory gives them. No fungicide is registered on wheat for septoria or bacterial leaf
   streak, so the app recommends asking an expert for those. The dose never depends on the severity percentage.
 - **Mobile version and translations.** The phone version uses smaller models and agrees with final-v1 on the
   placeholder level for 88% of test images. All 22 Indian-language translations are machine drafts that no native

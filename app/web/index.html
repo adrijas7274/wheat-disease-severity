@@ -3,125 +3,227 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="theme-color" content="#1b5e20">
+<meta name="theme-color" content="#FBF7EC">
 <meta name="description" content="Checks how much of a wheat leaf is diseased, on the phone, without internet. Decision support only.">
 <title>Wheat leaf check</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icons/icon-192.png">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="stylesheet" href="fonts/latin.css">
+<link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+<!-- shared SVG symbols: original line icons and the wheat illustration -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></symbol>
+  <symbol id="i-gallery" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 17 5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.6"/></symbol>
+  <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .8-1 1.5V14M12 17v.5"/></symbol>
+  <symbol id="i-history" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5M12 7v5l3 2"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></symbol>
+  <symbol id="i-speaker" viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></symbol>
+  <symbol id="i-spray" viewBox="0 0 24 24"><path d="M9 9h6v12H9zM10 9V6h4v3M14 6h3M17 4v4M19 5h2M19 7h2M8 13h8"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M12 3 2 20h20z"/><path d="M12 10v4M12 17v.5"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-tap" viewBox="0 0 24 24"><path d="M9 11V5a2 2 0 0 1 4 0v5l4 1a2 2 0 0 1 1.5 2.3L17.6 19a3 3 0 0 1-3 2H11a3 3 0 0 1-2.4-1.2L5 15a1.8 1.8 0 0 1 2.7-2.3L9 14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+  <symbol id="i-cross" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+  <symbol id="wheat" viewBox="0 0 120 120">
+    <path d="M60 118V40" stroke="#8A6500" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <g fill="#E0B23C" stroke="#8A6500" stroke-width="1.5">
+      <ellipse cx="52" cy="46" rx="6" ry="11" transform="rotate(-25 52 46)"/><ellipse cx="68" cy="46" rx="6" ry="11" transform="rotate(25 68 46)"/>
+      <ellipse cx="51" cy="64" rx="6" ry="11" transform="rotate(-25 51 64)"/><ellipse cx="69" cy="64" rx="6" ry="11" transform="rotate(25 69 64)"/>
+      <ellipse cx="52" cy="82" rx="6" ry="11" transform="rotate(-25 52 82)"/><ellipse cx="68" cy="82" rx="6" ry="11" transform="rotate(25 68 82)"/>
+      <ellipse cx="60" cy="30" rx="6" ry="12"/></g>
+    <path d="M60 100c-14-4-24-12-30-26 12 2 24 10 30 26zm0 0c14-4 24-12 30-26-12 2-24 10-30 26z" fill="#2F6B2F"/>
+  </symbol>
+  <!-- a wheat leaf with stripe-rust lesions, used by the how-to pictures -->
+  <symbol id="leafpic" viewBox="0 0 100 140">
+    <rect width="100" height="140" fill="#CFE3B8"/>
+    <path d="M50 4C70 40 72 100 52 138 30 100 30 40 50 4z" fill="#3E7D2C" stroke="#24511A" stroke-width="2"/>
+    <path d="M50 10v124" stroke="#2A5E20" stroke-width="1.5"/>
+    <g stroke="#E0A82E" stroke-width="3" stroke-linecap="round" stroke-dasharray="4 5">
+      <path d="M44 30v70"/><path d="M57 36v62"/><path d="M40 50v30"/><path d="M60 55v28"/></g>
+  </symbol>
+</svg>
+
 <header class="bar">
-  <span class="brand" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22V9M12 9c-3-1-4-4-4-7 3 1 4 4 4 7Zm0 0c3-1 4-4 4-7-3 1-4 4-4 7Zm0 5c-3-1-5-3-5-6 3 0 5 3 5 6Zm0 0c3-1 5-3 5-6-3 0-5 3-5 6Z"/></svg></span>
+  <button id="backBtn" class="iconBtn" type="button" hidden aria-label="Back" data-t-label="back"><svg><use href="#i-back"/></svg></button>
+  <span class="brand" aria-hidden="true"><svg class="art"><use href="#wheat"/></svg></span>
   <h1 data-t="app_title">Wheat leaf check</h1>
-  <button id="langBtn" class="pill" type="button" aria-haspopup="dialog">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/></svg>
-    <span id="langName">English</span>
-  </button>
+  <button id="langBtn" class="pill" type="button"><svg><use href="#i-globe"/></svg><span id="langName">English</span></button>
 </header>
-<p id="unverified" class="unverified" hidden><span data-t="unverified"></span> <span class="en">(translation not yet checked)</span></p>
+<p id="unverified" class="unverified" hidden><svg><use href="#i-warn"/></svg><span><span data-t="unverified"></span> <span class="en">(translation not yet checked)</span></span></p>
 
 <main>
-  <!-- 1. photo -->
-  <section id="s-home" class="screen">
-    <div id="loading" class="loading" hidden>
+  <div id="loading" class="loading" hidden>
       <p data-t="loading"></p>
       <div class="meter"><div id="meterFill"></div></div>
+  </div>
+  <!-- language picker (first start, and from the globe button) -->
+  <section id="s-lang" class="screen" hidden>
+    <h2 class="center" data-t="lang_title"></h2>
+    <div id="langList" class="langGrid"></div>
+  </section>
+
+  <!-- how to take a good photo: 3 steps, good and bad examples (original drawings) -->
+  <section id="s-howto" class="screen" hidden>
+    <div class="titleRow"><h2 data-t="howto"></h2>
+      <button id="howtoSpeak" class="iconBtn soft" type="button" data-t-label="listen"><svg><use href="#i-speaker"/></svg></button></div>
+    <ol class="steps">
+      <li class="card step"><span class="num">1</span><p data-t="step1"></p>
+        <div class="examples">
+          <figure class="ex good"><svg class="pic"><use href="#leafpic"/></svg><figcaption><svg><use href="#i-check"/></svg><span data-t="good"></span></figcaption></figure>
+          <figure class="ex bad"><svg class="pic dark"><use href="#leafpic"/></svg><figcaption><svg><use href="#i-cross"/></svg><span data-t="bad_dark"></span></figcaption></figure>
+        </div></li>
+      <li class="card step"><span class="num">2</span><p data-t="step2"></p>
+        <div class="examples">
+          <figure class="ex bad"><svg class="pic blur"><use href="#leafpic"/></svg><figcaption><svg><use href="#i-cross"/></svg><span data-t="bad_blur"></span></figcaption></figure>
+          <figure class="ex bad"><svg class="pic far" viewBox="0 0 100 140"><rect width="100" height="140" fill="#CFE3B8"/><use href="#leafpic" x="38" y="50" width="24" height="34"/></svg><figcaption><svg><use href="#i-cross"/></svg><span data-t="bad_far"></span></figcaption></figure>
+        </div></li>
+      <li class="card step"><span class="num">3</span><p data-t="step3"></p>
+        <div class="examples one">
+          <figure class="ex good tapPic"><svg class="pic"><use href="#leafpic"/></svg><span class="ring"></span><figcaption><svg><use href="#i-tap"/></svg><span data-t="tap_leaf"></span></figcaption></figure>
+        </div></li>
+    </ol>
+    <button id="howtoDone" class="btn primary" type="button"><span data-t="next"></span></button>
+  </section>
+
+  <!-- home -->
+  <section id="s-home" class="screen" hidden>
+    <div class="hero">
+      <svg class="art heroArt"><use href="#wheat"/></svg>
+      <p class="heroSub" data-t="home_sub"></p>
     </div>
-    <label class="big primary" for="camera">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg>
-      <span data-t="take_photo"></span>
-    </label>
+    <button id="cameraBtn" class="shutter" type="button"><svg><use href="#i-camera"/></svg><span data-t="take_photo"></span></button>
     <input id="camera" type="file" accept="image/*" capture="environment" hidden>
-    <label class="big" for="gallery">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="m3 17 5-5 4 4 3-3 6 6"/><circle cx="16" cy="9" r="1.6"/></svg>
-      <span data-t="choose_photo"></span>
-    </label>
+    <label class="btn" for="gallery"><svg><use href="#i-gallery"/></svg><span data-t="choose_photo"></span></label>
     <input id="gallery" type="file" accept="image/*" hidden>
+    <div class="row2">
+      <button id="howtoBtn" class="btn gold" type="button"><svg><use href="#i-help"/></svg><span data-t="howto"></span></button>
+      <button id="historyBtn" class="btn" type="button"><svg><use href="#i-history"/></svg><span data-t="my_scans"></span></button>
+    </div>
     <p class="disclaimer" data-t="disclaimer"></p>
     <button id="aboutBtn" class="link" type="button" data-t="credits"></button>
   </section>
 
-  <!-- 2. disease -->
+  <!-- live camera with a leaf-shaped guide and hints -->
+  <section id="s-camera" class="screen camScreen" hidden>
+    <div class="cam">
+      <video id="video" playsinline muted></video>
+      <svg class="guide" viewBox="0 0 100 160" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+        <defs><mask id="leafHole"><rect width="100" height="160" fill="#fff"/>
+          <path d="M50 6C74 46 76 112 52 154 26 112 26 46 50 6z" fill="#000"/></mask></defs>
+        <rect width="100" height="160" fill="rgba(0,0,0,.45)" mask="url(#leafHole)"/>
+        <path id="guideLine" d="M50 6C74 46 76 112 52 154 26 112 26 46 50 6z" fill="none" stroke="#fff" stroke-width="1.2" stroke-dasharray="3 2"/>
+      </svg>
+      <p id="camHint" class="camHint" role="status" aria-live="polite"><svg><use href="#i-warn"/></svg><span></span></p>
+    </div>
+    <button id="shutter" class="shutter small" type="button" data-t-label="take_photo"><svg><use href="#i-camera"/></svg></button>
+  </section>
+
+  <!-- disease -->
   <section id="s-disease" class="screen" hidden>
     <img id="thumb" class="thumb" alt="">
     <h2 data-t="choose_disease"></h2>
     <div id="diseases" class="choices"></div>
   </section>
 
-  <!-- 3. tap -->
+  <!-- tap the leaf, then the scanning animation -->
   <section id="s-tap" class="screen" hidden>
-    <h2 class="tapHint"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 11V5a2 2 0 0 1 4 0v5l4 1a2 2 0 0 1 1.5 2.3L17.6 19a3 3 0 0 1-3 2H11a3 3 0 0 1-2.4-1.2L5 15a1.8 1.8 0 0 1 2.7-2.3L9 14"/></svg><span data-t="tap_leaf"></span></h2>
-    <div class="stage"><canvas id="photo"></canvas><div id="tapDot" class="tapDot" hidden></div></div>
+    <h2 class="tapHint"><svg><use href="#i-tap"/></svg><span data-t="tap_leaf"></span></h2>
+    <div class="stage" id="tapStage">
+      <canvas id="photo"></canvas>
+      <canvas id="leafGlow" class="glow" hidden></canvas>
+      <div id="tapDot" class="tapDot" hidden></div>
+      <div id="scan" class="scan" hidden><span class="line"></span></div>
+    </div>
     <div id="working" class="working" hidden><span class="spinner"></span><span data-t="working"></span></div>
   </section>
 
-  <!-- 4. result -->
+  <!-- result -->
   <section id="s-result" class="screen" hidden>
-    <div id="card" class="card">
-      <div class="cardHead"><span id="cardIcon" class="cardIcon" aria-hidden="true"></span><p id="cardMsg" class="cardMsg"></p></div>
-      <p id="cardLevel" class="cardLevel" hidden></p>
+    <div id="card" class="card result">
+      <div id="gaugeBox" class="gaugeBox">
+        <svg id="gauge" class="gauge" viewBox="0 0 200 200" aria-hidden="true">
+          <circle cx="100" cy="100" r="84" class="track"/>
+          <circle id="gaugeArc" cx="100" cy="100" r="84" class="arc" transform="rotate(-90 100 100)"/>
+          <g id="gaugeTicks"></g>
+        </svg>
+        <div class="gaugeNum"><b id="gaugePct"></b><small data-t="gauge_label"></small></div>
+      </div>
+      <ol id="levelScale" class="scale" aria-hidden="true"></ol>
+      <div class="verdict"><span id="cardIcon" class="cardIcon" aria-hidden="true"></span>
+        <div><p id="cardLevel" class="cardLevel" hidden></p><p id="cardMsg" class="cardMsg"></p></div></div>
       <p id="cardSev" class="cardSev" hidden></p>
       <p id="cardReason" class="cardReason" hidden></p>
-      <button id="speak" class="big speak" type="button">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11"/></svg>
-        <span data-t="listen"></span>
-      </button>
+      <div class="cardTools">
+        <div id="viewToggle" class="seg" role="group">
+          <button id="viewPhoto" type="button" data-t="view_photo"></button>
+          <button id="viewDisease" type="button" aria-pressed="true" data-t="view_disease"></button>
+        </div>
+        <button id="speak" class="btn speak" type="button"><svg><use href="#i-speaker"/></svg><span data-t="listen"></span></button>
+      </div>
       <p id="noVoice" class="note" hidden data-t="no_voice"></p>
     </div>
-    <div id="advice" class="advice" hidden>
-      <h3 data-t="adv_title"></h3>
-      <p id="advWarn" class="advWarn" hidden><span aria-hidden="true">⚠</span> <span data-t="adv_unverified"></span></p>
-      <dl id="advList"></dl>
-      <p class="note" data-t="adv_label"></p>
-      <p id="advSource" class="note src"></p>
-    </div>
-    <a id="callKcc" class="big call" href="tel:18001801551">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2"/></svg>
-      <span><span data-t="call_kcc"></span><br><small>1800-180-1551</small></span>
-    </a>
     <div class="stage"><canvas id="overlay"></canvas></div>
+
+    <div id="advice" class="card advice" hidden>
+      <h3><svg><use href="#i-spray"/></svg><span data-t="adv_title"></span></h3>
+      <p id="advWarn" class="warnbox" hidden><svg><use href="#i-warn"/></svg><span data-t="adv_unverified"></span></p>
+      <p class="note" data-t="adv_options"></p>
+      <div id="advList" class="options"></div>
+      <p class="note" data-t="adv_label"></p>
+    </div>
+    <a id="callKcc" class="btn call" href="tel:18001801551">
+      <svg><use href="#i-phone"/></svg>
+      <span><span data-t="call_kcc"></span><br><small class="ltr">1800-180-1551</small></span>
+    </a>
     <p class="note" data-t="placeholder"></p>
-    <button id="again" class="big primary" type="button">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="4"/></svg>
-      <span data-t="new_photo"></span>
-    </button>
+    <button id="again" class="btn primary" type="button"><svg><use href="#i-camera"/></svg><span data-t="new_photo"></span></button>
     <p class="disclaimer" data-t="disclaimer"></p>
+  </section>
+
+  <!-- scan history, on this phone only -->
+  <section id="s-history" class="screen" hidden>
+    <h2 data-t="my_scans"></h2>
+    <p class="note" data-t="hist_note"></p>
+    <div id="histChart" class="card histChart" hidden></div>
+    <ul id="histList" class="histList"></ul>
+    <p id="histEmpty" class="empty" data-t="hist_empty" hidden></p>
+    <button id="histClear" class="btn" type="button"><svg><use href="#i-trash"/></svg><span data-t="hist_clear"></span></button>
   </section>
 
   <!-- about -->
   <section id="s-about" class="screen" hidden>
     <h2 data-t="credits"></h2>
     <p class="disclaimer" data-t="disclaimer"></p>
-    <div class="about" lang="en" dir="ltr">
-      <p><b>Decision support only.</b> This app does not replace an agriculture expert. The severity levels and the
-        advice are <b>placeholders</b> that have not yet been checked against an agronomy source.</p>
-      <p>Everything runs on this phone. Photos are not uploaded.</p>
+    <div class="about card" lang="en" dir="ltr">
+      <p><b>Decision support only.</b> This app does not replace an agriculture expert. The severity levels are
+        <b>placeholders</b>. The spray advice is copied from the official CIBRC list of registered uses and has not yet
+        been checked by an agriculture expert; per-acre and per-tank amounts are converted from the official figures.</p>
+      <p>Everything runs on this phone. Photos are not uploaded. Saved scans stay on this phone.</p>
       <h3>Credits and licences</h3>
       <ul>
         <li>Training data: PlantSeg (Wei et al., 2024, arXiv:2409.04038), CC BY-NC 4.0. Because of this, the model
           and this app are for non-commercial use only.</li>
         <li>Disease region model: SegFormer-B0 (Xie et al., 2021), fine-tuned for this project, INT8.</li>
         <li>Leaf finder: EfficientSAM-Ti (Xiong et al., 2024), Apache License 2.0, INT8 export.</li>
-        <li>Runtime: ONNX Runtime Web, MIT licence. Fonts: Noto, SIL Open Font License 1.1.</li>
+        <li>Spray advice: CIBRC "Major Uses of Pesticides" (fungicides, as on 30.09.2026), ppqs.gov.in.</li>
+        <li>Runtime: ONNX Runtime Web, MIT licence. Fonts: Noto, SIL Open Font License 1.1. Drawings: made for this app.</li>
         <li>Code: MIT licence. Source: <a href="https://github.com/adrijas7274/wheat-disease-severity">github.com/adrijas7274/wheat-disease-severity</a></li>
         <li>Translations other than English are machine drafts until a native speaker checks them.</li>
       </ul>
       <h3>This phone</h3>
       <pre id="diag">…</pre>
-      <button id="voiceCheck" class="pill" type="button">Check voices for all languages</button>
+      <button id="voiceCheck" class="pill dark" type="button">Check voices for all languages</button>
       <pre id="voices" hidden></pre>
     </div>
-    <button id="aboutBack" class="big" type="button" data-t="ok"></button>
+    <button id="aboutBack" class="btn" type="button" data-t="ok"></button>
   </section>
 </main>
-
-<dialog id="langDlg" aria-labelledby="langTitle">
-  <h2 id="langTitle" data-t="language"></h2>
-  <div id="langList" class="langList"></div>
-</dialog>
 
 <script type="module" src="js/app.js"></script>
 </body>

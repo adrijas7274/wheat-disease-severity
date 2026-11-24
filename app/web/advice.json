@@ -1,8 +1,12 @@
 {
  "status": "unverified",
  "verified_by": null,
- "about": "Treatment advice per disease and placeholder severity level. Values are copied as printed in the sources; nothing is converted or estimated, and the dose never depends on the severity percentage. UNVERIFIED: no agriculture expert has checked this table. app_product is the row the app shows; it is the only wheat row that prints a dose per litre, and is a choice for the expert to confirm.",
+ "about": "Treatment advice per disease and placeholder severity level. Official values are copied as printed; per-acre and per-15-litre-tank values are arithmetic conversions of them, labelled as converted. Nothing is estimated, and the dose never depends on the severity percentage. 'options' are up to 3 registered products shown in the app, unranked (selection rule in src/mobile/build_advice.py). Timing and repeat interval are left out until an official advisory gives them. UNVERIFIED: no agriculture expert has checked this table.",
  "kisan_call_centre": "1800-180-1551",
+ "conversion": {
+  "ha_per_acre": 0.40468564224,
+  "tank_litres": 15
+ },
  "sources": {
   "cibrc_mup": {
    "title": "Major Uses of Pesticides (Registered under the Insecticides Act, 1968) - Fungicides (upto 30/09/2026)",
@@ -73,7 +77,29 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 47,
-     "note": "Only wheat row in the list that prints a dose per litre."
+     "note": "Only wheat row in the list that prints a dose per litre.",
+     "converted": {
+      "per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "ml",
+       "text": "202.3 ml"
+      },
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": {
+       "lo": 15.0,
+       "hi": 15.0,
+       "unit": "ml",
+       "text": "15 ml"
+      },
+      "not_converted": [],
+      "per_ha_from": "dose per litre x water per hectare (both official)"
+     }
     },
     {
      "product": "Propiconazole 25% EC",
@@ -89,7 +115,28 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 24,
-     "note": "Formulation dose printed as '500gm' for a liquid (EC) product; unit to be confirmed by the expert."
+     "note": "Formulation dose printed as '500gm' for a liquid (EC) product; unit to be confirmed by the expert.",
+     "converted": {
+      "per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "g",
+       "text": "202.3 g"
+      },
+      "water_per_acre": {
+       "lo": 303.51423167999997,
+       "hi": 303.51423167999997,
+       "unit": "L",
+       "text": "304 L"
+      },
+      "per_tank": {
+       "lo": 10.0,
+       "hi": 10.0,
+       "unit": "g",
+       "text": "10 g"
+      },
+      "not_converted": []
+     }
     },
     {
      "product": "Triadimefon 25% WP",
@@ -105,7 +152,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 41,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 303.51423167999997,
+       "hi": 303.51423167999997,
+       "unit": "L",
+       "text": "304 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Tebuconazole 38.39% w/w SC",
@@ -121,7 +181,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 38,
-     "note": "Units of the dose columns not printed."
+     "note": "Units of the dose columns not printed.",
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 151.75711583999998,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "152-202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Kresoxim-methyl 44.3% SC",
@@ -137,7 +210,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 17,
-     "note": "Label says 'Rust' without the type. Units not printed."
+     "note": "Label says 'Rust' without the type. Units not printed.",
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Zineb 75% WP",
@@ -153,7 +239,25 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 42,
-     "note": "No waiting period printed."
+     "note": "No waiting period printed.",
+     "converted": {
+      "per_acre": {
+       "lo": 0.6070284633599999,
+       "hi": 0.80937128448,
+       "unit": "kg",
+       "text": "0.61-0.81 kg"
+      },
+      "water_per_acre": {
+       "lo": 303.51423167999997,
+       "hi": 404.68564224,
+       "unit": "L",
+       "text": "304-405 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "tank: both dose and water are ranges"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 18.2% w/w + Cyproconazole 7.3% w/w SC",
@@ -169,7 +273,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 46,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 14% + Epoxiconazole 9% SC",
@@ -185,7 +302,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 48,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 7.1% + Propiconazole 11.9% w/w SE",
@@ -201,7 +331,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 50,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 11% + Tebuconazole 18.3% w/w SC",
@@ -217,7 +360,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 51,
-     "note": "Waiting period printed as '-'."
+     "note": "Waiting period printed as '-'.",
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC",
@@ -233,7 +389,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 53,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Fluxapyroxad 167 g/l + Pyraclostrobin 333 g/l SC",
@@ -249,7 +418,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 66,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Picoxystrobin 7.05% + Propiconazole 11.71% SC",
@@ -265,7 +447,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 78,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Propiconazole 10% + Thiophanate-Methyl 42% WP",
@@ -281,7 +476,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 81,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Pydiflumetofen 13.6% w/w + Propiconazole 11.4% w/w SE",
@@ -297,7 +505,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 81,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Pyraclostrobin 133 g/l + Epoxiconazole 50 g/l SE",
@@ -313,7 +534,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 82,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Tebuconazole 10% + Sulphur 65% WG",
@@ -329,7 +563,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 86,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Tebuconazole 50% + Trifloxystrobin 25% WG",
@@ -345,7 +592,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 87,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 121.40569267199999,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "121-202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     }
    ],
    "levels": {
@@ -354,7 +614,11 @@
     "medium": "spray_recommended",
     "high": "spray_recommended"
    },
-   "app_product": 0
+   "options": [
+    4,
+    5,
+    0
+   ]
   },
   "wheat leaf rust": {
    "chemical_control": "registered",
@@ -373,7 +637,29 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 47,
-     "note": "Only wheat row in the list that prints a dose per litre."
+     "note": "Only wheat row in the list that prints a dose per litre.",
+     "converted": {
+      "per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "ml",
+       "text": "202.3 ml"
+      },
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": {
+       "lo": 15.0,
+       "hi": 15.0,
+       "unit": "ml",
+       "text": "15 ml"
+      },
+      "not_converted": [],
+      "per_ha_from": "dose per litre x water per hectare (both official)"
+     }
     },
     {
      "product": "Propiconazole 25% EC",
@@ -389,7 +675,28 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 24,
-     "note": "Formulation dose printed as '500gm' for a liquid (EC) product; unit to be confirmed by the expert."
+     "note": "Formulation dose printed as '500gm' for a liquid (EC) product; unit to be confirmed by the expert.",
+     "converted": {
+      "per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "g",
+       "text": "202.3 g"
+      },
+      "water_per_acre": {
+       "lo": 303.51423167999997,
+       "hi": 303.51423167999997,
+       "unit": "L",
+       "text": "304 L"
+      },
+      "per_tank": {
+       "lo": 10.0,
+       "hi": 10.0,
+       "unit": "g",
+       "text": "10 g"
+      },
+      "not_converted": []
+     }
     },
     {
      "product": "Triadimefon 25% WP",
@@ -405,7 +712,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 41,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 303.51423167999997,
+       "hi": 303.51423167999997,
+       "unit": "L",
+       "text": "304 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Kresoxim-methyl 44.3% SC",
@@ -421,7 +741,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 17,
-     "note": "Label says 'Rust' without the type. Units not printed."
+     "note": "Label says 'Rust' without the type. Units not printed.",
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Zineb 75% WP",
@@ -437,7 +770,25 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 42,
-     "note": "No waiting period printed."
+     "note": "No waiting period printed.",
+     "converted": {
+      "per_acre": {
+       "lo": 0.6070284633599999,
+       "hi": 0.80937128448,
+       "unit": "kg",
+       "text": "0.61-0.81 kg"
+      },
+      "water_per_acre": {
+       "lo": 303.51423167999997,
+       "hi": 404.68564224,
+       "unit": "L",
+       "text": "304-405 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "tank: both dose and water are ranges"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 18.2% w/w + Cyproconazole 7.3% w/w SC",
@@ -453,7 +804,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 46,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 14% + Epoxiconazole 9% SC",
@@ -469,7 +833,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 48,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC",
@@ -485,7 +862,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 53,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Fluxapyroxad 167 g/l + Pyraclostrobin 333 g/l SC",
@@ -501,7 +891,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 66,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Propiconazole 10% + Thiophanate-Methyl 42% WP",
@@ -517,7 +920,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 81,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Tebuconazole 10% + Sulphur 65% WG",
@@ -533,7 +949,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 86,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     }
    ],
    "levels": {
@@ -542,7 +971,11 @@
     "medium": "spray_recommended",
     "high": "spray_recommended"
    },
-   "app_product": 0
+   "options": [
+    3,
+    4,
+    0
+   ]
   },
   "wheat powdery mildew": {
    "chemical_control": "registered",
@@ -561,7 +994,29 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 47,
-     "note": "Only wheat row in the list that prints a dose per litre."
+     "note": "Only wheat row in the list that prints a dose per litre.",
+     "converted": {
+      "per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "ml",
+       "text": "202.3 ml"
+      },
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": {
+       "lo": 15.0,
+       "hi": 15.0,
+       "unit": "ml",
+       "text": "15 ml"
+      },
+      "not_converted": [],
+      "per_ha_from": "dose per litre x water per hectare (both official)"
+     }
     },
     {
      "product": "Sulphur 80% WG",
@@ -577,7 +1032,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 36,
-     "note": "Units not printed in the wheat row."
+     "note": "Units not printed in the wheat row.",
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Tebuconazole 38.39% w/w SC",
@@ -593,7 +1061,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 38,
-     "note": "Units of the dose columns not printed."
+     "note": "Units of the dose columns not printed.",
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 151.75711583999998,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "152-202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Triadimefon 25% WP",
@@ -609,7 +1090,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 41,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 303.51423167999997,
+       "hi": 303.51423167999997,
+       "unit": "L",
+       "text": "304 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 18.2% w/w + Cyproconazole 7.3% w/w SC",
@@ -625,7 +1119,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 46,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Azoxystrobin 14% + Epoxiconazole 9% SC",
@@ -641,7 +1148,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 48,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Propiconazole 13.9% w/w + Difenoconazole 13.9% w/w EC",
@@ -657,7 +1177,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 53,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Propiconazole 10% + Thiophanate-Methyl 42% WP",
@@ -673,7 +1206,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 81,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Pydiflumetofen 13.6% w/w + Propiconazole 11.4% w/w SE",
@@ -689,7 +1235,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 81,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Tebuconazole 10% + Sulphur 65% WG",
@@ -705,7 +1264,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 86,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 202.34282112,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     },
     {
      "product": "Tebuconazole 50% + Trifloxystrobin 25% WG",
@@ -721,7 +1293,20 @@
      "repeat_interval": null,
      "source": "cibrc_mup",
      "page": 87,
-     "note": null
+     "note": null,
+     "converted": {
+      "per_acre": null,
+      "water_per_acre": {
+       "lo": 121.40569267199999,
+       "hi": 202.34282112,
+       "unit": "L",
+       "text": "121-202 L"
+      },
+      "per_tank": null,
+      "not_converted": [
+       "dose: no unit printed in the official cell"
+      ]
+     }
     }
    ],
    "levels": {
@@ -730,7 +1315,11 @@
     "medium": "spray_recommended",
     "high": "spray_recommended"
    },
-   "app_product": 0
+   "options": [
+    1,
+    2,
+    0
+   ]
   },
   "wheat septoria blotch": {
    "chemical_control": "none_registered",
@@ -742,7 +1331,7 @@
     "medium": "ask_expert",
     "high": "ask_expert"
    },
-   "app_product": null
+   "options": []
   },
   "wheat bacterial leaf streak (black chaff)": {
    "chemical_control": "none_registered",
@@ -754,7 +1343,7 @@
     "medium": "ask_expert",
     "high": "ask_expert"
    },
-   "app_product": null
+   "options": []
   }
  }
 }

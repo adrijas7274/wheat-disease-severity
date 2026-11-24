@@ -57,3 +57,30 @@ colour and icon: no action, monitor, treat, treat urgently, retake, and consult 
   the least reliable.
 - Offline text-to-speech depends on the voices installed on each phone. Many Indian languages have no voice.
 - The APK is debug-signed and meant for testing only.
+
+## App design and treatment advice (2026-11-24)
+
+**Methods.**
+- The interface follows a small design system (`app/web/css/tokens.css`): wheat-green, golden wheat and cream.
+- Text colours meet WCAG AA (≥ 4.5:1) on both backgrounds, and outcome colours carry white text at ≥ 6:1.
+- Body text is ≥ 18 px and touch targets ≥ 48 px. Every outcome has an icon as well as a colour.
+- Three design directions were mocked up (`report/figures/app/mockups/`); direction C with A's illustrations was
+  chosen.
+- Treatment advice comes only from the CIBRC "Major Uses of Pesticides" list of 30.09.2026. Restricted products
+  (mancozeb) are excluded.
+- Per-acre and per-15-litre-tank amounts are arithmetic conversions, labelled as such.
+- A dose is shown only for photos that passed the quality gate and the uncertainty check, at the medium or high
+  placeholder level. It never depends on the severity percentage.
+
+**Results.**
+- In an emulated phone browser, every screen works in all 23 languages, including right to left.
+- The app restarts offline, and compute is 3.45 s per photo on a laptop CPU.
+- The browser pipeline was re-checked against its earlier outputs on the 121 parity images after the redesign
+  (`experiments/LOG.md`).
+
+**Limitations.**
+- No agriculture expert has checked the advice, and no native speaker has checked the translations.
+- Septoria and bacterial leaf streak have no registered wheat fungicide, so the app sends those users to an expert.
+- Several official cells print no unit, so no conversion is shown for them.
+- The camera hints are uncalibrated.
+- Phone timing on a real low-end device is still unmeasured.

@@ -41,9 +41,10 @@ export function loadAllFonts() {
   for (const l of Object.values(data.languages)) loadFont(l.font);
 }
 
-export function setLanguage(code) {
+/** Use a language; save it only when the user chose it (so the first start still shows the picker). */
+export function setLanguage(code, save = false) {
   lang = data.languages[code] ? code : "en";
-  try { localStorage.setItem(STORE, lang); } catch { /* ignore */ }
+  if (save) try { localStorage.setItem(STORE, lang); } catch { /* ignore */ }
   const meta = data.languages[lang];
   loadFont(meta.font);
   document.documentElement.lang = lang;

@@ -1,0 +1,55 @@
+# Packages the same web app as an Android APK with Capacitor 6 (debug-signed, for testing by sideloading).
+# The APK is attached to the run as the artifact "wheat-leaf-check-apk".
+name: Android APK
+on:
+  push:
+    branches: [main]
+    paths: ["app/**", ".github/workflows/android.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - name: Install (pinned versions, no install scripts)
+        working-directory: app
+        run: npm ci --ignore-scripts
+      - name: Build web app
+        working-directory: app
+        run: npm run build
+      - name: Create the Android project
+        working-directory: app
+        run: |
+          npx cap add android
+          # service workers inside the APK (offline cache + threads), see android-overrides/MainActivity.java
+          cp android-overrides/MainActivity.java android/app/src/main/java/io/github/adrijas7274/wheatcheck/MainActivity.java
+          # Android 11+: the text-to-speech plugin must declare that it looks for a TTS engine
+          sed -i 's#</manifest>#    <queries><intent><action android:name="android.intent.action.TTS_SERVICE" /></intent></queries>\n</manifest>#' android/app/src/main/AndroidManifest.xml
+          # live camera screen (getUserMedia inside the WebView): Capacitor asks for this permission at run time
+          sed -i 's#</manifest>#    <uses-permission android:name="android.permission.CAMERA" />\n</manifest>#' android/app/src/main/AndroidManifest.xml
+          npx cap sync android
+      - name: Build APK
+        working-directory: app/android
+        run: ./gradlew --no-daemon assembleDebug
+      - name: Checksum
+        run: |
+          cp app/android/app/build/outputs/apk/debug/app-debug.apk wheat-leaf-check-debug.apk
+          sha256sum wheat-leaf-check-debug.apk | tee wheat-leaf-check-debug.apk.sha256
+          ls -l wheat-leaf-check-debug.apk
+      - uses: actions/upload-artifact@v4
+        with:
+          name: wheat-leaf-check-apk
+          path: |
+            wheat-leaf-check-debug.apk
+            wheat-leaf-check-debug.apk.sha256

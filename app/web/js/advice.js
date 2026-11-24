@@ -21,22 +21,27 @@ export function adviceFor(result, disease, advice) {
   if (!d || !result.level) return out;
   out.level = result.level;
   out.action = d.levels[result.level] || null;
-  if (out.action === "spray_recommended" && d.app_product !== null && d.app_product !== undefined) {
-    const p = d.products[d.app_product];
-    const src = advice.sources[p.source];
-    out.product = {
-      name: p.product,
-      dosePerLitre: p.dose_per_litre,
-      formulationPerHa: p.formulation_per_ha,
-      waterPerHa: p.water_l_per_ha,
-      dosePerAcre: p.dose_per_acre,
-      waterPerAcre: p.water_per_acre,
-      timing: p.timing,
-      repeatInterval: p.repeat_interval,
-      waitingDays: p.waiting_period_days,
-      source: `${src.title}, p. ${p.page} (${src.url})`,
-      sourceShort: `CIBRC Major Uses of Pesticides, as on ${src.as_on}, p. ${p.page}`,
-    };
+  out.products = [];
+  if (out.action === "spray_recommended" && d.options && d.options.length) {
+    // up to 3 registered options, unranked, in the order of the official list; dose independent of severity
+    out.products = d.options.map((i) => {
+      const p = d.products[i];
+      const src = advice.sources[p.source];
+      const c = p.converted || {};
+      return {
+        name: p.product,
+        dosePerLitre: p.dose_per_litre,
+        formulationPerHa: p.formulation_per_ha,
+        waterPerHa: p.water_l_per_ha,
+        perAcreConverted: c.per_acre ? c.per_acre.text : null,
+        waterPerAcreConverted: c.water_per_acre ? c.water_per_acre.text : null,
+        perTankConverted: c.per_tank ? c.per_tank.text : null,
+        waitingDays: p.waiting_period_days,
+        source: `${src.title}, p. ${p.page} (${src.url})`,
+        sourceShort: `CIBRC Major Uses of Pesticides, as on ${src.as_on}, p. ${p.page}`,
+      };
+    });
+    out.product = out.products[0];
   }
   return out;
 }
